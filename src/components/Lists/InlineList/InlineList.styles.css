@@ -1,5 +1,0 @@
-.inlineList {
-  @apply flex space-x-2;
-  @apply text-sm font-mono;
-  @apply my-2;  
-}

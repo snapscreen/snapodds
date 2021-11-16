@@ -1,6 +1,0 @@
-.article pre,
-.article code,
-.article kbd,
-.article samp {
-  @apply break-all whitespace-pre-wrap;
-}
