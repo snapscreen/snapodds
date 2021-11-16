@@ -2,15 +2,15 @@
   "name": "SnapOdds",
   "description": "SnapOdds website",
   "version": "1.0.0",
-  "homepage": "https://zeitvertrieb.github.io/fiskaly/",
+  "homepage": "https://zeitvertrieb.github.io/snapodds/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zeitvertrieb/fiskaly"
+    "url": "https://github.com/zeitvertrieb/snapodds"
   },
   "bugs": {
-    "url": "https://github.com/zeitvertrieb/fiskaly/issues"
+    "url": "https://github.com/zeitvertrieb/snapodds/issues"
   },
-  "author": "Matthias Grieder <matthias@grieder.info> (https://matthias.grieder.info)",
+  "author": "Matthias Grieder <matthias@snapscreen.com>",
   "license": "Apache License 2.0.",
   "keywords": [
     "brand",
