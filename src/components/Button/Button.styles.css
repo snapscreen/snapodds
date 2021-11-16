@@ -1,0 +1,28 @@
+.btn, a.btn {
+  @apply rounded-full;
+  @apply py-2 px-6;
+  @apply inline-flex items-center justify-center;
+  @apply font-display font-bold text-lg text-current;
+  @apply border border-opacity-0 hover:border-opacity-100;
+  @apply transition-all;
+  @apply focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus;
+}
+
+.btn.primary {
+  @apply bg-skin-primary;
+  @apply text-skin-fg-focus;
+  @apply border-skin-primary;
+  @apply py-4 px-8;
+  @apply text-xl lg:text-2xl;
+  @apply hover:text-skin-fg-focus;
+  @apply focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus;
+}
+
+.btn.ghost {
+  @apply hover:border-opacity-0;
+  @apply px-2;
+}
+
+.btn.icon {
+  @apply px-2;
+}

@@ -1,0 +1,18 @@
+.footer {
+  @apply text-center;
+  @apply p-8 mt-12;
+}
+
+.copyright {
+  @apply font-mono;
+  @apply text-sm text-skin-fg-muted;
+}
+
+.social {
+  @apply flex justify-center space-x-2;
+}
+
+.base {
+  @apply mt-12 pt-8;
+  @apply border-t border-skin-base-muted;
+}

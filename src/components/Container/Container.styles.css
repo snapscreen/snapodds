@@ -1,0 +1,9 @@
+.container {
+  @apply w-full;
+  @apply max-w-none;
+}
+.container > div {
+  @apply max-w-screen-xl;
+  @apply mx-auto;
+  @apply px-4;
+}
