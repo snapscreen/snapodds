@@ -9,6 +9,10 @@
   html,
   body {
     @apply bg-skin-base text-skin-fg;
+    background-image:
+    radial-gradient(at 92% 8%, hsla(215,15%,47%,.4) 0, transparent 60%),
+    radial-gradient(at 93% 100%, hsla(217,100%,70%,.6) 0, transparent 60%),
+    radial-gradient(at 0% 0%, hsla(173,100%,78%,.6) 0, transparent 60%);
   }
 
   :root {
