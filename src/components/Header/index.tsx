@@ -41,10 +41,12 @@ export const Header: React.FC<EmptyProps> = () => {
           </div>
         </div>
         <div className="header__right">
-          <ThemeSwitch />
+          <div className="hidden sm:flex">
+            <ThemeSwitch />
+          </div>
           <div className="lg:hidden">
             <Popover.Button className="btn icon">
-              <span className="sr-only">Open menu</span>
+              <span className="mr-2">Menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
@@ -63,15 +65,16 @@ export const Header: React.FC<EmptyProps> = () => {
           <div className="rounded-lg shadow-lg ring-1 ring-skin-header ring-opacity-5 bg-skin-header border">
             <div className="p-4">
               <div className="z-50 flex items-center justify-between">
-                <div className="-mr-2 -mt-2 order-2">
+                <div className="-mt-2 order-2 flex flex-row-reverse">
                   <Popover.Button className="btn icon">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
+                  <div className="mr-2">
+                    <ThemeSwitch />
+                  </div>
                 </div>
-                <Link to="/" className="brand">
-                  <Logo />
-                </Link>
+                <Logo className="brand -ml-2" />
               </div>
             </div>
             <div className="py-6 px-4 space-y-6">
