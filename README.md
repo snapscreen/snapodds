@@ -1,6 +1,6 @@
 # SnapOdds website
 
-SanpOdds is documented at https://zeitvertrieb.github.io/snapodds/.
+SnapOdds is documented at https://zeitvertrieb.github.io/snapodds/.
 The documentation is hosted on Github Pages and built with Gatsby and Gatsby MDX.
 
 ## Licence
