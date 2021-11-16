@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Tab } from '@headlessui/react'
+import { Tab } from "@headlessui/react";
 import { Layout, Container, Hero, Button, Seo } from "@/components";
 
 function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   let [categories] = useState({
-    "SnapOdds SDK" : [
+    "SnapOdds SDK": [
       {
         id: 1,
         description: "tbd",
@@ -21,10 +21,11 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
     "Webbanner solution": [
       {
         id: 1,
-        description: "Our snap interface works also in webbrowsers. As trigger for action also a standard webbanner does the job.",
+        description:
+          "Our snap interface works also in webbrowsers. As trigger for action also a standard webbanner does the job.",
       },
     ],
-  })
+  });
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -34,11 +35,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
         lead="SnapOdds is a service from Snapscreen that helps you to aquire betting players instantly. SnapOdds is easily integrated into your app as SDK or Webbanner into your website."
       >
         <div className="text-center">
-          <Button
-            as="link"
-            styleType="primary"
-            to="/try-now"
-          >
+          <Button as="link" styleType="primary" to="/try-now">
             Try now
           </Button>
         </div>
@@ -53,11 +50,11 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
                     key={category}
                     className={({ selected }) =>
                       classNames(
-                        'w-full py-2.5 leading-5 font-medium rounded-full',
-                        'focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus',
+                        "w-full py-2.5 leading-5 font-medium rounded-full",
+                        "focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus",
                         selected
-                          ? 'bg-skin-primary text-skin-base shadow'
-                          : 'hover:bg-skin-base-muted'
+                          ? "bg-skin-primary text-skin-base shadow"
+                          : "hover:bg-skin-base-muted"
                       )
                     }
                   >
@@ -73,10 +70,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
                   >
                     <ul>
                       {posts.map((post) => (
-                        <li
-                          key={post.id}
-                          className=""
-                        >
+                        <li key={post.id} className="">
                           <p>{post.description}</p>
                         </li>
                       ))}
