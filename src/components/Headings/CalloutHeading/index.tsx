@@ -10,9 +10,7 @@ export const CalloutHeading: React.FC<HeadingsProps> = ({ text }) => {
       data-aos-duration="300"
       data-aos-easing="ease-in-cubic"
     >
-      <span className="bg-clip-text text-transparent bg-gradient-to-r from-skin-primary to-blue-400">
-        {text}
-      </span>
+      {text}
     </h1>
   );
 };
