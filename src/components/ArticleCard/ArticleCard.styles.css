@@ -1,7 +1,6 @@
 .card {
   @apply flex flex-col h-full;
   @apply p-4;
-  @apply rounded-none md:rounded-xl;
   @apply transition-all;
   @apply hover:bg-skin-base-flash hover:shadow-light hover:z-10;
 }

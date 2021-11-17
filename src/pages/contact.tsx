@@ -8,7 +8,7 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Your bright future starts with a simple conversation!" />
+      <Seo title="Get in touch" />
       <Hero
         title="Your bright future starts with a simple conversation!"
         lead="Whether you are curious how SnapOdds works with you, or you’d like to know your growth content potential, we’d love to chat with you."

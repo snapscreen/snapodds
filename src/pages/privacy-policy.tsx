@@ -8,7 +8,7 @@ const Privacy: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="You privacy is important for us." />
+      <Seo title="Privacy Policy" />
       <Hero
         title="Privacy Policy"
         lead="We believe you should always know what data we collect from you and how we use it, and that you should have meaningful control over both. That’s the basic purpose of this Privacy Policy."

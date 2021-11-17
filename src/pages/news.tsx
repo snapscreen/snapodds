@@ -10,7 +10,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="Follow our Journey." />
+        <Seo title="News and press" />
         <Hero title="Sorry." lead="There is a problem loading our articles." />
       </Layout>
     );
@@ -18,10 +18,10 @@ const News: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Follow our Journey." />
-      <Hero title="Follow our Journey." />
+      <Seo title="News and press" />
+      <Hero title="Follow Our Journey." />
       <Container>
-        <ol className="grid grid-cols-1 md:grid-cols-2 gap-4 -mx-4">
+        <ol className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-8 -mx-4 sm:mx-0 lg:mx-1">
           {posts.map(({ node }: { node: INode }) => {
             const title = node.frontmatter.title || node.fields.slug;
             return (

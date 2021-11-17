@@ -3,12 +3,6 @@
   @apply py-8 mt-12;
 }
 
-.copyright {
-  @apply font-mono;
-  @apply text-sm text-skin-fg-muted;
-  @apply mb-4;
-}
-
 .social {
   @apply flex justify-center space-x-2;
 }
@@ -16,4 +10,10 @@
 .base {
   @apply my-10 pt-8;
   @apply border-t border-skin-base-muted;
+}
+
+.baseCopy {
+  @apply font-mono;
+  @apply text-sm text-skin-fg-muted;
+  @apply my-3;
 }

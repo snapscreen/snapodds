@@ -9,7 +9,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
   let url = "https://bet.us.snapscreen.com/snap";
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Try SnapOdds yourself" />
+      <Seo title="SnapOdds demo" />
       <Hero
         title="Try now!"
         lead="We commit ourselves to create a great user experience. Best way to understand how easy SnapOdds works is to trying it."

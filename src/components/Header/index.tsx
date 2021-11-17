@@ -61,7 +61,7 @@ export const Header: React.FC<EmptyProps> = () => {
         leaveTo="opacity-0 scale-95"
       >
         <Popover.Panel focus className="header--mobile">
-          <div className="rounded-lg shadow-lg ring-1 ring-skin-header ring-opacity-5 bg-skin-header border">
+          <div className="shadow-lg ring-1 ring-skin-header ring-opacity-5 bg-skin-header border border-skin-base-muted">
             <div className="p-4">
               <div className="z-50 flex items-center justify-between">
                 <div className="-mt-2 order-2 flex flex-row-reverse">
