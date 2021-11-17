@@ -56,7 +56,7 @@ export function Button(props: ButtonProps): JSX.Element {
         rel="noopener noreferrer"
         {...rest}
       >
-        {props.children}
+        <span>{props.children}</span>
       </a>
     );
   } else if (props.as === "unstyled") {

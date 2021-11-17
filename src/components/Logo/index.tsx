@@ -28,26 +28,26 @@ export const Logo: React.FC<LogoProps> = ({
           >
             <rect width="210" height="210" rx="30" fill="none" />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M183.4 33H163V36.6H183.4V57H187L187 36.6V33H183.4Z"
               fill="currentColor"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M48 33H24V33V36.6V57H27.6L27.6 36.6H48V33Z"
               fill="currentColor"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M24 172.4V176H27.6H48V172.4L27.6 172.4L27.6 152H24L24 172.4Z"
               fill="currentColor"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M187 172.4V152H183.4L183.4 172.4L163 172.4L163 176L183.4 176H187L187 172.4Z"
               fill="currentColor"
             />
@@ -89,32 +89,32 @@ export const Logo: React.FC<LogoProps> = ({
               fill={"var(--color-primary-contrast)"}
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M487.4 0H467V3.6H487.4V24H491L491 3.6V0H487.4Z"
               fill={
                 onBackground ? "var(--tw-ring-offset-color)" : "currentColor"
               }
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M24 0H0V3.8147e-06V3.6V24H3.6L3.6 3.6H24V0Z"
               fill={
                 onBackground ? "var(--tw-ring-offset-color)" : "currentColor"
               }
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M0 139.4V143H3.6H24V139.4L3.6 139.4L3.6 119H3.14722e-06L0 139.4Z"
               fill={
                 onBackground ? "var(--tw-ring-offset-color)" : "currentColor"
               }
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M491 139.4V119H487.4L487.4 139.4L467 139.4L467 143L487.4 143H491L491 139.4Z"
               fill={
                 onBackground ? "var(--tw-ring-offset-color)" : "currentColor"

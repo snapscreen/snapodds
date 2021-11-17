@@ -6,6 +6,7 @@
 .copyright {
   @apply font-mono;
   @apply text-sm text-skin-fg-muted;
+  @apply mb-4;
 }
 
 .social {

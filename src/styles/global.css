@@ -10,8 +10,8 @@
   body {
     @apply bg-skin-base text-skin-fg;
     background-image:
-    radial-gradient(at 92% 8%, hsla(215,15%,47%,.4) 0, transparent 60%),
-    radial-gradient(at 93% 100%, hsla(217,100%,70%,.6) 0, transparent 60%),
+    radial-gradient(at 92% 8%, hsla(215,15%,47%,.2) 0, transparent 60%),
+    radial-gradient(at 93% 100%, hsla(217,100%,70%,.4) 0, transparent 60%),
     radial-gradient(at 0% 0%, hsla(173,100%,78%,.6) 0, transparent 60%);
   }
 
@@ -83,4 +83,43 @@ h2, .h2 {
 .prose,
 .prose [class~="lead"] {
   @apply text-current;
+}
+
+
+/* rectangles */
+.rect {
+  @apply relative;
+  @apply inline-flex;
+  @apply mx-auto;
+  @apply p-2;
+}
+
+.rect:before,
+.rect:after,
+.rect > :last-child:before,
+.rect > :last-child:after {
+  @apply absolute;
+  @apply w-4 h-4;
+  @apply border-2 border-skin-fg;
+  content: '';
+}
+
+.rect:before {
+  @apply top-0 left-0;
+  @apply border-t-2 border-r-0 border-b-0 border-l-2;
+}
+
+.rect:after {
+  @apply top-0 right-0;
+  @apply border-t-2 border-r-2 border-b-0 border-l-0;
+}
+
+.rect > :last-child:before {
+  @apply bottom-0 right-0;
+  @apply border-t-0 border-r-2 border-b-2 border-l-0;
+}
+
+.rect > :last-child:after {
+  @apply bottom-0 left-0;
+  @apply border-t-0 border-r-0 border-b-2 border-l-2;
 }

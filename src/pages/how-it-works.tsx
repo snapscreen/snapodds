@@ -16,7 +16,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
       >
         <div className="text-center">
           <Button as="link" styleType="primary" to="/try-now">
-            Try now
+            <span>Try now</span>
           </Button>
         </div>
       </Hero>

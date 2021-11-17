@@ -21,11 +21,15 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             <h2 className="text-center">
               1. Scan QR code with your mobile phone.
             </h2>
-            <QRCode
-              value={url}
-              renderAs={"svg"}
-              className="mx-auto p-2 bg-white rounded-lg"
-            />
+            <div className="rect">
+              <span>
+                <QRCode
+                  value={url}
+                  renderAs={"svg"}
+                  className="mx-auto p-2 bg-white"
+                />
+              </span>
+            </div>
             <p>Or</p>
             <p>
               Open <span className="text-skin-primary">{url}</span> in your
