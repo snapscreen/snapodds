@@ -29,7 +29,6 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                 <ArticleCard
                   link={node.fields.slug}
                   title={title}
-                  order={node.frontmatter.order}
                   description={node.frontmatter.description}
                   tags={node.frontmatter.tags}
                   date={node.frontmatter.date}
@@ -61,7 +60,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            order
             date(formatString: "MMMM DD, YYYY")
             title
             description

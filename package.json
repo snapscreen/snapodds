@@ -20,7 +20,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby clean && gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "gatsby clean && prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

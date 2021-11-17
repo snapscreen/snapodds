@@ -1,14 +1,6 @@
 import { MDXProviderComponentsProp, MDXProviderProps } from "@mdx-js/react";
 import React, { ReactElement } from "react";
-import {
-  ColorPicker,
-  ColorsPrimaryBlock,
-  ColorsBackgroundsBlock,
-  ColorsTextBlock,
-  ColorsAccentBlock,
-} from "./ColorsBlock";
 import CodeBlock from "./CodeBlock";
-import { LogoBlock, LogoOnBgBlock } from "./LogoBlock";
 
 const preToCodeBlock = (preProps: MDXProviderProps) => {
   if (
@@ -52,13 +44,6 @@ const components: MDXProviderComponentsProp = {
       return <pre {...preProps} />;
     }
   },
-  ColorPicker,
-  ColorsPrimaryBlock,
-  ColorsBackgroundsBlock,
-  ColorsTextBlock,
-  ColorsAccentBlock,
-  LogoBlock,
-  LogoOnBgBlock,
 };
 
 export default components;

@@ -23,7 +23,6 @@ interface HeadingsProps {
 interface ArticleCardProps {
   link?: any;
   title?: string;
-  order?: number;
   description?: any;
   tags?: keyof JSX.IntrinsicElements | string;
   date?: string;
@@ -77,7 +76,6 @@ interface INode {
     slug: string;
   };
   frontmatter: {
-    order: number;
     date: string;
     title: string;
     tags?: string;

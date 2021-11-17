@@ -46,15 +46,13 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
             <li>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev" className="py-2">
-                  ← <span>{previous.frontmatter.order}.</span>{" "}
-                  {previous.frontmatter.title}
+                  ← {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
                 <Link to={next.fields.slug} rel="next" className="py-2">
-                  <span>{next.frontmatter.order}.</span>{" "}
                   {next.frontmatter.title} →
                 </Link>
               )}
@@ -84,7 +82,6 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       body
       frontmatter {
-        order
         title
         date(formatString: "MMMM DD, YYYY")
         description
@@ -96,7 +93,6 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        order
       }
     }
     next: mdx(id: { eq: $nextPostId }) {
@@ -105,7 +101,6 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        order
       }
     }
   }

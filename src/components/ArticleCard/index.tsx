@@ -8,7 +8,6 @@ import "./ArticleCard.styles.css";
 export const ArticleCard: React.FC<ArticleCardProps> = ({
   link,
   title,
-  order,
   description,
   tags,
   date,

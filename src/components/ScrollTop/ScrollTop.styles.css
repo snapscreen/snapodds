@@ -1,0 +1,6 @@
+.scrollTopContainer {
+  @apply fixed;
+  @apply right-4 bottom-4 lg:right-8 lg:bottom-8;
+  @apply transition-all transform;
+  @apply hover:-translate-y-1;
+}

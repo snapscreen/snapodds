@@ -11,4 +11,5 @@ export { CalloutHeading, ArticleHeading } from "./Headings";
 export { Nav } from "./Nav";
 export { ThemeSwitch } from "./ThemeSwitch";
 export { Tags } from "./Tags";
+export { ScrollTop } from "./ScrollTop";
 export { Seo } from "./Seo";

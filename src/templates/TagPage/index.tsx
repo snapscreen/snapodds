@@ -26,7 +26,6 @@ const TagPageTemplate: React.FC<PageProps> = ({
                 <ArticleCard
                   link={node.fields.slug}
                   title={title}
-                  order={node.frontmatter.order}
                   description={node.frontmatter.description}
                   tags={node.frontmatter.tags}
                   date={node.frontmatter.date}
@@ -56,7 +55,6 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            order
             date(formatString: "MMMM DD, YYYY")
             title
             description

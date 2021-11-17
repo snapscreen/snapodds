@@ -91,7 +91,7 @@ module.exports = {
               {
                 allMdx(
                   limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___order] },
+                  sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   edges {
                     node {
@@ -99,7 +99,6 @@ module.exports = {
                       html
                       slug
                       frontmatter {
-                        order
                         title
                         date
                       }

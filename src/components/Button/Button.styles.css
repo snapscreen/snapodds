@@ -5,7 +5,7 @@
   @apply font-display font-bold text-lg text-current;
   @apply border border-opacity-0 hover:border-opacity-100;
   @apply transition-all;
-  @apply hover:scale-105 hover:shadow-xl;
+  @apply hover:scale-105;
   @apply focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus focus:scale-95;
 }
 
@@ -15,7 +15,7 @@
   @apply border-skin-primary;
   @apply py-4 px-8;
   @apply text-xl lg:text-2xl;
-  @apply hover:text-skin-fg-focus;
+  @apply hover:text-skin-fg-focus hover:shadow-xl;
   @apply focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus;
 }
 

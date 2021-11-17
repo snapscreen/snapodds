@@ -14,6 +14,6 @@
 }
 
 .base {
-  @apply mt-12 pt-8;
+  @apply my-10 pt-8;
   @apply border-t border-skin-base-muted;
 }

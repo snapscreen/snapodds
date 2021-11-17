@@ -1,11 +1,19 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { EmptyProps } from "@/definitions";
-import { Container, Button, Logo } from "@/components";
+import { Container, Button, Logo, Nav, ScrollTop } from "@/components";
 
 import "./Footer.styles.css";
 
+const navigation = {
+  links: [
+    { name: "Home", to: "/" },
+    { name: "Privacy Policy", to: "/privacy-policy" },
+    { name: "Terms Of Use", to: "/terms-of-use" },
+  ],
+};
+
 export const Footer: React.FC<EmptyProps> = () => {
+  const { links } = navigation;
   return (
     <footer className="footer">
       <Container>
@@ -74,13 +82,19 @@ export const Footer: React.FC<EmptyProps> = () => {
             </svg>
           </div>
           <p>Snapscreen is a Techstars portfolio company.</p>
+        </div>
+        <div className="base">
+          <div className="flex justify-center mb-4">
+            <Nav links={links} />
+          </div>
+          <Logo icon />
           <p className="copyright">
             &copy; {new Date().getFullYear()}{" "}
             <span>A Snapscreen Solution. All rights reserved.</span>
           </p>
-          <Logo icon />
         </div>
       </Container>
+      <ScrollTop />
     </footer>
   );
 };

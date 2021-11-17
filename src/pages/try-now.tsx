@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { DeviceMobileIcon } from "@heroicons/react/outline";
 import { PageProps } from "@/definitions";
 import { Layout, Button, Container, Hero, Seo } from "@/components";
 var QRCode = require("qrcode.react");
