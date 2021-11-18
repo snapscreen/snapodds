@@ -28,7 +28,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
             <div className="prose prose-lg sm:p-4">
               <h2>SnapOdds Brand Assets</h2>
               <div className="py-2">
-                <Button as="externalLink" styleType="primary" href="https://google.com">Get Logo Kit</Button>
+                <Button as="externalLink" styleType="primary" href="https://github.com/zeitvertrieb/snapodds/raw/main/static/SnapOdds-Logo-Kit.zip">Get Logo Kit</Button>
                 <p>SnapOdds logo is composed of a clean, modern logotype and viewfinder borders that represents our technology.
                 The standard color is SnapOdds is teal (#2dd4bf) with white or black being acceptable on dark or light backgrounds.
                 Please don’t alter the logo in any way.</p>
