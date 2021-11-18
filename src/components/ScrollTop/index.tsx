@@ -21,17 +21,17 @@ export const ScrollTop: React.FC<EmptyProps> = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   return (
     <div className="scrollTopContainer">
-    {showButton && (
+      {showButton && (
         <Button as="button" styleType="icon" onClick={scrollToTop}>
           <ArrowUpIcon className="w-6 h-6" />
         </Button>
-    )}
+      )}
     </div>
   );
 };
