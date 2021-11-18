@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tag-page-index-tsx",
     "path": "/tag/business",
-    "result": {"data":{"site":{"siteMetadata":{"title":"SnapOdds"}},"allMdx":{"edges":[{"node":{"frontmatter":{"date":"July 05, 2021","title":"Snapscreen partnership with Miomni, the leading B2B white label end-to-end solutions provider in the gaming industry.","description":"We are happy to announce a partnership with Miomni.","tags":"business"},"fields":{"slug":"/miomnipartner/"}}}]}},"pageContext":{"tag":"business","slugs":["miomnipartner/"]}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"SnapOdds"}},"allMdx":{"edges":[{"node":{"frontmatter":{"date":"November 18, 2021","title":"New Sports Betting Tech Player Closes Oversubscribed Seed Round","description":"Snapscreen announced today a $1.2m seed funding round led by New York based VC Sharp Alpha Advisors.","tags":"business"},"fields":{"slug":"/seed-round/"}}},{"node":{"frontmatter":{"date":"July 05, 2021","title":"Snapscreen partnership with Miomni, the leading B2B white label end-to-end solutions provider in the gaming industry.","description":"We are happy to announce a partnership with Miomni.","tags":"business"},"fields":{"slug":"/miomnipartner/"}}}]}},"pageContext":{"tag":"business","slugs":["seed-round/","miomnipartner/"]}},
     "staticQueryHashes": ["2841359383"]}
