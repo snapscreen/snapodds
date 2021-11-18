@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import {
@@ -41,24 +42,39 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
             <MDXRenderer>{post.body}</MDXRenderer>
           </section>
         </article>
-        <nav className="mt-8 pt-16 grid grid-cols-blog border-t border-skin-base-muted">
-          <ul className="col-start-2 text-lg flex flex-wrap justify-between">
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev" className="py-2">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next" className="py-2">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
+        {(previous || next) && (
+          <section className="pageNav">
+            <div className="pageNav__title">Continue reading</div>
+            <nav className="pageNav__nav">
+              <ul>
+                <li>
+                  {previous && (
+                    <Link
+                      to={previous.fields.slug}
+                      rel="prev"
+                      className="pageLink"
+                    >
+                      <ArrowLeftIcon />
+                      <span className="pageLink__text">
+                        {previous.frontmatter.title}
+                      </span>
+                    </Link>
+                  )}
+                </li>
+                <li>
+                  {next && (
+                    <Link to={next.fields.slug} rel="next" className="pageLink">
+                      <span className="pageLink__text">
+                        {next.frontmatter.title}
+                      </span>
+                      <ArrowRightIcon />
+                    </Link>
+                  )}
+                </li>
+              </ul>
+            </nav>
+          </section>
+        )}
       </Container>
     </Layout>
   );

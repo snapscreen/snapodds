@@ -13,7 +13,6 @@
 }
 
 .baseCopy {
-  @apply font-mono;
   @apply text-sm text-skin-fg-muted;
   @apply my-3;
 }

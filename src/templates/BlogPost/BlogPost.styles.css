@@ -4,3 +4,30 @@
 .article samp {
   @apply break-all whitespace-pre-wrap;
 }
+
+.pageNav {
+  @apply mt-16 pt-16 border-t border-skin-base-muted;
+}
+
+.pageNav__title {
+  @apply font-bold;
+  @apply text-center;
+}
+
+.pageNav__nav {
+  @apply mt-8 grid grid-cols-blog;
+}
+
+.pageNav ul {
+  @apply col-start-2 text-lg flex flex-wrap justify-between;
+}
+
+.pageLink {
+  @apply py-4;
+}
+
+.pageLink svg {
+  @apply inline;
+  @apply mx-2;
+  @apply h-5 w-5;
+}

@@ -10,7 +10,7 @@
 }
 .card__footer {
   @apply flex justify-between;
-  @apply font-mono text-xs text-skin-fg-muted;
+  @apply text-sm text-skin-fg-muted;
   @apply mt-2 pt-2;
   @apply border-t border-skin-base-muted;
 }

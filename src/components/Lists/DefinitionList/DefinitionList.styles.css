@@ -1,7 +1,5 @@
 .definitionList {
-  @apply font-mono;
   @apply mt-8;
-  @apply text-skin-fg-muted;
   @apply flex;
 }
 
@@ -10,5 +8,5 @@
 }
 .definitionList dd {
   @apply text-sm;
-  @apply ml-3;
+  @apply ml-1;
 }
