@@ -6,7 +6,7 @@ var QRCode = require("qrcode.react");
 
 const TryNow: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  let url = "https://bet.us.snapscreen.com/snap";
+  let url = "https://bit.ly/SnapOddsDemo";
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="SnapOdds demo" />
@@ -15,11 +15,12 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
         lead="We commit ourselves to create a great user experience. Best way to understand how easy SnapOdds works is to trying it."
       ></Hero>
       <Container>
-        <div className="relative prose prose-lg lg:prose-xl mx-auto space-y-16 text-center">
-          <section>
+        <ol className="relative prose prose-lg lg:prose-xl mx-auto space-y-16 text-center">
+          <li>
             <h2 className="text-center">
               1. Scan QR code with your mobile phone.
             </h2>
+            <p>For the best experience download our demo iPhone app in the App Store.</p>
             <div className="rect">
               <span>
                 <QRCode
@@ -29,31 +30,16 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
                 />
               </span>
             </div>
-            <p>Or</p>
-            <p>
-              Open <span className="text-skin-primary">{url}</span> in your
-              mobile phone webbrowser.
-            </p>
-          </section>
-          <div className="flex justify-center" aria-hidden="true">
-            <span
-              className="flex h-24 w-0.5 bg-skin-base-muted"
-              aria-hidden="true"
-            />
-          </div>
-          <section>
-            <h2 className="text-center">2. Allow camera access.</h2>
-            <p>Play the video below.</p>
-          </section>
-          <div className="flex justify-center" aria-hidden="true">
-            <span
-              className="flex h-24 w-0.5 bg-skin-base-muted"
-              aria-hidden="true"
-            />
-          </div>
-          <section>
+            <div className="flex justify-center mt-8" aria-hidden="true">
+              <span
+                className="flex h-24 w-0.5 bg-skin-fg"
+                aria-hidden="true"
+              />
+            </div>
+          </li>
+          <li>
             <h2 className="text-center">
-              3. Take a Snap of the playing video.
+              2. Snap the demo video below or a game on TV.
             </h2>
             <p>Fit the video in the view rectangle.</p>
             <div className="aspect-w-16 aspect-h-9">
@@ -66,14 +52,14 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
                 allowFullScreen
               ></iframe>
             </div>
-          </section>
-          <div className="flex justify-center" aria-hidden="true">
-            <span
-              className="flex h-24 w-0.5 bg-skin-base-muted"
-              aria-hidden="true"
-            />
-          </div>
-          <section>
+            <div className="flex justify-center mt-8" aria-hidden="true">
+              <span
+                className="flex h-24 w-0.5 bg-skin-fg"
+                aria-hidden="true"
+              />
+            </div>
+          </li>
+          <li>
             <h2 className="text-center">
               <span aria-label="Celebrate" role="img">
                 🎉
@@ -84,8 +70,8 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             <Button to="/contact" as="link" styleType="primary">
               Interested? Get in touch.
             </Button>
-          </section>
-        </div>
+          </li>
+        </ol>
       </Container>
     </Layout>
   );
