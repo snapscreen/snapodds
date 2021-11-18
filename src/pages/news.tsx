@@ -50,7 +50,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                   />
                   <figcaption>
                     <p>Portrait of Thomas Willomitzer, CEO – Snapscreen, Inc.</p>
-                    <Button as="externalLink" href="https://google.com">
+                    <Button as="externalLink" href="https://raw.githubusercontent.com/zeitvertrieb/snapodds/main/src/images/Thomas-Willomitzer-Portrait-SnapOdds.jpg">
                       <span>Download JPG</span>
                       <DownloadIcon className="w-6 h-6" />
                     </Button>
