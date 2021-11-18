@@ -88,7 +88,11 @@ export const Footer: React.FC<EmptyProps> = () => {
             <Nav links={links} />
           </div>
           <Logo icon />
-          <p className="baseCopy">SnapOdds and the SnapOdds logo are trademarks owned by Snapscreen, Inc. Other names and brands may be claimed as the property of others.</p>
+          <p className="baseCopy">
+            SnapOdds and the SnapOdds logo are trademarks owned by Snapscreen,
+            Inc. Other names and brands may be claimed as the property of
+            others.
+          </p>
           <p className="baseCopy">
             &copy; {new Date().getFullYear()}{" "}
             <span>Snapscreen, Inc. All rights reserved.</span>
