@@ -9,6 +9,10 @@
   @apply focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus focus:scale-95;
 }
 
+.btn * + * {
+  @apply ml-2;
+}
+
 .btn.primary {
   @apply bg-skin-primary;
   @apply text-skin-fg-focus;

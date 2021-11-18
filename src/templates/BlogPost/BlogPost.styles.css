@@ -15,11 +15,12 @@
 }
 
 .pageNav__nav {
-  @apply mt-8 grid grid-cols-blog;
+  @apply mt-8;
 }
 
 .pageNav ul {
-  @apply col-start-2 text-lg flex flex-wrap justify-between;
+  @apply text-lg;
+  @apply flex flex-wrap justify-center space-y-2;
 }
 
 .pageLink {

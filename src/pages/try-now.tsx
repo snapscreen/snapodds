@@ -6,7 +6,9 @@ var QRCode = require("qrcode.react");
 
 const TryNow: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+
   let url = "https://bit.ly/SnapOddsDemo";
+  
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="SnapOdds demo" />
@@ -20,7 +22,10 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             <h2 className="text-center">
               1. Scan QR code with your mobile phone.
             </h2>
-            <p>For the best experience download our demo iPhone app in the App Store.</p>
+            <p>
+              For the best experience download our demo iPhone app in the App
+              Store.
+            </p>
             <div className="rect">
               <span>
                 <QRCode
@@ -31,20 +36,21 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               </span>
             </div>
             <div className="flex justify-center mt-8" aria-hidden="true">
-              <span
-                className="flex h-24 w-0.5 bg-skin-fg"
-                aria-hidden="true"
-              />
+              <span className="flex h-24 w-0.5 bg-skin-fg" aria-hidden="true" />
             </div>
           </li>
           <li>
             <h2 className="text-center">
               2. Snap the demo video below or a game on TV.
             </h2>
-            <p>Fit the video in the view rectangle.</p>
+            <p>
+              SnapOdds works for any game live on TV!
+              <br />
+              The video below is only temporarily used for demo reasons.
+            </p>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://player.vimeo.com/video/146022717?color=0c88dd&title=0&byline=0&portrait=0&badge=0&muted=1"
+                src="https://player.vimeo.com/video/639957702?color=0c88dd&title=0&byline=0&portrait=0&badge=0&muted=1"
                 width="640"
                 height="360"
                 frameBorder="0"
@@ -53,10 +59,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               ></iframe>
             </div>
             <div className="flex justify-center mt-8" aria-hidden="true">
-              <span
-                className="flex h-24 w-0.5 bg-skin-fg"
-                aria-hidden="true"
-              />
+              <span className="flex h-24 w-0.5 bg-skin-fg" aria-hidden="true" />
             </div>
           </li>
           <li>

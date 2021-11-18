@@ -8,9 +8,9 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="We’ve cracked in-play sports betting aquisition!" />
+      <Seo title="We’ve cracked converting viewers into bettors!" />
       <Hero
-        title="We’ve cracked in-play sports betting aquisition!"
+        title="We’ve cracked converting viewers into bettors!"
         lead="Just snap the TV or streaming and we find all odds for the game.
       We enable your players a greater sports betting experience.
       SnapOdds is the “Shazam” for sports betting."

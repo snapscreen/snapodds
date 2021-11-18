@@ -44,7 +44,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
         </article>
         {(previous || next) && (
           <section className="pageNav">
-            <div className="pageNav__title">Continue reading</div>
+            <div className="pageNav__title">Further readings</div>
             <nav className="pageNav__nav">
               <ul>
                 <li>

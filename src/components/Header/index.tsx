@@ -10,7 +10,7 @@ const navigation = {
   links: [
     { name: "Meet SnapOdds", to: "/" },
     { name: "How it works", to: "/how-it-works" },
-    { name: "News", to: "/news" },
+    { name: "Newsroom", to: "/news" },
     { name: "Contact", to: "/contact" },
   ],
 };
