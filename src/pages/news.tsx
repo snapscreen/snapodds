@@ -63,18 +63,18 @@ const News: React.FC<PageProps> = ({ data, location }) => {
               </div>
               <h2>Images for Press</h2>
               <div className="py-2">
-                <div className="flex flex-col sm:flex-row sm:space-x-4 items-center">
+                <div className="flex flex-col items-start sm:flex-row items-center">
                   <StaticImage
                     src="../images/Thomas-Willomitzer-Portrait-SnapOdds.jpg"
                     alt="Portrait of Thomas Willomitzer, CEO Snapscreen Inc."
                     placeholder="blurred"
                     layout="fixed"
-                    height={300}
-                    width={380}
+                    height={320}
+                    className="w-full mr-auto"
                   />
-                  <figcaption>
+                  <figcaption className="w-full flex-1 sm:ml-8">
                     <p>
-                      Portrait of Thomas Willomitzer, CEO – Snapscreen, Inc.
+                      Portrait of Thomas Willomitzer<br />CEO – Snapscreen, Inc.
                     </p>
                     <Button
                       as="externalLink"
@@ -87,7 +87,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                 </div>
               </div>
             </div>
-            <hr className="mt-4" />
+            <hr className="mt-4 border-skin-base-muted" />
           </section>
           <section>
             <div className="prose prose-lg sm:p-4 mb-8 md:mb-0">
