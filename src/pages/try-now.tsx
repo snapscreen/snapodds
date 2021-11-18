@@ -8,7 +8,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   let url = "https://bit.ly/SnapOddsDemo";
-  
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="SnapOdds demo" />
