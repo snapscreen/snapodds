@@ -16,7 +16,6 @@ export const Logo: React.FC<LogoProps> = ({
 }) => {
   return (
     <Button as="link" to="/" styleType="ghost">
-      <span className="sr-only">SnapOdds</span>
       <span className={className}>
         {icon ? (
           <svg
@@ -123,6 +122,7 @@ export const Logo: React.FC<LogoProps> = ({
           </svg>
         )}
       </span>
+      <span className="sr-only">SnapOdds</span>
     </Button>
   );
 };

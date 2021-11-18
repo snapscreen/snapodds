@@ -1,6 +1,6 @@
 .footer {
   @apply text-center;
-  @apply py-8 mt-12;
+  @apply py-8 mt-8;
 }
 
 .social {

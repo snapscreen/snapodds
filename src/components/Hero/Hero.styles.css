@@ -4,19 +4,16 @@
   @apply bg-skin-base;
 }
 
-.heroBackground > img {
-  @apply absolute inset-0 z-0;
-}
-
 .heroBackground + .hero {
+  @apply min-h-[70vh];
   @apply text-white;
-  @apply min-h-[60vh];
 }
 
 .hero {
   @apply relative z-10 overflow-visible;
   @apply py-16;
   @apply mx-auto;
+  @apply min-h-[60vh];
 }
 
 .lead {

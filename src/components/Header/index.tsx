@@ -45,8 +45,8 @@ export const Header: React.FC<EmptyProps> = () => {
           </div>
           <div className="lg:hidden">
             <Popover.Button className="btn icon">
-              <span className="mr-2">Menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <span className="mr-2">Menu</span>
             </Popover.Button>
           </div>
         </div>
@@ -66,8 +66,8 @@ export const Header: React.FC<EmptyProps> = () => {
               <div className="z-50 flex items-center justify-between">
                 <div className="-mt-2 order-2 flex flex-row-reverse">
                   <Popover.Button className="btn icon">
-                    <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <span className="sr-only">Close menu</span>
                   </Popover.Button>
                   <div className="mr-2">
                     <ThemeSwitch />

@@ -31,7 +31,13 @@ const News: React.FC<PageProps> = ({ data, location }) => {
       <Hero
         title="Newsroom and Press"
         lead="Thanks for following our journey. Find here our press releases and brand assets."
-      />
+      >
+        <div className="flex justify-center sm:hidden">
+          <Button as="link" to="/news#articles">
+            Jump to press releases
+          </Button>
+        </div>
+      </Hero>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <section>
@@ -74,7 +80,9 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                   />
                   <figcaption className="w-full flex-1 sm:ml-8">
                     <p>
-                      Portrait of Thomas Willomitzer<br />CEO – Snapscreen, Inc.
+                      Portrait of Thomas Willomitzer
+                      <br />
+                      CEO – Snapscreen, Inc.
                     </p>
                     <Button
                       as="externalLink"
@@ -89,7 +97,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
             </div>
             <hr className="mt-4 border-skin-base-muted" />
           </section>
-          <section>
+          <section id="articles">
             <div className="prose prose-lg sm:p-4 mb-8 md:mb-0">
               <h2>Press releases</h2>
             </div>

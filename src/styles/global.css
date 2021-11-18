@@ -9,10 +9,10 @@
   html,
   body {
     @apply bg-skin-base text-skin-fg;
-    background-image:
+    /* background-image:
     radial-gradient(at 92% 8%, hsla(215,15%,47%,.2) 0, transparent 60%),
     radial-gradient(at 93% 100%, hsla(217,100%,70%,.4) 0, transparent 60%),
-    radial-gradient(at 0% 0%, hsla(173,100%,78%,.6) 0, transparent 60%);
+    radial-gradient(at 0% 0%, hsla(173,100%,78%,.6) 0, transparent 60%); */
   }
 
   :root {
@@ -20,7 +20,7 @@
     --color-primary-tint: #99f6e4;
     --color-primary-shade: #14b8a6;
     --color-primary-contrast: var(--color-primary-shade);
-    --color-background: #f5f6fa;
+    --color-background: #f5f5f5;
     --color-background-muted: #e7e5fd;
     --color-background-flash: #ffffff;
     --color-header-background: 255, 255, 255;
@@ -32,7 +32,7 @@
 
   .dark {
     --color-primary-contrast: var(--color-primary);
-    --color-background: #0c171a;
+    --color-background: #0e1318;
     --color-background-muted: #333e48;
     --color-background-flash: #000;
     --color-header-background: 0, 0, 0;
@@ -86,6 +86,9 @@ h2, .h2 {
   @apply text-current;
 }
 
+.prose h1 {
+  @apply text-current;
+}
 
 /* rectangles */
 .rect {

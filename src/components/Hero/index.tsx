@@ -13,23 +13,20 @@ type HeroProps = {
 
 export const Hero: React.FC<HeroProps> = ({ title, lead, img, children }) => {
   return (
-    <div className="">
+    <div className="relative overflow-hidden">
       {!img ? null : (
-        <div className="heroBackground bg-indigo-700">
-          <img src={img} alt="" />
-        </div>
+        <div
+          className="heroBackground absolute inset-0 overflow-hidden bg-cover"
+          style={{ backgroundImage: `url(${img})` }}
+        />
       )}
-      <div className="hero prose prose-xl lg:prose-2xl">
+      <div className="hero prose prose-xl lg:prose-2xl max-w-screen-2xl px-4">
         <Container>
           <section>
             <CalloutHeading itemProp="headline" text={title} />
-            <p className="lead sm:text-center mx-auto mt-16">{lead}</p>
+            <p className="lead mt-16">{lead}</p>
           </section>
-          {!children ? null : (
-            <section className="py-16 sm:text-center mx-auto">
-              {children}
-            </section>
-          )}
+          {!children ? null : <section className="mx-auto">{children}</section>}
         </Container>
       </div>
     </div>

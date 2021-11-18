@@ -10,7 +10,7 @@
 }
 
 .btn * + * {
-  @apply ml-4 -mr-2;
+  @apply ml-4;
 }
 
 .btn.primary {
