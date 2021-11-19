@@ -15,9 +15,9 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
         lead="SnapOdds is a service from Snapscreen that helps you to aquire betting players instantly. SnapOdds is easily integrated into your app as SDK or Webbanner into your website."
       ></Hero>
       <Container>
-        <article className="mx-auto prose prose-xl max-w-full space-y-32">
+        <article className="mx-auto prose prose-xl max-w-full space-y-8">
           <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 p-8">
               <StaticImage
                 src="../images/solution-sdk.png"
                 alt="SnapOdds SDK"
@@ -39,6 +39,14 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center">
+            <div className="w-full md:w-1/2 p-8 md:order-2">
+              <StaticImage
+                src="../images/solution-banner.png"
+                alt="SnapOdds SDK"
+                placeholder="blurred"
+                layout="fullWidth"
+              />
+            </div>
             <div className="w-full md:w-1/2">
               <h2>SnapOdds Banner</h2>
               <ul className="lead">
@@ -49,14 +57,6 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
                 <li>Open new opportunities for consumer acquisition</li>
                 <li>The smartest ad banner in history</li>
               </ul>
-            </div>
-            <div className="w-full md:w-1/2">
-              <StaticImage
-                src="../images/solution-banner.png"
-                alt="SnapOdds SDK"
-                placeholder="blurred"
-                layout="fullWidth"
-              />
             </div>
           </div>
         </article>

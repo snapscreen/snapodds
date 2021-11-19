@@ -1,6 +1,6 @@
 import React from "react";
 import { EmptyProps } from "@/definitions";
-import { Container, Button, Logo, Nav, ScrollTop } from "@/components";
+import { Container, Button, Nav, ScrollTop } from "@/components";
 
 import "./Footer.styles.css";
 

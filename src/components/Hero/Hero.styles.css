@@ -12,6 +12,7 @@
 .hero {
   @apply relative z-10 overflow-visible;
   @apply py-16;
+  @apply max-w-screen-2xl;
   @apply mx-auto;
   @apply min-h-[60vh];
 }

@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ title, lead, img, children }) => {
           style={{ backgroundImage: `url(${img})` }}
         />
       )}
-      <div className="hero prose prose-xl lg:prose-2xl max-w-screen-2xl px-4">
+      <div className="hero prose prose-xl lg:prose-2xl">
         <Container>
           <section>
             <CalloutHeading itemProp="headline" text={title} />
