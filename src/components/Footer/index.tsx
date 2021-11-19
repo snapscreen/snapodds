@@ -38,7 +38,7 @@ export const Footer: React.FC<EmptyProps> = () => {
               </g>
             </svg>
           </div>
-          <p>SnapOdds by Snapscreen, Techstars portfolio company.</p>
+          <p>By Snapscreen Inc., a Techstars portfolio company.</p>
         </div>
         <div className="base">
           <div className="flex justify-center mb-4">

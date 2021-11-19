@@ -5,7 +5,7 @@ module.exports = {
     author: {
       name: `Matthias Grieder`,
     },
-    description: `SnapOdds Website`,
+    description: `We’ve cracked converting viewers into bettors!`,
     siteUrl: `https://zeitvertrieb.github.io/snapodds/`,
     social: {
       linkedin: `snapodds`,

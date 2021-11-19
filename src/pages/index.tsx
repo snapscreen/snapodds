@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Seo } from "@/components";
+import { Layout, Container, Hero, Button, Seo } from "@/components";
 
 const Home: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -26,6 +26,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
             className="w-full sm:w-1/2 md:w-1/3 relative sm:absolute right-0 bottom-0 sm:translate-y-[50%]"
           />
         </div>
+        <Button as="link" to="/how-it-works" styleType="primary">Explore how it works</Button>
       </Hero>
       <Container></Container>
     </Layout>
