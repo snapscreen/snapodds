@@ -17,9 +17,9 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
           <Button
             as="externalLink"
             styleType="primary"
-            href="mailto:hello@snapodds.tv"
+            href="mailto:hello@snapodds.com"
           >
-            hello@snapodds.tv
+            hello@snapodds.com
           </Button>
         </div>
       </Hero>

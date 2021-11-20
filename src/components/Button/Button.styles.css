@@ -13,6 +13,10 @@
   @apply ml-4;
 }
 
+.btn.normal {
+  @apply bg-skin-base-muted;
+}
+
 .btn.primary {
   @apply bg-skin-primary;
   @apply text-skin-fg-focus;

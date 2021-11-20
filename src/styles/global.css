@@ -32,9 +32,9 @@
 
   .dark {
     --color-primary-contrast: var(--color-primary);
-    --color-background: #0e1318;
-    --color-background-muted: #333e48;
-    --color-background-flash: #000;
+    --color-background: #00172e;
+    --color-background-muted: #062643;
+    --color-background-flash: #062643;
     --color-header-background: 0, 0, 0;
     --color-text: #fff;
     --color-text-muted: #b8bec6;

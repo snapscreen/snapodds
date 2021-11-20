@@ -61,12 +61,13 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                 </p>
               </div>
               <h2>About Snapscreen, Inc.</h2>
-              <div className="py-2">
+              <p className="py-2">
                 Based in New York with offices in Austria and Australia,
                 Snapscreen is a technology company focused on the use of mobile
-                devices and image recognition in the world of sports and
-                entertainment. Snapscreen is a Techstars portfolio company.
-              </div>
+                devices and image recognition for broadcast TV and streaming in
+                the world of sports and entertainment - think of "Shazam for
+                Sports Betting"
+              </p>
               <h2>Images for Press</h2>
               <div className="py-2">
                 <div className="flex flex-col items-start sm:flex-row items-center">
@@ -82,11 +83,12 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                     <p>
                       Portrait of Thomas Willomitzer
                       <br />
-                      CEO – Snapscreen, Inc.
+                      Founder & CEO – Snapscreen, Inc.
                     </p>
                     <Button
                       as="externalLink"
                       href="https://raw.githubusercontent.com/zeitvertrieb/snapodds/main/src/images/Thomas-Willomitzer-Portrait-SnapOdds.jpg"
+                      styleType="normal"
                     >
                       <span>Download JPG</span>
                       <DownloadIcon className="w-6 h-6" />

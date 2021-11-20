@@ -6,7 +6,7 @@ module.exports = {
       name: `Matthias Grieder`,
     },
     description: `We’ve cracked converting viewers into bettors!`,
-    siteUrl: `https://zeitvertrieb.github.io/snapodds/`,
+    siteUrl: `https://snapodds.com`,
     social: {
       linkedin: `snapodds`,
       github: `zeitvertrieb/snapodds`,

@@ -675,7 +675,7 @@ const TermsOfUse: React.FC<PageProps> = ({ data, location }) => {
             19901
           </p>
           <p>
-            Email: <a href="mailto:hello@snapodds.tv">hello@snapodds.tv</a>
+            Email: <a href="mailto:hello@snapodds.com">hello@snapodds.com</a>
           </p>
         </article>
       </Container>

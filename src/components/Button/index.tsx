@@ -7,7 +7,7 @@ import "./Button.styles.css";
 type BaseProps = {
   children: React.ReactNode;
   className?: string;
-  styleType?: "primary" | "default" | "ghost" | "icon";
+  styleType?: "primary" | "normal" | "ghost" | "icon";
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 };
 
