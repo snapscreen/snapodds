@@ -1,10 +1,11 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Seo } from "@/components";
+import { Layout, Container, Hero, Seo, Button } from "@/components";
 
 const TermsOfUse: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const email = data.site.siteMetadata.email;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -674,9 +675,13 @@ const TermsOfUse: React.FC<PageProps> = ({ data, location }) => {
             Company Agent, 9 E. LOOCKERMAN STREET SUITE 311 DOVER, Delaware
             19901
           </p>
-          <p>
-            Email: <a href="mailto:hello@snapodds.com">hello@snapodds.com</a>
-          </p>
+          <Button
+            as="externalLink"
+            styleType="primary"
+            href={"mailto:"+{email}}
+          >
+            {email}
+          </Button>
         </article>
       </Container>
     </Layout>
@@ -690,6 +695,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        email
       }
     }
   }

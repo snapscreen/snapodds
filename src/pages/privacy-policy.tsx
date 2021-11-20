@@ -1,10 +1,11 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Seo } from "@/components";
+import { Layout, Container, Hero, Seo, Button } from "@/components";
 
 const Privacy: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const email = data.site.siteMetadata.email;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -123,8 +124,15 @@ const Privacy: React.FC<PageProps> = ({ data, location }) => {
           <h2>Contact Us</h2>
           <p>
             If you have any questions or suggestions about our Privacy Policy,
-            do not hesitate to contact us at hello@snapodds.com.
+            do not hesitate to contact us.
           </p>
+          <Button
+            as="externalLink"
+            styleType="primary"
+            href={"mailto:"+{email}}
+          >
+            {email}
+          </Button>
         </article>
       </Container>
     </Layout>
@@ -138,6 +146,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        email
       }
     }
   }

@@ -25,8 +25,8 @@ export const Hero: React.FC<HeroProps> = ({ title, lead, img, children }) => {
           <section>
             <CalloutHeading itemProp="headline" text={title} />
             <p className="lead mt-16">{lead}</p>
+            {!children ? null : children}
           </section>
-          {!children ? null : <section className="mx-auto">{children}</section>}
         </Container>
       </div>
     </div>

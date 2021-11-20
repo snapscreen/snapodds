@@ -5,6 +5,7 @@ import { Layout, Container, Hero, Button, Seo } from "@/components";
 
 const Contact: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const email = data.site.siteMetadata.email;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -13,15 +14,13 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
         title="Your bright future starts with a simple conversation!"
         lead="Whether you are curious how SnapOdds works with you, or you’d like to know your growth content potential, we’d love to chat with you."
       >
-        <div className="text-center">
-          <Button
-            as="externalLink"
-            styleType="primary"
-            href="mailto:hello@snapodds.com"
-          >
-            hello@snapodds.com
-          </Button>
-        </div>
+        <Button
+          as="externalLink"
+          styleType="primary"
+          href={"mailto:"+{email}}
+        >
+          {email}
+        </Button>
       </Hero>
       <Container></Container>
     </Layout>
@@ -35,6 +34,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        email
       }
     }
   }

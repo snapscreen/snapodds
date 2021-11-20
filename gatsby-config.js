@@ -7,6 +7,7 @@ module.exports = {
     },
     description: `SnapOdds`,
     siteUrl: `https://snapodds.com`,
+    email: `hello@snapodds.com`,
     social: {
       linkedin: `snapodds`,
       github: `snapscreen/snapodds`,

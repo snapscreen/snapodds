@@ -9,12 +9,26 @@
   @apply text-white;
 }
 
+.heroBackground + .hero h1,
+.heroBackground + .hero .lead,
+.heroBackground .hero > * {
+  @apply text-left;
+  @apply ml-0;
+}
+
 .hero {
   @apply relative z-10 overflow-visible;
   @apply py-16;
   @apply max-w-screen-2xl;
   @apply mx-auto;
   @apply min-h-[60vh];
+}
+
+.hero h1,
+.hero .lead,
+.hero > * {
+  @apply text-center;
+  @apply mx-auto;
 }
 
 .lead {

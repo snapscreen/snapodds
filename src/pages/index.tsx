@@ -26,9 +26,11 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
             className="w-full sm:w-1/2 md:w-1/3 relative sm:absolute right-0 bottom-0 sm:translate-y-[50%]"
           />
         </div>
-        <Button as="link" to="/how-it-works" styleType="primary">
-          Explore how it works
-        </Button>
+        <div className="flex justify-center md:justify-start">
+          <Button as="link" to="/how-it-works" styleType="primary">
+            Explore how it works
+          </Button>
+        </div>
       </Hero>
       <Container></Container>
     </Layout>

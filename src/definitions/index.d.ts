@@ -48,6 +48,7 @@ interface PageProps {
 interface ISite {
   siteMetadata: {
     title: string;
+    email: string;
     description: string;
     author: {
       name: string;
