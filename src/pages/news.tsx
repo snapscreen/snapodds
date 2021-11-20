@@ -47,7 +47,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                 <Button
                   as="externalLink"
                   styleType="primary"
-                  href="https://github.com/zeitvertrieb/snapodds/raw/main/static/SnapOdds-Logo-Kit.zip"
+                  href="https://github.com/snapscreen/snapodds/raw/main/static/SnapOdds-Logo-Kit.zip"
                 >
                   <span>Get Logo Kit</span>
                   <DownloadIcon className="w-6 h-6" />
@@ -87,7 +87,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                     </p>
                     <Button
                       as="externalLink"
-                      href="https://raw.githubusercontent.com/zeitvertrieb/snapodds/main/src/images/Thomas-Willomitzer-Portrait-SnapOdds.jpg"
+                      href="https://raw.githubusercontent.com/snapscreen/snapodds/main/src/images/Thomas-Willomitzer-Portrait-SnapOdds.jpg"
                       styleType="normal"
                     >
                       <span>Download JPG</span>
