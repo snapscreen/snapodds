@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: `https://snapodds.com`,
     social: {
       linkedin: `snapodds`,
-      github: `zeitvertrieb/snapodds`,
+      github: `snapscreen/snapodds`,
     },
   },
   plugins: [

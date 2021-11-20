@@ -2,13 +2,13 @@
   "name": "SnapOdds",
   "description": "SnapOdds website",
   "version": "1.0.0",
-  "homepage": "https://zeitvertrieb.github.io/snapodds/",
+  "homepage": "https://snapscreen.github.io/snapodds/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zeitvertrieb/snapodds"
+    "url": "https://github.com/snapscreen/snapodds"
   },
   "bugs": {
-    "url": "https://github.com/zeitvertrieb/snapodds/issues"
+    "url": "https://github.com/snapscreen/snapodds/issues"
   },
   "author": "Matthias Grieder <matthias@snapscreen.com>",
   "license": "MIT",
