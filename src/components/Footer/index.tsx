@@ -98,9 +98,8 @@ export const Footer: React.FC<EmptyProps> = () => {
             </ul>
           </div>
           <p className="baseCopy">
-            SnapOdds and the SnapOdds logo are trademarks owned by Snapscreen,
-            Inc. Other names and brands may be claimed as the property of
-            others.
+            SnapOdds is a trademark owned by Snapscreen, Inc.
+            Other names and brands may be claimed as the property of others.
           </p>
           <p className="baseCopy">
             &copy; {new Date().getFullYear()}{" "}

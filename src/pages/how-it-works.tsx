@@ -51,7 +51,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
               <h2>SnapOdds Banner</h2>
               <ul className="lead">
                 <li>
-                  Embed DK branded snapping into 3rd party iOS, Android and
+                  Embed branded snapping into 3rd party iOS, Android and
                   mobile web apps
                 </li>
                 <li>Open new opportunities for consumer acquisition</li>
