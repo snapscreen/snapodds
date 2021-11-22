@@ -2,7 +2,7 @@
   "name": "SnapOdds",
   "description": "SnapOdds website",
   "version": "1.0.0",
-  "homepage": "https://snapscreen.github.io/snapodds/",
+  "homepage": "https://snapodds.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/snapscreen/snapodds"
@@ -27,9 +27,6 @@
     "clean": "gatsby clean",
     "tsc": "tsc",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build",
-    "docz:serve": "docz build && docz serve",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages"
   },
   "dependencies": {
@@ -47,6 +44,7 @@
     "framer-motion": "^4.1.17",
     "gatsby": "^4.0.1",
     "gatsby-plugin-build-date": "^1.0.0",
+    "gatsby-plugin-cname": "^1.0.0",
     "gatsby-plugin-feed": "^4.0.0",
     "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-manifest": "^4.0.0",

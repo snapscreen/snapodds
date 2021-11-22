@@ -11,7 +11,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="We’ve cracked converting viewers into bettors!" />
       <Hero
-        title="We’ve cracked converting viewers into bettors!"
+        title="It’s a Snap converting viewers into bettors!"
         img={sportsBar}
       >
         <div className="relative w-full flex flex-col h-full sm:pr-80 lg:pr-96">

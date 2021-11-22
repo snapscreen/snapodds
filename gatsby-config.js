@@ -1,16 +1,15 @@
 module.exports = {
-  pathPrefix: `/snapodds`,
+  pathPrefix: `/`,
   siteMetadata: {
+    siteUrl: `https://snapodds.com/`,
     title: "SnapOdds",
+    description: `It’s a Snap converting viewers into bettors!`,
     author: {
       name: `Matthias Grieder`,
     },
-    description: `SnapOdds`,
-    siteUrl: `https://snapodds.com`,
     email: `hello@snapodds.com`,
     social: {
       linkedin: `snapodds`,
-      github: `snapscreen/snapodds`,
     },
   },
   plugins: [
@@ -120,7 +119,7 @@ module.exports = {
         name: `SnapOdds`,
         short_name: `SnapOdds`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#00172e`,
         theme_color: `#2DD4BF`,
         display: `minimal-ui`,
         icon: `src/images/SnapOdds_Icon.svg`, // This path is relative to the root of the site.
