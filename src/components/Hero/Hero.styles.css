@@ -27,8 +27,8 @@
 .hero h1,
 .hero .lead,
 .hero > * {
-  @apply text-center;
-  @apply mx-auto;
+  @apply lg:text-center;
+  @apply lg:mx-auto;
 }
 
 .lead {
