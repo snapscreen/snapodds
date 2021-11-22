@@ -5,4 +5,5 @@ The documentation is hosted on Github Pages and built with Gatsby and Gatsby MDX
 
 ## Licence
 
+SnapOdds is a trademark owned by Snapscreen, Inc.
 SnapOdds website is licensed under the terms of the [Apache License 2.0](LICENSE).
