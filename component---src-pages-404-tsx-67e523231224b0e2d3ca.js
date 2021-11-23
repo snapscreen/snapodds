@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkSnapOdds=self.webpackChunkSnapOdds||[]).push([[218],{6040:function(e,t,a){a.r(t);var n=a(7294),l=a(5128);t.default=function(e){var t=e.data,a=e.location,o=t.site.siteMetadata.title;return n.createElement(l.Ar,{location:a,title:o},n.createElement(l.pQ,{title:"404: Not Found"}),n.createElement(l.VM,{title:"We are sorry.",lead:"The content you are looking for could not be found."},n.createElement(l.zx,{as:"link",styleType:"primary",to:"/"},"Meet SnapOdds")))}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-67e523231224b0e2d3ca.js.map
