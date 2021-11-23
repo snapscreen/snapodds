@@ -11,8 +11,8 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="How SnapOdds works." />
       <Hero
-        title="Get odds with just a snap of the live TV screen."
-        lead="SnapOdds is a service from Snapscreen that helps you to aquire betting players instantly. SnapOdds is easily integrated into your app as SDK or Webbanner into your website."
+        title="Display odds with just a snap of the live TV screen."
+        lead="SnapOdds is a revolutionary bet discovery and engagement tool from Snapscreen. Integrate into your web and mobile experiences and acquisition path to create a dynamic, frictionless path to wagering."
       ></Hero>
       <Container>
         <article className="mx-auto prose prose-xl max-w-full space-y-8">
@@ -51,8 +51,8 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
               <h2>SnapOdds Banner</h2>
               <ul className="lead">
                 <li>
-                  Embed branded snapping into 3rd party iOS, Android and
-                  mobile web apps
+                  Embed branded snapping into 3rd party iOS, Android and mobile
+                  web apps
                 </li>
                 <li>Open new opportunities for consumer acquisition</li>
                 <li>The smartest ad banner in history</li>

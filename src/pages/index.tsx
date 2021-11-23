@@ -16,9 +16,10 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
       >
         <div className="relative w-full flex flex-col h-full sm:pr-80 lg:pr-96">
           <p className="lead">
-            Just snap the TV or streaming and we find all odds for the game. We
-            enable your players a greater sports betting experience. SnapOdds is
-            the “Shazam” for sports betting.
+            Just snap the game on live TV and we find the odds in a flash. We
+            enable your players a greater sports betting experience. Upgrade
+            your Sportsbook experience or player acquisition with frictionless
+            bet discovery!
           </p>
           <img
             src="iPhone.png"
@@ -28,7 +29,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
         </div>
         <div className="flex justify-center md:justify-start">
           <Button as="link" to="/how-it-works" styleType="primary">
-            Explore how it works
+            How it works
           </Button>
         </div>
       </Hero>

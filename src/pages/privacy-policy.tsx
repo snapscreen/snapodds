@@ -129,7 +129,7 @@ const Privacy: React.FC<PageProps> = ({ data, location }) => {
           <Button
             as="externalLink"
             styleType="primary"
-            href={"mailto:"+{email}}
+            href={"mailto:" + { email }}
           >
             {email}
           </Button>
