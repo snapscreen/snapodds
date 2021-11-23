@@ -2,8 +2,7 @@ import React, { ReactNode, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Location } from "history";
-import { IntercomProvider } from "react-use-intercom";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Banner } from "@/components";
 
 interface LayoutProps {
   location: Location;
@@ -12,7 +11,6 @@ interface LayoutProps {
 }
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const INTERCOM_APP_ID = "kk4zxl1p";
   useEffect(() => {
     AOS.init({
       once: true,
@@ -22,10 +20,11 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     });
   });
   return (
-    <IntercomProvider appId={INTERCOM_APP_ID}>
+    <>
       <Header />
+      <Banner />
       <main>{children}</main>
       <Footer />
-    </IntercomProvider>
+    </>
   );
 };

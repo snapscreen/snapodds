@@ -1,0 +1,14 @@
+.banner {
+  @apply bg-skin-focus;
+  @apply py-4;
+}
+
+.banner > * {
+  @apply text-skin-fg-focus;
+  @apply text-center;
+}
+
+.banner p {
+  @apply text-xl;
+  @apply m-0;
+}
