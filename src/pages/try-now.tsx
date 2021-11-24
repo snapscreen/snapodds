@@ -7,7 +7,7 @@ var QRCode = require("qrcode.react");
 const TryNow: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
-  let url = "https://bit.ly/SnapOddsDemo";
+  let url = "https://snapodds.onelink.me/rx4N/de77d92a";
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -41,20 +41,19 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
           </li>
           <li>
             <h2 className="text-center">
-              2. Snap the demo video below or a game on TV.
+              2. Snap the demo video below.
             </h2>
             <p>
-              SnapOdds works for any game live on TV!
-              <br />
-              The video below is only temporarily used for demo reasons.
+              The video below is only temporarily used for demo reasons.<br />
+              Our Demo App works also for live games on TV!
             </p>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://player.vimeo.com/video/639957702?color=0c88dd&title=0&byline=0&portrait=0&badge=0&muted=1"
+                src="https://www.youtube.com/embed/Aw3xFO1wdJ4?controls=0&autoplay=true&start=250"
                 width="640"
                 height="360"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>

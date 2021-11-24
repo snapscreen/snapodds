@@ -75,7 +75,7 @@ export const Footer: React.FC<EmptyProps> = () => {
                 <Button
                   as="externalLink"
                   styleType="ghost"
-                  href="https://www.linkedin.com/company/snapodds/"
+                  href="https://www.linkedin.com/products/snapscreen-snapodds/"
                 >
                   <svg
                     className="h-10 w-10"
