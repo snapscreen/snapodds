@@ -49,7 +49,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             </p>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.youtube.com/embed/Aw3xFO1wdJ4?controls=0&autoplay=true&start=250"
+                src="https://www.youtube.com/embed/Aw3xFO1wdJ4?autoplay=true&mute=1&start=250"
                 width="640"
                 height="360"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
