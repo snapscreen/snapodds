@@ -17,12 +17,23 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
         <Button
           as="externalLink"
           styleType="primary"
-          href={"mailto:" + { email }}
+          href="https://meetings.hubspot.com/willo1/sbc-north-america-meetings"
         >
-          {email}
+          Book a meeting
         </Button>
       </Hero>
-      <Container></Container>
+      <Container>
+        <div className="text-center">
+          <p className="lead mx-auto mb-4">Or write us an email to:</p>
+          <Button
+            as="externalLink"
+            styleType="ghost"
+            href={"mailto:" + { email }}
+          >
+            {email}
+          </Button>
+        </div>
+      </Container>
     </Layout>
   );
 };

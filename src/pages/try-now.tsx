@@ -40,11 +40,10 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             </div>
           </li>
           <li>
-            <h2 className="text-center">
-              2. Snap the demo video below.
-            </h2>
+            <h2 className="text-center">2. Snap the demo video below.</h2>
             <p>
-              The video below is only temporarily used for demo reasons.<br />
+              The video below is only temporarily used for demo reasons.
+              <br />
               Our Demo App works also for live games on TV!
             </p>
             <div className="aspect-w-16 aspect-h-9">
