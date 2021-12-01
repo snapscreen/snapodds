@@ -1,6 +1,6 @@
 import React from "react";
 import { EmptyProps } from "@/definitions";
-import { Container, Button, Nav, ScrollTop } from "@/components";
+import { Container, Button, Nav, ScrollTop, DownloadBadge } from "@/components";
 
 import "./Footer.styles.css";
 
@@ -96,6 +96,9 @@ export const Footer: React.FC<EmptyProps> = () => {
                 </Button>
               </li>
             </ul>
+          </div>
+          <div className="flex justify-center my-6 h-14">
+            <DownloadBadge />
           </div>
           <p className="baseCopy">
             SnapOdds is a trademark owned by Snapscreen, Inc. Other names and

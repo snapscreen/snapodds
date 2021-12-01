@@ -9,7 +9,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="We’ve cracked converting viewers into bettors!" />
+      <Seo title="It’s a Snap converting viewers into bettors!" />
       <Hero
         title="It’s a Snap converting viewers into bettors!"
         img={sportsBar}
