@@ -1,0 +1,8 @@
+.badge {
+  @apply flex;
+  @apply my-auto mx-4;
+}
+
+.badge img {
+  @apply h-auto;
+}

@@ -29,12 +29,11 @@
 .header__left,
 .header__right {
   @apply flex items-center;
-  @apply lg:w-1/5;
 }
 
 .header__center {
-  @apply flex items-center;
-  @apply mx-auto;
+  @apply flex flex-1 items-center;
+  @apply mx-auto ml-6;
 }
 .header__right {
   @apply justify-end;

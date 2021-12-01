@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuAlt2Icon as MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Logo, Nav, ThemeSwitch } from "@/components";
+import { Logo, Nav, ThemeSwitch, DownloadBadge } from "@/components";
 import { EmptyProps } from "@/definitions";
 
 import "./Header.styles.css";
@@ -10,6 +10,7 @@ const navigation = {
   links: [
     { name: "Meet SnapOdds", to: "/" },
     { name: "How it works", to: "/how-it-works" },
+    { name: "Try now", to: "/try-now" },
     { name: "Newsroom", to: "/news" },
     { name: "Contact", to: "/contact" },
   ],
@@ -41,6 +42,7 @@ export const Header: React.FC<EmptyProps> = () => {
         </div>
         <div className="header__right">
           <div className="hidden sm:flex">
+            <DownloadBadge />
             <ThemeSwitch />
           </div>
           <div className="lg:hidden">
@@ -74,6 +76,9 @@ export const Header: React.FC<EmptyProps> = () => {
                   </div>
                 </div>
                 <Logo className="brand -ml-2" />
+              </div>
+              <div className="-mx-4 mt-4">
+                <DownloadBadge />
               </div>
             </div>
             <div className="py-6 px-4 space-y-6">
