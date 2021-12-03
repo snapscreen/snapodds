@@ -22,7 +22,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <Banner />
+      {/* <Banner /> */}
       <main>{children}</main>
       <Footer />
     </>
