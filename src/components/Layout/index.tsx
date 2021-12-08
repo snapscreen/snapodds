@@ -2,7 +2,8 @@ import React, { ReactNode, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Location } from "history";
-import { Header, Footer, Banner } from "@/components";
+import { Header, Footer } from "@/components";
+// import { Banner } from "@/components";
 
 interface LayoutProps {
   location: Location;

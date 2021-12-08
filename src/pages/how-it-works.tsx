@@ -17,6 +17,15 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
         <Button as="link" to="/try-now" styleType="primary">
           Try now
         </Button>
+        <div className="aspect-w-16 aspect-h-9">
+          <video
+            width="640"
+            height="360"
+            controls
+            loop
+            autoPlay
+          ><source src="SnapOdds-video.mp4" type="video/mp4" /></video>
+        </div>
       </Hero>
       <Container>
         <article className="mx-auto prose prose-xl max-w-full space-y-8">
