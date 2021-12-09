@@ -1,6 +1,6 @@
 .badge {
   @apply flex;
-  @apply h-full;
+  @apply h-10;
   @apply my-auto mx-4;
 }
 

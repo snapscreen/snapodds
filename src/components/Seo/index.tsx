@@ -70,7 +70,7 @@ export const Seo: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
     {
       name: `apple-itunes-app`,
       content: `app-id=1596532274,app-argument=https://apps.apple.com/at/app/snapodds/id1596532274`,
-    }
+    },
   ];
 
   const className = getTheme();
@@ -85,8 +85,7 @@ export const Seo: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
       meta={metaProps.concat(meta || [])}
-    >
-    </Helmet>
+    ></Helmet>
   );
 };
 
