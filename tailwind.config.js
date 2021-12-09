@@ -27,16 +27,12 @@ const themes = {
 
 module.exports = {
   mode: "jit",
-  purge: {
-    mode: "all",
-    content: [
-      "./src/**/*.tsx",
-      "./src/**/*.ts",
-      "./content/**/*.tsx",
-      "./content/**/*.mdx",
-    ],
-  },
-  darkMode: "class",
+  content: [
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "./content/**/*.tsx",
+    "./content/**/*.mdx",
+  ],
   theme: {
     extend: {
       typography: (theme) => ({

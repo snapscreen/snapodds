@@ -44,7 +44,6 @@
 
 .brand {
   @apply h-12;
-  @apply -ml-2;
   @apply border-transparent hover:border-transparent;
   @apply focus:outline-none focus:ring-2 focus:ring-skin-focus;
 }
