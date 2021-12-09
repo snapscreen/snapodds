@@ -1,6 +1,6 @@
 .badge {
-  @apply flex;
-  @apply h-10;
+  @apply flex justify-start;
+  @apply w-[7.25rem] h-10;
   @apply my-auto mx-4;
 }
 
