@@ -5979,6 +5979,13 @@ gatsby-plugin-feed@^4.0.0:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
+gatsby-plugin-hubspot@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-hubspot/-/gatsby-plugin-hubspot-2.0.0.tgz#35d393f3a7072fc149d520e1be263cd1b6c4e11f"
+  integrity sha512-QldNOgR4/XOoSTov3mX5q2W0kRP7WMAL7yBxkV9ngqf0iGw47HYTUymYezuJfuaQ9IpOydcdk249ys0OZCKvpw==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+
 gatsby-plugin-image@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.1.0.tgz#71f3568ce7558a84fbcf06ca5ea9b00a1cd9d41d"

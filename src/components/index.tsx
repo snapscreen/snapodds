@@ -15,3 +15,4 @@ export { ThemeSwitch } from "./ThemeSwitch";
 export { Tags } from "./Tags";
 export { ScrollTop } from "./ScrollTop";
 export { Seo } from "./Seo";
+export { HsForm } from "./HsForm";

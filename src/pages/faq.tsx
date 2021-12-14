@@ -1,13 +1,13 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Seo } from "@/components";
+import { Layout, Container, Hero, Seo, HsForm } from "@/components";
 
 const faqs = [
   {
     question: "What was the idea/genesis behind the product?",
     answer:
-      "Thomas Willomitzer (CEO): I watched a Super Bowl game years ago, an Ad was shown with the Shazam logo and I thought there must be a more convenient and robust way to connect TV and mobile. At the time I was founding CTO of ID verification market leader Jumio.com and naturally thought of using the camera to bridge TV and mobile.",
+      "Thomas Willomitzer (CEO): “I watched a Super Bowl game years ago, an Ad was shown with the Shazam logo and I thought there must be a more convenient and robust way to connect TV and mobile. At the time I was founding CTO of ID verification market leader Jumio.com and naturally thought of using the camera to bridge TV and mobile.”",
   },
   {
     question:
@@ -36,7 +36,7 @@ const Faq: React.FC<PageProps> = ({ data, location }) => {
       <Seo title="Frequently asked questions" />
       <Hero
         title="FAQs"
-        lead="Find here some answers that will help You to better understand our company, business and product."
+        lead="Find here answers that will help You to better understand our vision, business and product."
       ></Hero>
       <Container>
         <dl className="mx-auto prose prose-xl space-y-8">
@@ -49,6 +49,7 @@ const Faq: React.FC<PageProps> = ({ data, location }) => {
             </div>
           ))}
         </dl>
+        <HsForm />
       </Container>
     </Layout>
   );

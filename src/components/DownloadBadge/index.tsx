@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { EmptyProps } from "@/definitions";
 
 import "./DownloadBadge.styles.css";
@@ -8,11 +7,11 @@ export const DownloadBadge: React.FC<EmptyProps> = () => {
   return (
     <>
       <span className="badge">
-        <Link
+        <a
           target="_blank"
           rel="noopener noreferrer"
           className="text-current underline"
-          to="https://apps.apple.com/at/app/snapodds/id1596532274?l=en"
+          href="https://apps.apple.com/at/app/snapodds/id1596532274?l=en"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.66407 40">
             <title>Download on the App Store</title>
@@ -139,7 +138,7 @@ export const DownloadBadge: React.FC<EmptyProps> = () => {
               </g>
             </g>
           </svg>
-        </Link>
+        </a>
       </span>
     </>
   );

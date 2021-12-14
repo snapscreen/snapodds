@@ -19,6 +19,14 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
     {
+      resolve: "gatsby-plugin-hubspot",
+      options: {
+        trackingCode: "7433878",
+        respectDNT: false,
+        productionOnly: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-build-date`,
       options: {
         formatting: {

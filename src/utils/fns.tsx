@@ -1,3 +1,4 @@
+// Theme
 export const themeStorageKey = "theme";
 
 export const getTheme = (): string => {
