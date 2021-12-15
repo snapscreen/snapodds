@@ -22,10 +22,6 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             <h2 className="text-center">
               1. Scan QR code with your mobile phone.
             </h2>
-            <p>
-              For the best experience download our demo iPhone app in the App
-              Store.
-            </p>
             <div className="rect">
               <span>
                 <QRCode
@@ -35,6 +31,24 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
                 />
               </span>
             </div>
+            <p className="text-lg">
+              <a
+                target="_blank"
+                className="text-current underline"
+                href="https://bet.us.snapscreen.com"
+              >
+                https://bet.us.snapscreen.com
+              </a>
+              <br /> – or – <br />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-current underline"
+                href="https://apps.apple.com/at/app/snapodds/id1596532274?l=en"
+              >
+                https://apps.apple.com/at/app/snapodds/id1596532274?l=en
+              </a>
+            </p>
             <div className="flex justify-center mt-8" aria-hidden="true">
               <span className="flex h-24 w-0.5 bg-skin-fg" aria-hidden="true" />
             </div>
@@ -42,9 +56,16 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
           <li>
             <h2 className="text-center">2. Snap the demo video below.</h2>
             <p>
-              The video below is only temporarily used for demo reasons.
-              <br />
-              Our Demo App works also for live games on TV!
+              For the best experience{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-current underline"
+                href="https://apps.apple.com/at/app/snapodds/id1596532274?l=en"
+              >
+                download our iPhone app
+              </a>{" "}
+              in the App Store.
             </p>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
@@ -56,6 +77,14 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
                 allowFullScreen
               ></iframe>
             </div>
+            <p>
+              <small>
+                The video above is only for demo reasons.
+              </small>
+            </p>
+            <p className="lead font-bold">
+              SnapOdds works for live games on TV!
+            </p>
             <div className="flex justify-center mt-8" aria-hidden="true">
               <span className="flex h-24 w-0.5 bg-skin-fg" aria-hidden="true" />
             </div>
