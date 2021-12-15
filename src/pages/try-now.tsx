@@ -11,7 +11,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="SnapOdds demo" />
+      <Seo title="See how it works" />
       <Hero
         title="Try now!"
         lead="We commit ourselves to create a great user experience. Best way to understand how easy SnapOdds works is to trying it."
