@@ -35,9 +35,9 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               <a
                 target="_blank"
                 className="text-current underline"
-                href="https://bet.us.snapscreen.com"
+                href="https://demo.snapodds.com/"
               >
-                https://bet.us.snapscreen.com
+                https://demo.snapodds.com
               </a>
               <br /> – or – <br />
               <a
@@ -78,9 +78,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               ></iframe>
             </div>
             <p>
-              <small>
-                The video above is only for demo reasons.
-              </small>
+              <small>The video above is only for demo reasons.</small>
             </p>
             <p className="lead font-bold">
               SnapOdds works for live games on TV!
