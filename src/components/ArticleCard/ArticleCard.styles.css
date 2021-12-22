@@ -3,6 +3,7 @@
   @apply p-4;
   @apply transition-all;
   @apply hover:bg-skin-base-flash hover:shadow-light hover:z-10;
+  @apply focus-within:bg-skin-base-flash focus-within:shadow-light focus-within:z-10;
 }
 
 .card__header {
@@ -24,8 +25,9 @@
   @apply transition-all;
   @apply group-hover:text-skin-fg;
 }
-.cardTitle a {
+.card a {
   @apply group-hover:text-skin-fg;
+  @apply focus:bg-skin-focus focus:text-skin-fg-focus focus:outline-none;
 }
 
 .cardCopy {
