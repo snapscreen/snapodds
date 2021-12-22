@@ -37,7 +37,7 @@ export const Footer: React.FC<EmptyProps> = () => {
                 <path fill="#39c463" d="M594.11,116.9V98.09h60.21V116.9Z" />
               </g>
             </svg>
-            <p>By Snapscreen Inc., a Techstars portfolio company.</p>
+            <p>Snapscreen Inc., a Techstars portfolio company.</p>
           </div>
           <div className="flex flex-col justify-center p-8">
             <svg className="h-8 w-auto" viewBox="0 0 105.1 42.52">

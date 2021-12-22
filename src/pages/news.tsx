@@ -30,7 +30,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
       <Seo title="Newsroom and Press" />
       <Hero
         title="Newsroom and Press"
-        lead="Thanks for following our journey. Find here our press releases and brand assets."
+        lead="Below you will find our press releases and brand assets."
       >
         <div className="flex justify-center sm:hidden">
           <Button as="link" to="/news#articles">
@@ -65,8 +65,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                 Based in New York with offices in Austria and Australia,
                 Snapscreen is a technology company focused on the use of mobile
                 devices and image recognition for broadcast TV and streaming in
-                the world of sports and entertainment - think of "Shazam for
-                Sports Betting"
+                the world of sports and entertainment.
               </p>
               <h2>Images for Press</h2>
               <div className="py-2">
@@ -81,7 +80,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                   />
                   <figcaption className="w-full flex-1 sm:ml-8">
                     <p>
-                      Portrait of Thomas Willomitzer
+                      Thomas Willomitzer
                       <br />
                       Founder & CEO – Snapscreen, Inc.
                     </p>
