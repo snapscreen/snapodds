@@ -7,6 +7,7 @@ export { Banner } from "./Banner";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
 export { Hero } from "./Hero";
+export { Loader } from "./Loader";
 export { Logo } from "./Logo";
 export { Layout } from "./Layout";
 export { DefinitionList, InlineList } from "./Lists";

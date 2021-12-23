@@ -2,7 +2,9 @@
   @apply flex flex-col;
   @apply p-8 my-8 mx-auto;
   @apply w-full;
+  @apply transition-all;
   @apply bg-skin-base-flash;
+  @apply hover:shadow-light;
 }
 
 .formContainer > div {

@@ -1,0 +1,12 @@
+.loader {
+  @apply flex items-center justify-center;
+  @apply w-full;
+  @apply p-8;
+}
+
+.loader > svg {
+  @apply animate-spin;
+  @apply -ml-1 mr-3;
+  @apply h-8 w-8;
+  @apply text-gray-500;
+}
