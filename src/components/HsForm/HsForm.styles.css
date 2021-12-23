@@ -63,7 +63,7 @@
   @apply block mb-4 text-sm;
 }
 
-.hs-error-msgs {
+.hs-error-msgs > * {
   @apply text-pink-600;
 }
 
