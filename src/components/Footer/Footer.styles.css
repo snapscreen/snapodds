@@ -1,6 +1,6 @@
 .footer {
   @apply text-center;
-  @apply py-8 mt-8;
+  @apply py-8;
 }
 
 .social {
@@ -8,8 +8,8 @@
 }
 
 .base {
-  @apply my-10 pt-8;
-  @apply border-t border-skin-base-muted;
+  @apply my-10;
+  /* @apply border-t border-skin-base-muted; */
 }
 
 .baseCopy {

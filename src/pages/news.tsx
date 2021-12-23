@@ -9,6 +9,7 @@ import {
   Hero,
   Button,
   Seo,
+  HsFormSubscribe,
 } from "@/components";
 import { DownloadIcon } from "@heroicons/react/outline";
 
@@ -120,6 +121,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
             </ol>
           </section>
         </div>
+        <HsFormSubscribe />
       </Container>
     </Layout>
   );

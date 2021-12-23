@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Seo, HsForm } from "@/components";
+import { Layout, Container, Hero, Seo } from "@/components";
 
 const faqs = [
   {
@@ -49,7 +49,6 @@ const Faq: React.FC<PageProps> = ({ data, location }) => {
             </div>
           ))}
         </dl>
-        <HsForm />
       </Container>
     </Layout>
   );

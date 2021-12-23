@@ -1,7 +1,15 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Button, Seo } from "@/components";
+import {
+  Layout,
+  Container,
+  Hero,
+  Button,
+  Seo,
+  HsFormSubscribe,
+  SupportedBy,
+} from "@/components";
 
 const Home: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -33,7 +41,10 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
           </Button>
         </div>
       </Hero>
-      <Container></Container>
+      <Container>
+        <SupportedBy />
+        <HsFormSubscribe />
+      </Container>
     </Layout>
   );
 };

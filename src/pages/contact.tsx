@@ -1,7 +1,14 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Button, Seo } from "@/components";
+import {
+  Layout,
+  Container,
+  Hero,
+  Button,
+  Seo,
+  HsFormContact,
+} from "@/components";
 
 const Contact: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -23,15 +30,18 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
         </Button>
       </Hero>
       <Container>
-        <div className="text-center">
-          <p className="lead mx-auto mb-4">Or write us an email to:</p>
-          <Button
-            as="externalLink"
-            styleType="ghost"
-            href={"mailto:" + { email }}
-          >
-            {email}
-          </Button>
+        <div className="mx-auto">
+          <HsFormContact />
+          <div className="prose prose-lg mx-auto text-center pt-8">
+            <h2 className="text-center">Or, send us an Email to:</h2>
+            <Button
+              as="externalLink"
+              styleType="ghost"
+              href={"mailto:" + { email }}
+            >
+              {email}
+            </Button>
+          </div>
         </div>
       </Container>
     </Layout>
