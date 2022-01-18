@@ -27,7 +27,7 @@ yarn start
 yarn build
 # Format all Files with prettier
 yarn format
-# Deplpy on Github pages
+# Deploy on Github pages
 yarn deploy
 
 ```
