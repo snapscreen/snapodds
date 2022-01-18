@@ -54,7 +54,7 @@ export const Header: React.FC<EmptyProps> = () => {
           </div>
           <div className="lg:hidden">
             <Popover.Button className="btn icon">
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <MenuIcon className="h-5 w-5" aria-hidden="true" />
               <span className="mr-2">Menu</span>
             </Popover.Button>
           </div>
@@ -75,7 +75,7 @@ export const Header: React.FC<EmptyProps> = () => {
               <div className="z-50 flex items-center justify-between">
                 <div className="-mt-2 order-2 flex flex-row-reverse">
                   <Popover.Button className="btn icon">
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XIcon className="h-5 w-5" aria-hidden="true" />
                     <span className="sr-only">Close menu</span>
                   </Popover.Button>
                   <div className="mr-2">
