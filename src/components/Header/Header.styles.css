@@ -61,3 +61,8 @@
   @apply text-skin-fg;
   @apply order-1;
 }
+
+.header .btn.primary {
+  @apply text-lg;
+  @apply px-6 py-2;
+}

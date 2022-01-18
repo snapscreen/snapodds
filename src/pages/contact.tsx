@@ -21,13 +21,6 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
         title="Your bright future starts with a simple conversation!"
         lead="Whether you are curious how SnapOdds works with you, or you’d like to know your growth content potential, we’d love to chat with you."
       >
-        <Button
-          as="externalLink"
-          styleType="primary"
-          href="https://meetings.hubspot.com/willo1/talk-to-snapodds"
-        >
-          Book a meeting
-        </Button>
       </Hero>
       <Container>
         <div className="mx-auto">

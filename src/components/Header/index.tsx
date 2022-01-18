@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuAlt2Icon as MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Logo, Nav, ThemeSwitch, DownloadBadge } from "@/components";
+import { Logo, Nav, ThemeSwitch, DownloadBadge, Button } from "@/components";
 import { EmptyProps } from "@/definitions";
 
 import "./Header.styles.css";
@@ -10,7 +10,7 @@ const navigation = {
   links: [
     { name: "Meet SnapOdds", to: "/" },
     { name: "How it works", to: "/how-it-works" },
-    { name: "Try now", to: "/try-now" },
+    { name: "Products", to: "/products" },
     { name: "Newsroom", to: "/news" },
     { name: "Contact", to: "/contact" },
   ],
@@ -42,7 +42,14 @@ export const Header: React.FC<EmptyProps> = () => {
         </div>
         <div className="header__right">
           <div className="hidden sm:flex">
-            <DownloadBadge />
+            <Button
+              as="externalLink"
+              styleType="primary"
+              href="https://meetings.hubspot.com/willo1/talk-to-snapodds"
+              className="mr-4"
+            >
+              Book a meeting
+            </Button>
             <ThemeSwitch />
           </div>
           <div className="lg:hidden">
@@ -77,12 +84,19 @@ export const Header: React.FC<EmptyProps> = () => {
                 </div>
                 <Logo className="brand -ml-2" />
               </div>
-              <div className="-mx-4 mt-4">
-                <DownloadBadge />
-              </div>
             </div>
             <div className="py-6 px-4 space-y-6">
               <Nav links={links} />
+            </div>
+            <div className="py-6 px-4">
+              <Button
+                as="externalLink"
+                styleType="primary"
+                className="w-full"
+                href="https://meetings.hubspot.com/willo1/talk-to-snapodds"
+              >
+                Book a meeting
+              </Button>
             </div>
           </div>
         </Popover.Panel>
