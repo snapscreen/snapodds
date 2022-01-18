@@ -9,7 +9,6 @@ The documentation is hosted on Github Pages and built with Gatsby and Gatsby MDX
 | --------------- | --------------------------------------------------------------------------------- |
 | Framework       | [GatsbyJS](https://www.gatsbyjs.com/) + [Github Pages](https://pages.github.com/) |
 | Form Submission | [HUbspot](https://hubspot.com/)                                                   |
-| Deployment      | Fully automated GitOps Flow                                                       |
 | Package-Manager | `yarn`                                                                            |
 | Language        | `Typescript`                                                                      |
 
@@ -28,11 +27,12 @@ yarn start
 yarn build
 # Format all Files with prettier
 yarn format
+# Deplpy on Github pages
+yarn deploy
 
 ```
 
 Open [http://localhost:8000](http://localhost:8000) with your browser to see the result.
-
 
 ## Licence
 

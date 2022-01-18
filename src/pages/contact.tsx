@@ -20,8 +20,7 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
       <Hero
         title="Your bright future starts with a simple conversation!"
         lead="Whether you are curious how SnapOdds works with you, or you’d like to know your growth content potential, we’d love to chat with you."
-      >
-      </Hero>
+      ></Hero>
       <Container>
         <div className="mx-auto">
           <HsFormContact />
