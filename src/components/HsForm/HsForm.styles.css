@@ -35,9 +35,11 @@
 }
 
 .hs-button {
+  @apply appearance-none;
   @apply bg-skin-primary;
   @apply text-skin-fg-focus font-semibold;
   @apply border-skin-primary;
+  @apply rounded-none;
   @apply py-4 px-8;
   @apply text-xl lg:text-2xl;
   @apply hover:text-skin-fg-focus hover:shadow-xl hover:cursor-pointer;
@@ -50,8 +52,14 @@
   @apply w-full;
   @apply px-0 py-2;
   @apply border-0 border-b-2 border-skin-fg-muted;
+  @apply rounded-none;
   @apply bg-transparent;
   @apply focus:ring-0 focus:outline-none focus:border-skin-fg;
+}
+
+.hs-input input {
+  @apply appearance-none;
+  @apply rounded-none;
 }
 
 .hs-form-field > label {
