@@ -39,7 +39,7 @@
   @apply bg-skin-primary;
   @apply text-skin-fg-focus font-semibold;
   @apply border-skin-primary;
-  @apply rounded-none;
+  @apply rounded-md;
   @apply py-4 px-8;
   @apply text-xl lg:text-2xl;
   @apply hover:text-skin-fg-focus hover:shadow-xl hover:cursor-pointer;

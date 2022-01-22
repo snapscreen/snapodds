@@ -4,6 +4,7 @@
   @apply inline-flex items-center justify-center;
   @apply font-display font-bold text-lg text-skin-fg;
   @apply border border-opacity-0;
+  @apply rounded-md;
   @apply transition-all;
   @apply hover:border-opacity-100 hover:scale-105;
   @apply focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus focus:scale-95;
