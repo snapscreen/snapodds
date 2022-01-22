@@ -1,36 +1,33 @@
-import React from "react";
-import { wrapRootElement as wrap } from "./wrapRootElement";
+const React = require("react");
 
-function setTheme() {
-  if (typeof window !== "undefined") {
-    const theme = localStorage.getItem("theme");
-
-    let selectedTheme;
-    if (typeof theme === "string") {
-      selectedTheme = theme;
-    } else {
-      selectedTheme = "dark";
-    }
-
-    if (selectedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }
-}
-
-const ScriptTag = () => {
-  const boundFn = String(setTheme);
-
-  let calledFunction = `(${boundFn})()`;
-
-  return <script dangerouslySetInnerHTML={{ __html: calledFunction }} />;
+exports.onRenderBody = ({ setHeadComponents }) => {
+  setHeadComponents([
+    <script
+      key="darkmode"
+      dangerouslySetInnerHTML={{
+        __html: `(function() {
+            function setTheme(theme) {
+              window.__theme = theme;
+              if (theme === 'dark') {
+                document.documentElement.className = 'dark';
+              } else {
+                document.documentElement.className = '';
+              }
+            };
+            window.__setPreferredTheme = function(theme) {
+              setTheme(theme);
+              try {
+                localStorage.setItem('color-theme', theme);
+              } catch (e) {}
+            };
+            let preferredTheme;
+            try {
+              preferredTheme = localStorage.getItem('color-theme');
+            } catch (e) {}
+            let darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+          })();`,
+      }}
+    />,
+  ]);
 };
-
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents(<ScriptTag key="theme" />);
-};
-
-export const wrapPageElement = wrap;

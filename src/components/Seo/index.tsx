@@ -10,7 +10,6 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { ISite } from "@/definitions";
-import { getTheme } from "@/utils/fns";
 
 type MetaProps = JSX.IntrinsicElements["meta"];
 
@@ -67,20 +66,12 @@ export const Seo: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
       name: `twitter:description`,
       content: metaDescription,
     },
-    {
-      name: `apple-itunes-app`,
-      content: `app-id=1596532274,app-argument=https://apps.apple.com/at/app/snapodds/id1596532274`,
-    },
   ];
-
-  const className = getTheme();
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
-        class: className,
-        ...(className === "dark" && { class: className }),
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}

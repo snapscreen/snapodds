@@ -26,13 +26,13 @@ const themes = {
 };
 
 module.exports = {
-  mode: "jit",
   content: [
     "./src/**/*.tsx",
     "./src/**/*.ts",
     "./content/**/*.tsx",
     "./content/**/*.mdx",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       typography: (theme) => ({
