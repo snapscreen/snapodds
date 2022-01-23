@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-news-tsx",
     "path": "/news/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"SnapOdds"}},"allMdx":{"totalCount":2,"edges":[{"node":{"excerpt":"New Sports Betting Tech Player Closes Oversubscribed Seed Round Seed round led by Sharp Alpha Advisors New technology for player acquisition…","fields":{"slug":"/seed-round/"},"frontmatter":{"date":"November 18, 2021","title":"Sharp Alpha Advisors Bets on SnapOdds.tv","description":"Snapscreen announced today a $1.2m seed funding round led by New York based VC Sharp Alpha Advisors.","tags":"business"}}},{"node":{"excerpt":"Meet the company at the Meadowlands Exposition Center, New Jersey from Nov. 30 to Dec. 2 2021. Our Founder Thomas Willomitzer  and Co…","fields":{"slug":"/sbc/"},"frontmatter":{"date":"November 17, 2021","title":"Meet SnapOdds at the SBC Summit North America","description":"SnapOdds will be part of the leading sports betting event in North America.","tags":"marketing"}}}]}},"pageContext":{}},
-    "staticQueryHashes": ["2841359383"]}
+    "result": {"data":{"site":{"siteMetadata":{"title":"SnapOdds"}}},"pageContext":{}},
+    "staticQueryHashes": ["1765611749","2841359383","3935214766"]}
