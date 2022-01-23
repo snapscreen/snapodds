@@ -1,0 +1,18 @@
+.supportedContainer {
+  @apply flex flex-col sm:flex-row;
+  @apply justify-center items-center sm:items-start;
+  @apply divide-y sm:divide-y-0 sm:divide-x divide-skin-base-muted;
+  @apply py-10;
+}
+
+.supportedLogo {
+  @apply flex flex-col justify-center;
+  @apply p-8;
+}
+
+.supportedLogo svg {
+  @apply h-8 w-auto;
+}
+.supportedLogo p {
+  @apply text-sm;
+}

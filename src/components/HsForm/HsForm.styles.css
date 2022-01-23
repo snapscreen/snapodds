@@ -3,7 +3,6 @@
   @apply p-8 my-8 mx-auto;
   @apply w-full;
   @apply transition-all;
-  @apply bg-skin-base-flash;
   @apply hover:shadow-light;
 }
 
@@ -51,7 +50,7 @@
   @apply block;
   @apply w-full;
   @apply px-0 py-2;
-  @apply border-0 border-b-2 border-skin-fg-muted;
+  @apply border-0 border-b-2 border-skin-base-muted;
   @apply rounded-none;
   @apply bg-transparent;
   @apply focus:ring-0 focus:outline-none focus:border-skin-fg;
@@ -71,8 +70,9 @@
   @apply block mb-4 text-sm;
 }
 
-.hs-error-msgs > * {
-  @apply text-pink-600;
+.hs-error-msgs > *,
+.hs-error-msgs .legal-consent-container .hs-error-msgs label {
+  color: #f2545b;
 }
 
 .hs_error_rollup {

@@ -7,10 +7,9 @@ import "./SupportedBy.styles.css";
 export const SupportedBy: React.FC<EmptyProps> = () => {
   return (
     <Container>
-      <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center divide-y sm:divide-y-0 sm:divide-x divide-skin-base-muted py-10">
-        <div className="flex flex-col justify-center p-8">
+      <div className="supportedContainer">
+        <div className="supportedLogo">
           <svg
-            className="h-8 w-auto"
             viewBox="0 0 654.32 116.9"
             aria-hidden="true"
           >
@@ -29,8 +28,8 @@ export const SupportedBy: React.FC<EmptyProps> = () => {
           </svg>
           <p>Snapscreen Inc., a Techstars portfolio company.</p>
         </div>
-        <div className="flex flex-col justify-center p-8">
-          <svg className="h-8 w-auto" viewBox="0 0 105.1 42.52">
+        <div className="supportedLogo">
+          <svg viewBox="0 0 105.1 42.52">
             <g fill="currentColor">
               <path d="M23.33,7.76c.08-1.5,1.13-2.14,2.6-2.14,1.12,0,2.35.35,2.35,2.06v3.39a.42.42,0,0,0,.46.47.87.87,0,0,0,.25,0v.65a2.05,2.05,0,0,1-.51,0c-.79,0-.92-.44-.92-1.12h0a2.44,2.44,0,0,1-2.33,1.31c-1.18,0-2.15-.58-2.15-1.87,0-1.8,1.75-1.86,3.44-2.06.64-.08,1-.16,1-.87,0-1-.76-1.32-1.67-1.32s-1.69.45-1.71,1.49Zm4.17.94h0c-.1.19-.45.25-.66.29-1.33.24-3,.22-3,1.48a1.33,1.33,0,0,0,1.43,1.26,2.06,2.06,0,0,0,2.23-2Z" />
               <path d="M35.06,12.2h-.72V11.05h0a2.39,2.39,0,0,1-2.21,1.34c-1.61,0-2.24-.94-2.24-2.43V5.8h.78V10c0,1.15.47,1.76,1.71,1.76s1.92-1.26,1.92-2.57V5.8h.78Z" />
