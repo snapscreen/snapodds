@@ -7,24 +7,26 @@
 
 .pageNav {
   @apply mt-16 pt-16 border-t border-skin-base-muted;
+  @apply mx-auto;
 }
 
 .pageNav__title {
+  @apply text-lg;
   @apply font-bold;
   @apply text-center;
 }
 
 .pageNav__nav {
-  @apply mt-8;
-}
-
-.pageNav ul {
-  @apply text-lg;
-  @apply flex flex-wrap justify-center space-y-2;
+  @apply grid grid-cols-1 gap-y-10 gap-x-8 md:grid-cols-2;
 }
 
 .pageLink {
   @apply py-4;
+}
+
+.pageLink h4 {
+  @apply text-2xl tracking-tight font-bold;
+  @apply text-skin-primary-text;
 }
 
 .pageLink svg {

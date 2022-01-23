@@ -43,35 +43,33 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
           </section>
         </article>
         {(previous || next) && (
-          <section className="pageNav">
+          <section className="pageNav prose prose-xl">
             <div className="pageNav__title">Further readings</div>
             <nav className="pageNav__nav">
-              <ul>
-                <li>
-                  {previous && (
-                    <Link
-                      to={previous.fields.slug}
-                      rel="prev"
-                      className="pageLink"
-                    >
-                      <ArrowLeftIcon />
-                      <span className="pageLink__text">
-                        {previous.frontmatter.title}
-                      </span>
-                    </Link>
-                  )}
-                </li>
-                <li>
-                  {next && (
-                    <Link to={next.fields.slug} rel="next" className="pageLink">
-                      <span className="pageLink__text">
-                        {next.frontmatter.title}
-                      </span>
-                      <ArrowRightIcon />
-                    </Link>
-                  )}
-                </li>
-              </ul>
+            {previous && (
+              <div className="pageNav__item">
+                <Link
+                  to={previous.fields.slug}
+                  rel="prev"
+                  className="pageLink"
+                >
+                  <h4 className="pageLink__text">
+                    {previous.frontmatter.title}
+                  </h4>
+                </Link>
+                <p>{previous.frontmatter.description}</p>
+              </div>
+            )}
+            {next && (
+              <div className="pageNav__item">
+                <Link to={next.fields.slug} rel="next" className="pageLink">
+                  <h4 className="pageLink__text">
+                    {next.frontmatter.title}
+                  </h4>
+                </Link>
+                <p>{next.frontmatter.description}</p>
+              </div>
+            )}
             </nav>
           </section>
         )}
@@ -109,6 +107,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        description
       }
     }
     next: mdx(id: { eq: $nextPostId }) {
@@ -117,6 +116,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        description
       }
     }
   }

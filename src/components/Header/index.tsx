@@ -7,16 +7,19 @@ import { EmptyProps } from "@/definitions";
 import "./Header.styles.css";
 
 const navigation = {
-  links: [
+  leftNav: [
     { name: "How it works", to: "/how-it-works" },
     { name: "Products", to: "/products" },
     { name: "Newsroom", to: "/news" },
     { name: "Contact", to: "/contact" },
   ],
+  rightNav: [
+    { name: "Developer", to: "https://github.com/snapodds/" },
+  ],
 };
 
 export const Header: React.FC<EmptyProps> = () => {
-  const { links } = navigation;
+  const { leftNav, rightNav } = navigation;
   const [top, setTop] = useState(true);
 
   // detect whether user has scrolled the page down by 10px
@@ -36,16 +39,19 @@ export const Header: React.FC<EmptyProps> = () => {
         </div>
         <div className="header__center">
           <div className="hidden lg:flex">
-            <Nav links={links} />
+            <Nav links={leftNav} />
           </div>
         </div>
         <div className="header__right">
+          <div className="hidden lg:flex">
+            <Nav links={rightNav} />
+          </div>
           <div className="hidden sm:flex">
             <Button
               as="externalLink"
               styleType="primary"
               href="https://meetings.hubspot.com/willo1/talk-to-snapodds"
-              className="mr-4"
+              className="mx-4"
             >
               Book a meeting
             </Button>
@@ -84,8 +90,9 @@ export const Header: React.FC<EmptyProps> = () => {
                 <Logo className="brand -ml-2" />
               </div>
             </div>
-            <div className="py-6 px-4 space-y-6">
-              <Nav links={links} />
+            <div className="py-6 px-4 space-y-6 divide-y">
+              <Nav links={leftNav} />
+              <Nav links={rightNav} />
             </div>
             <div className="py-6 px-4">
               <Button

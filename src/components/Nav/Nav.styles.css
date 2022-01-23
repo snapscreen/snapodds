@@ -1,11 +1,14 @@
 .nav {
   @apply flex items-center;
-  @apply mt-2;
+}
+
+.nav + .nav {
+  @apply pt-4;
 }
 
 .nav > * {
   @apply flex flex-col sm:flex-row;
-  @apply space-y-4 sm:space-x-8 sm:space-y-0;
+  @apply space-y-4 sm:space-x-4 sm:space-y-0;
 }
 
 .navElem {
@@ -13,7 +16,7 @@
 
 .navLink {
   @apply py-2;
-  @apply font-display font-semibold text-lg text-current;
+  @apply font-display font-semibold text-current;
   @apply transition-all;
   @apply hover:border-current;
   @apply focus:bg-skin-focus focus:text-skin-fg-focus focus:outline-none;

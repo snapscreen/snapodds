@@ -28,12 +28,12 @@ export const ThemeSwitch: React.FC<EmptyProps> = () => {
     >
       {theme === "dark" ? (
         <>
-          <SunIcon className="h-6 w-6" aria-hidden="true" />
+          <SunIcon className="h-5 w-5" aria-hidden="true" />
           <span className="sr-only">Switch to light mode</span>
         </>
       ) : (
         <>
-          <MoonIcon className="h-6 w-6" aria-hidden="true" />
+          <MoonIcon className="h-5 w-5" aria-hidden="true" />
           <span className="sr-only">Switch to dark mode</span>
         </>
       )}

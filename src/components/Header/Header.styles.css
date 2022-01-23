@@ -63,6 +63,6 @@
 }
 
 .header .btn.primary {
-  @apply text-lg;
+  @apply text-base text-skin-fg-focus;
   @apply px-6 py-2;
 }
