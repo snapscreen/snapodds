@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Seo, Button } from "@/components";
+import { Layout, Container, LogoCloud, Seo, Button } from "@/components";
 
 const Products: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -10,6 +10,7 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Our Products" />
+      <LogoCloud />
       <Container>
         <article className="mx-auto prose prose-xl max-w-full space-y-8 divide-y divide-skin-base-muted">
           <div className="flex flex-col md:flex-row items-center">

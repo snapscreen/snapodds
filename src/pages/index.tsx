@@ -9,6 +9,7 @@ import {
   Seo,
   HsFormSubscribe,
   SupportedBy,
+  LogoCloud,
 } from "@/components";
 
 const Home: React.FC<PageProps> = ({ data, location }) => {
@@ -41,9 +42,10 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
           </Button>
         </div>
       </Hero>
+      <LogoCloud />
       <Container>
-        <SupportedBy />
         <HsFormSubscribe />
+        <SupportedBy />
       </Container>
     </Layout>
   );
