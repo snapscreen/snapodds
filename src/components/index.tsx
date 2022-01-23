@@ -3,6 +3,7 @@ export { Container } from "./Container";
 export { Button } from "./Button";
 export { DownloadBadge } from "./DownloadBadge";
 export { SupportedBy } from "./SupportedBy";
+export { LogoCloud } from "./LogoCloud";
 export { Banner } from "./Banner";
 export { Footer } from "./Footer";
 export { Header } from "./Header";

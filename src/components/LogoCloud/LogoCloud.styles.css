@@ -1,0 +1,8 @@
+.logoCloudContainer {
+  @apply lg:grid lg:grid-cols-2 lg:gap-8;
+  @apply py-16;
+}
+
+.logoCloudContainer svg {
+  @apply text-current;
+}
