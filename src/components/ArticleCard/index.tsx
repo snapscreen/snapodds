@@ -23,9 +23,15 @@ export const ArticleCard: React.FC<CardProps> = ({
       <header className="card__header">
         <GatsbyImage image={image} alt={title} />
         <h3 className="cardTitle">
-          <Link to={link} itemProp="url">
-            <span itemProp="headline">{title}</span>
-          </Link>
+          {type === "link" ?
+            <a href={link} itemProp="url" target="_blank">
+              <span itemProp="headline">{title}</span>
+            </a>
+            :
+            <Link to={link} itemProp="url">
+              <span itemProp="headline">{title}</span>
+            </Link>
+          }
         </h3>
       </header>
       <section className="card__body">
@@ -40,10 +46,15 @@ export const ArticleCard: React.FC<CardProps> = ({
       </section>
       <footer className="card__footer">
         <span>{date}</span>
-
-        <Link to={link} itemProp="url">
-          {type === "link" ? <span>{link}</span> : <span>Read more</span>}
-        </Link>
+        {type === "link" ?
+          <a href={link} itemProp="url" target="_blank">
+            <span>{link}</span>
+          </a>
+          :
+          <Link to={link} itemProp="url">
+            <span>Read more</span>
+          </Link>
+        }
       </footer>
     </article>
   );
