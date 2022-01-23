@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { CardProps } from "@/definitions";
 // import { Tags } from "@/components";
 
@@ -42,7 +42,7 @@ export const ArticleCard: React.FC<CardProps> = ({
         <span>{date}</span>
 
         <Link to={link} itemProp="url">
-          {type === 'link' ? <span>{link}</span> : <span>Read more</span> }
+          {type === "link" ? <span>{link}</span> : <span>Read more</span>}
         </Link>
       </footer>
     </article>

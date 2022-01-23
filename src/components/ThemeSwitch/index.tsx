@@ -15,8 +15,8 @@ export const ThemeSwitch: React.FC<EmptyProps> = () => {
   const [theme, setTheme] = useState(websiteTheme);
 
   const ThemeToggle = () => {
-    window.__setPreferredTheme(websiteTheme === 'dark' ? 'light' : 'dark');
-    setTheme(websiteTheme === 'dark' ? 'light' : 'dark');
+    window.__setPreferredTheme(websiteTheme === "dark" ? "light" : "dark");
+    setTheme(websiteTheme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -26,7 +26,7 @@ export const ThemeSwitch: React.FC<EmptyProps> = () => {
       onClick={ThemeToggle}
       className="--icon"
     >
-      {theme === 'dark' ? (
+      {theme === "dark" ? (
         <>
           <SunIcon className="h-6 w-6" aria-hidden="true" />
           <span className="sr-only">Switch to light mode</span>
