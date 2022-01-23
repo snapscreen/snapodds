@@ -7,26 +7,41 @@
 }
 
 .card__header {
-  @apply flex space-x-2;
+  @apply flex items-center space-x-3;
 }
+
 .card__footer {
   @apply flex justify-between;
   @apply text-sm text-skin-fg-muted;
   @apply mt-2 pt-2;
+  @apply space-x-4;
   @apply border-t border-skin-base-muted;
 }
+
+.card__footer > * {
+  @apply whitespace-nowrap;
+}
+
+.card__footer a {
+  @apply text-ellipsis;
+  @apply overflow-hidden;
+  @apply ml-auto;
+}
+
 .card__body {
   @apply flex-1;
 }
 
 .cardTitle {
-  @apply text-3xl font-display;
-  @apply mt-3;
+  @apply text-2xl font-display font-semibold;
   @apply transition-all;
+}
+
+.cardTitle a {
   @apply group-hover:text-skin-fg;
 }
+
 .card a {
-  @apply group-hover:text-skin-fg;
   @apply focus:bg-skin-focus focus:text-skin-fg-focus focus:outline-none;
 }
 

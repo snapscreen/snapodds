@@ -10,7 +10,7 @@ export { Hero } from "./Hero";
 export { Loader } from "./Loader";
 export { Logo } from "./Logo";
 export { Layout } from "./Layout";
-export { DefinitionList, InlineList } from "./Lists";
+export { DefinitionList, InlineList, NewsReleaseList, NewsLinkList } from "./Lists";
 export { CalloutHeading, ArticleHeading } from "./Headings";
 export { HsFormContact, HsFormSubscribe } from "./HsForm";
 export { Nav } from "./Nav";

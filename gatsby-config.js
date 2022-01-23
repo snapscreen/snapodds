@@ -34,14 +34,6 @@ module.exports = {
         },
       },
     },
-    // Articles
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/articles`,
-        name: "articles",
-      },
-    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -65,6 +57,22 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
+      },
+    },
+    // Articles
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/articles`,
+        name: "articles",
+      },
+    },
+    // Coverage
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/coverage`,
+        name: "coverage",
       },
     },
     {

@@ -20,12 +20,14 @@ interface HeadingsProps {
   itemProp?: string;
 }
 
-interface ArticleCardProps {
+interface CardProps {
   link?: any;
-  title?: string;
+  title: string;
   description?: any;
   tags?: keyof JSX.IntrinsicElements | string;
   date?: string;
+  image?: string;
+  type: string;
 }
 
 interface PageProps {
@@ -79,7 +81,9 @@ interface INode {
   frontmatter: {
     date: string;
     title: string;
-    tags?: string;
+    tags?: string | undefined;
     description: string;
+    link: string;
+    image?: any;
   };
 }

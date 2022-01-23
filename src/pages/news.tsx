@@ -1,10 +1,11 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { INode, PageProps } from "@/definitions";
+import { PageProps } from "@/definitions";
 import {
   Layout,
-  ArticleCard,
+  NewsReleaseList,
+  NewsLinkList,
   Container,
   Hero,
   Button,
@@ -15,16 +16,6 @@ import { DownloadIcon } from "@heroicons/react/outline";
 
 const News: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const posts = data.allMdx.edges;
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="Newsroom and Press" />
-        <Hero title="Sorry." lead="There is a problem loading our articles." />
-      </Layout>
-    );
-  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -99,26 +90,9 @@ const News: React.FC<PageProps> = ({ data, location }) => {
             </div>
             <hr className="mt-4 border-skin-base-muted" />
           </section>
-          <section id="articles">
-            <div className="prose prose-lg sm:p-4 mb-8 md:mb-0">
-              <h2>Press releases</h2>
-            </div>
-            <ol className="-mx-4 sm:mx-0 lg:mx-1">
-              {posts.map(({ node }: { node: INode }) => {
-                const title = node.frontmatter.title || node.fields.slug;
-                return (
-                  <li key={node.fields.slug} className="group">
-                    <ArticleCard
-                      link={node.fields.slug}
-                      title={title}
-                      description={node.frontmatter.description}
-                      tags={node.frontmatter.tags}
-                      date={node.frontmatter.date}
-                    />
-                  </li>
-                );
-              })}
-            </ol>
+          <section id="articles" className="space-y-8">
+            <NewsReleaseList />
+            <NewsLinkList />
           </section>
         </div>
         <HsFormSubscribe />
@@ -134,23 +108,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            tags
-          }
-        }
       }
     }
   }

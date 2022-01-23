@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "gatsby";
-import { ArticleCardProps } from "@/definitions";
-import { Tags } from "@/components";
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { CardProps } from "@/definitions";
+// import { Tags } from "@/components";
 
 import "./ArticleCard.styles.css";
 
-export const ArticleCard: React.FC<ArticleCardProps> = ({
+export const ArticleCard: React.FC<CardProps> = ({
   link,
   title,
   description,
-  tags,
   date,
+  image,
+  type,
 }) => {
   return (
     <article
@@ -19,11 +21,12 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
       className="card group"
     >
       <header className="card__header">
-        <h2 className="cardTitle">
+        <GatsbyImage image={image} alt={title} />
+        <h3 className="cardTitle">
           <Link to={link} itemProp="url">
             <span itemProp="headline">{title}</span>
           </Link>
-        </h2>
+        </h3>
       </header>
       <section className="card__body">
         <p
@@ -33,12 +36,13 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           itemProp="description"
           className="cardCopy"
         />
-        <Tags tags={tags} />
+        {/* <Tags tags={tags} /> */}
       </section>
       <footer className="card__footer">
         <span>{date}</span>
+
         <Link to={link} itemProp="url">
-          <span>Read</span>
+          {type === 'link' ? <span>{link}</span> : <span>Read more</span> }
         </Link>
       </footer>
     </article>

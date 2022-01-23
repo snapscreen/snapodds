@@ -8,7 +8,6 @@ import "./Header.styles.css";
 
 const navigation = {
   links: [
-    { name: "Meet SnapOdds", to: "/" },
     { name: "How it works", to: "/how-it-works" },
     { name: "Products", to: "/products" },
     { name: "Newsroom", to: "/news" },
