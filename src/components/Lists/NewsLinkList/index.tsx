@@ -1,10 +1,10 @@
 import * as React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
-import { INode, PageProps } from "@/definitions";
+import { INode, EmptyProps } from "@/definitions";
 import { ArticleCard } from "@/components";
 
-export const NewsLinkList: React.FC<PageProps> = () => {
+export const NewsLinkList: React.FC<EmptyProps> = () => {
   return (
     <StaticQuery
       query={graphql`

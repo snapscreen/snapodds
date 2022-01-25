@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuAlt2Icon as MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Logo, Nav, ThemeSwitch, DownloadBadge, Button } from "@/components";
+import { Logo, Nav, ThemeSwitch, Button } from "@/components";
 import { EmptyProps } from "@/definitions";
 
 import "./Header.styles.css";
@@ -14,7 +14,11 @@ const navigation = {
     { name: "Contact", to: "/contact" },
   ],
   rightNav: [
-    { name: "Developer", to: "https://github.com/snapodds/" },
+    {
+      name: "Developers",
+      to: "https://github.com/snapodds/",
+      externalLink: true,
+    },
   ],
 };
 
