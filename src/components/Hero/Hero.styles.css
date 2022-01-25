@@ -12,6 +12,8 @@
 .heroBackground + .hero h1,
 .heroBackground + .hero .lead,
 .heroBackground .hero > * {
+  @apply relative;
+  @apply z-10;
   @apply text-left;
   @apply ml-0;
 }
@@ -31,6 +33,6 @@
 }
 
 .lead {
-  @apply sm:text-lg lg:text-2xl;
+  @apply sm:text-xl lg:text-2xl;
   @apply max-w-screen-md;
 }
