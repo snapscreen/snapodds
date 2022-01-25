@@ -23,7 +23,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
         title="It’s a Snap converting viewers into bettors!"
         img={sportsBar}
       >
-        <div className="relative w-full flex flex-col h-full sm:pr-80 lg:pr-96">
+        <div className="relative w-full flex flex-col h-full sm:pr-96 lg:pr-96">
           <p className="lead">
             Just snap the game on live TV and we find the odds in a flash. We
             enable your players a greater sports betting experience. Upgrade
@@ -33,7 +33,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
           <img
             src="iPhone.png"
             alt="iPhone"
-            className="w-full sm:w-1/2 md:w-1/3 relative sm:absolute right-0 bottom-0 sm:translate-y-[50%]"
+            className="w-2/3 mx-auto sm:w-1/2 md:w-1/3 relative sm:absolute right-0 bottom-0 sm:translate-y-[50%]"
           />
         </div>
         <div className="flex justify-center md:justify-start">

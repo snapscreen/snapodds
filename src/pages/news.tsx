@@ -93,9 +93,9 @@ const News: React.FC<PageProps> = ({ data, location }) => {
           <section id="articles" className="space-y-8">
             <NewsReleaseList />
             <NewsLinkList />
+            <HsFormSubscribe />
           </section>
         </div>
-        <HsFormSubscribe />
       </Container>
     </Layout>
   );
