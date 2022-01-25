@@ -20,7 +20,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
       </Hero>
       <Container>
         <div className="aspect-video">
-          <video width="640" height="360" controls loop autoPlay className="w-full mx-auto">
+          <video width="640" height="360" controls loop autoPlay preload="auto" className="w-full mx-auto">
             <source src="SnapOdds-video.mp4" type="video/mp4" />
           </video>
         </div>

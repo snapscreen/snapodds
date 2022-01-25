@@ -68,7 +68,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               in the App Store.
             </p>
             <div className="w-full aspect-video">
-              <video controls loop autoPlay>
+              <video controls loop autoPlay className="w-full mx-auto" preload="auto">
                 <source src="SnapOdds-demo-game.mp4" type="video/mp4" />
               </video>
             </div>
