@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import { PageProps } from "@/definitions";
 import { Layout, Container, Hero, Seo, Button } from "@/components";
+import DemoVideo from "../videos/SnapOdds-video.mp4"
 
 const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -21,7 +21,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
       <Container>
         <div className="aspect-video">
           <video width="640" height="360" controls loop autoPlay preload="auto" className="w-full mx-auto">
-            <source src="SnapOdds-video.mp4" type="video/mp4" />
+            <source src={DemoVideo} type="video/mp4" />
           </video>
         </div>
       </Container>

@@ -2,7 +2,9 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
 import { Layout, Button, Container, Hero, Seo } from "@/components";
+import DemoVideo from "../videos/SnapOdds-demo-game.mp4"
 var QRCode = require("qrcode.react");
+
 
 const TryNow: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -69,7 +71,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             </p>
             <div className="w-full aspect-video">
               <video controls loop autoPlay className="w-full mx-auto" preload="auto">
-                <source src="SnapOdds-demo-game.mp4" type="video/mp4" />
+                <source src={DemoVideo} type="video/mp4" />
               </video>
             </div>
             <p>
