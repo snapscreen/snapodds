@@ -67,15 +67,10 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               </a>{" "}
               in the App Store.
             </p>
-            <div className="aspect-w-16 aspect-h-9">
-              <iframe
-                src="https://www.youtube.com/embed/Aw3xFO1wdJ4?autoplay=true&mute=1&start=250"
-                width="640"
-                height="360"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
+            <div className="w-full aspect-video">
+              <video controls loop autoPlay>
+                <source src="SnapOdds-demo-game.mp4" type="video/mp4" />
+              </video>
             </div>
             <p>
               <small>The video above is only for demo reasons.</small>
