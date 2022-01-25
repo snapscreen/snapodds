@@ -24,7 +24,7 @@ export const ScrollTop: React.FC<EmptyProps> = () => {
         setShowButton(0);
       }
     })
-  }, [window, scrollToTop]);
+  }, []);
 
   return (
     <div className="scrollTopContainer">

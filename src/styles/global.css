@@ -126,3 +126,35 @@ h2, .h2 {
   @apply bottom-0 left-0;
   @apply border-t-0 border-r-0 border-b-2 border-l-2;
 }
+
+/* Hubspot cookie banner overwrite */
+div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom {
+  box-shadow: none !important;
+}
+
+div#hs-eu-cookie-confirmation {
+  background: transparent !important;
+  border-top: 0 !important;
+  box-shadow: none !important;
+  font-family: inherit !important;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner {
+  background: var(--color-background) !important;
+  border-top: 1px solid var(--color-background-muted) !important;
+  color: var(--color-text) !important;
+  max-width: 1280px !important;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner p {
+  color: inherit !important;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-decline-button {
+  border: 0 !important;
+  color: inherit !important;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a, div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a:hover {
+  color: var(--color-primary-contrast) !important;
+}
