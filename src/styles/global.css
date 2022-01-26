@@ -150,11 +150,12 @@ div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner p {
   color: inherit !important;
 }
 
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button {
+  border: 0 !important;
+  color: white !important;
+}
+
 div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-decline-button {
   border: 0 !important;
   color: inherit !important;
-}
-
-div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a, div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a:hover {
-  color: var(--color-primary-contrast) !important;
 }

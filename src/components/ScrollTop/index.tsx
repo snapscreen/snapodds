@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useStateIfMounted } from "use-state-if-mounted";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components";
 import { ArrowUpIcon } from "@heroicons/react/outline";
 import { EmptyProps } from "@/definitions";
@@ -7,7 +6,7 @@ import { EmptyProps } from "@/definitions";
 import "./ScrollTop.styles.css";
 
 export const ScrollTop: React.FC<EmptyProps> = () => {
-  const [showButton, setShowButton] = useStateIfMounted(0);
+  const [showButton, setShowButton] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -19,9 +18,9 @@ export const ScrollTop: React.FC<EmptyProps> = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 60) {
-        setShowButton(1);
+        setShowButton(true);
       } else {
-        setShowButton(0);
+        setShowButton(true);
       }
     })
   }, []);
