@@ -1,6 +1,22 @@
 .footer {
-  @apply text-center;
-  @apply py-8;
+  @apply bg-skin-header;
+}
+
+.footer .nav > * {
+  @apply mt-4;
+}
+
+.footer .nav > * {
+  @apply flex sm:flex-col;
+  @apply space-y-4 space-x-0;
+}
+
+.footer .navLink {
+  @apply font-normal;
+}
+
+.nav__title {
+  @apply text-sm font-semibold tracking-wider uppercase;
 }
 
 .social {
@@ -8,8 +24,10 @@
 }
 
 .base {
-  @apply my-10;
-  /* @apply border-t border-skin-base-muted; */
+  @apply mt-12;
+  @apply pt-8;
+  @apply border-t border-skin-base-muted;
+  @apply text-center;
 }
 
 .baseCopy {
