@@ -33,7 +33,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
           <img
             src="iPhone.png"
             alt="iPhone"
-            className="w-2/3 mx-auto sm:w-1/2 md:w-1/3 relative sm:absolute right-0 bottom-0 sm:translate-y-[50%]"
+            className="w-2/3 mx-auto sm:w-1/2 md:w-80 relative sm:absolute right-0 bottom-0 sm:translate-y-[30%] md:translate-y-[58%] lg:translate-y-[36%]"
           />
         </div>
         <div className="flex justify-center md:justify-start">

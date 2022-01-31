@@ -1,10 +1,16 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Button, Container, Hero, Seo } from "@/components";
-import DemoVideo from "../videos/SnapOdds-demo-game.mp4"
+import {
+  Layout,
+  Button,
+  Container,
+  Hero,
+  Seo,
+  DownloadBadge,
+} from "@/components";
+import DemoVideo from "../videos/SnapOdds-demo-game.mp4";
 var QRCode = require("qrcode.react");
-
 
 const TryNow: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -15,11 +21,11 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="See how it works" />
       <Hero
-        title="Try now!"
-        lead="We commit ourselves to create a great user experience. Best way to understand how easy SnapOdds works is to trying it."
+        title="Try and experience SnapOdds yourself!"
+        lead="Use our demo app or mobile website."
       ></Hero>
       <Container>
-        <ol className="relative prose prose-lg lg:prose-xl mx-auto space-y-16 text-center">
+        <ol className="relative mb-8 prose prose-lg lg:prose-xl mx-auto space-y-16 text-center">
           <li>
             <h2 className="text-center">
               1. Scan QR code with your mobile phone.
@@ -42,22 +48,6 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
                 https://demo.snapodds.com
               </a>
               <br /> – or – <br />
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-current underline"
-                href="https://apps.apple.com/at/app/snapodds/id1596532274?l=en"
-              >
-                https://apps.apple.com/at/app/snapodds/id1596532274?l=en
-              </a>
-            </p>
-            <div className="flex justify-center mt-8" aria-hidden="true">
-              <span className="flex h-24 w-0.5 bg-skin-fg" aria-hidden="true" />
-            </div>
-          </li>
-          <li>
-            <h2 className="text-center">2. Snap the demo video below.</h2>
-            <p>
               For the best experience{" "}
               <a
                 target="_blank"
@@ -69,8 +59,25 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               </a>{" "}
               in the App Store.
             </p>
+            <div className="flex justify-center">
+              <DownloadBadge />
+            </div>
+            <div className="flex justify-center mt-8" aria-hidden="true">
+              <span className="flex h-24 w-0.5 bg-skin-fg" aria-hidden="true" />
+            </div>
+          </li>
+          <li>
+            <h2 className="text-center">
+              2. Play and snap the demo game below.
+            </h2>
             <div className="w-full aspect-video">
-              <video controls loop autoPlay className="w-full mx-auto" preload="auto">
+              <video
+                controls
+                loop
+                autoPlay
+                className="w-full mx-auto"
+                preload="auto"
+              >
                 <source src={DemoVideo} type="video/mp4" />
               </video>
             </div>

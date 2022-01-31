@@ -22,7 +22,7 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
         lead="Whether you are curious how SnapOdds works with you, or you’d like to know your growth content potential, we’d love to chat with you."
       ></Hero>
       <Container>
-        <div className="mx-auto">
+        <div className="mx-auto mb-16">
           <HsFormContact />
           <div className="prose prose-lg mx-auto text-center pt-8">
             <h2 className="text-center">Or, send us an Email to:</h2>

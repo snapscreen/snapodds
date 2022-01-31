@@ -31,7 +31,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
         </div>
       </Hero>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-8">
           <section>
             <div className="prose prose-lg sm:p-4">
               <h2>SnapOdds Brand Assets</h2>
@@ -88,7 +88,9 @@ const News: React.FC<PageProps> = ({ data, location }) => {
                 </div>
               </div>
             </div>
+            {/*
             <hr className="mt-4 border-skin-base-muted" />
+            */}
           </section>
           <section id="articles" className="space-y-8">
             <NewsReleaseList />
