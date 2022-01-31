@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
-const portalRoot = document.querySelector("#portal") as HTMLElement;
+const portalRoot = typeof document !== `undefined` ? document.getElementById('portal') : null
 
 export const Portal: React.FC<{}> = ({ children }) => {
   const el = useRef(document.createElement("div"));
