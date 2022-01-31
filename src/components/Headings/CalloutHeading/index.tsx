@@ -4,7 +4,7 @@ import { HeadingsProps } from "@/definitions";
 export const CalloutHeading: React.FC<HeadingsProps> = ({ text }) => {
   return (
     <h1
-      className="h1 py-8 max-w-2xl"
+      className="h1 py-8"
       data-aos="zoom-out"
       data-aos-delay="50"
       data-aos-duration="300"
