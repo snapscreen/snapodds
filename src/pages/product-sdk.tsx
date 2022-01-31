@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, LogoCloud, Seo, Button } from "@/components";
+import {
+  Layout,
+  Container,
+  Hero,
+  LogoCloud,
+  Modal,
+  Seo,
+  HsFormDemoSDK,
+  Button,
+} from "@/components";
 
 const Products: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const modalRefDemoSDK = useRef();
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -50,14 +60,22 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
                 <li>Drive engagement with live games</li>
                 <li>More “intuitive” experience vs. text search/paging</li>
               </ul>
-              <Button
-                as="link"
-                styleType="primary"
-                to="/contact"
-                className="mt-8"
-              >
-                Contact Sales
-              </Button>
+              <div className="flex mt-8">
+                <Button as="link" styleType="ghost" to="/contact">
+                  Contact Sales
+                </Button>
+                <Button
+                  as="button"
+                  styleType="primary"
+                  onClick={() => modalRefDemoSDK.current.openModal()}
+                  className="ml-8 my-auto"
+                >
+                  Get a demo
+                </Button>
+              </div>
+              <Modal ref={modalRefDemoSDK} title="Book a SDK Demo">
+                <HsFormDemoSDK />
+              </Modal>
             </div>
           </div>
         </article>
