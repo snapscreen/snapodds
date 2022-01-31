@@ -37,7 +37,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
         </div>
         <div className="hidden mx-auto sm:block sm:w-1/2 lg:w-1/3 sm:absolute right-0 -bottom-8">
           <StaticImage
-            src="../images/iPhone.png"
+            src="../images/iphone.png"
             alt="Snap TV"
             placeholder="blurred"
             layout="fullWidth"
