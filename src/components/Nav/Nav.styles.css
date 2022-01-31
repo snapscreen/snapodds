@@ -15,7 +15,7 @@
 }
 
 .navLink {
-  @apply py-2;
+  @apply py-0.5;
   @apply font-display font-semibold text-current;
   @apply transition-all;
   @apply hover:border-current;

@@ -26,7 +26,7 @@ export const Nav = (props: {
 
   return (
     <nav className="nav">
-      <ul>
+      <ul role="list">
         <NavLinks />
       </ul>
     </nav>
