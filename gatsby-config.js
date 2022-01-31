@@ -1,8 +1,9 @@
+require("dotenv").config();
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     siteUrl: `https://snapodds.com/`,
-    title: "SnapOdds",
+    title: `SnapOdds`,
     description: `It’s a Snap converting viewers into bettors!`,
     author: {
       name: `Matthias Grieder`,
@@ -13,13 +14,20 @@ module.exports = {
     },
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-sitemap",
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: "gatsby-plugin-hubspot",
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: "portal",
+        id: "portal",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-hubspot`,
       options: {
         trackingCode: "7433878",
         respectDNT: false,
@@ -30,14 +38,14 @@ module.exports = {
       resolve: `gatsby-plugin-build-date`,
       options: {
         formatting: {
-          format: "MMM DD YYYY",
+          format: `MMM DD YYYY`,
         },
       },
     },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [".mdx", ".md"],
+        extensions: [`.mdx`, `.md`],
         plugins: [`gatsby-remark-images`],
         gatsbyRemarkPlugins: [
           {
@@ -64,7 +72,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/articles`,
-        name: "articles",
+        name: `articles`,
       },
     },
     // Coverage
@@ -72,7 +80,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/coverage`,
-        name: "coverage",
+        name: `coverage`,
       },
     },
     {
