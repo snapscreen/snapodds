@@ -1,16 +1,17 @@
 # SnapOdds website
 
 Reach SnapOdds website via https://snapodds.com.
-The documentation is hosted on Github Pages and built with Gatsby and Gatsby MDX.
+The website is hosted on netlify and built with GatsbyJS and Gatsby MDX.
 
 ## Development Stack
 
-| What?           | Details / Where?                                                                  |
-| --------------- | --------------------------------------------------------------------------------- |
-| Framework       | [GatsbyJS](https://www.gatsbyjs.com/) + [Github Pages](https://pages.github.com/) |
-| Form Submission | [HUbspot](https://hubspot.com/)                                                   |
-| Package-Manager | `yarn`                                                                            |
-| Language        | `Typescript`                                                                      |
+| What?           | Details / Where?                                            |
+| --------------- | ----------------------------------------------------------- |
+| Framework       | [GatsbyJS](https://www.gatsbyjs.com/)                       |
+| Deployment      | https://snapodds.netlify.app/ fully automated GitOps Flow   |
+| Form Submission | [HUbspot](https://hubspot.com/)                             |
+| Package-Manager | `yarn`                                                      |
+| Language        | `Typescript`                                                |
 
 ## Getting Started
 
@@ -27,12 +28,11 @@ yarn start
 yarn build
 # Format all Files with prettier
 yarn format
-# Deploy on Github pages
-yarn deploy
 
 ```
 
 Open [http://localhost:8000](http://localhost:8000) with your browser to see the result.
+View GraphiQL, an in-browser IDE, to explore site's data and schema [http://localhost:8000/___graphql](http://localhost:8000/___graphql)
 
 ## Licence
 
