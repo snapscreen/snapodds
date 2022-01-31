@@ -20,6 +20,14 @@ interface HeadingsProps {
   itemProp?: string;
 }
 
+interface FaqProps {
+  key: string;
+  category: string;
+  author?: string;
+  q: string;
+  a: string;
+}
+
 interface CardProps {
   link?: any;
   title: string;
