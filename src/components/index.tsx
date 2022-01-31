@@ -8,6 +8,7 @@ export { Banner } from "./Banner";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
 export { Hero } from "./Hero";
+export { Faq } from "./Faq";
 export { Loader } from "./Loader";
 export { Logo } from "./Logo";
 export { Layout } from "./Layout";
@@ -18,7 +19,14 @@ export {
   NewsLinkList,
 } from "./Lists";
 export { CalloutHeading, ArticleHeading } from "./Headings";
-export { HsFormContact, HsFormSubscribe } from "./HsForm";
+export {
+  HsFormContact,
+  HsFormSubscribe,
+  HsFormDemoSDK,
+  HsFormDemoBanner,
+} from "./HsForm";
+export { Portal } from "./Portal";
+export { Modal } from "./Modal";
 export { Nav } from "./Nav";
 export { ThemeSwitch } from "./ThemeSwitch";
 export { Tags } from "./Tags";
