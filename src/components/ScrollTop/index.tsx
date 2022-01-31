@@ -16,13 +16,18 @@ export const ScrollTop: React.FC<EmptyProps> = () => {
   };
 
   useEffect(() => {
+    let isVisible = false;
+
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 60) {
+      if (window.pageYOffset > 60 && !isVisible) {
         setShowButton(true);
       } else {
-        setShowButton(true);
+        setShowButton(false);
       }
-    })
+    });
+    return () => {
+      isVisible = true;
+    };
   }, []);
 
   return (
