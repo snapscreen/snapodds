@@ -1,46 +1,41 @@
-import React from "react";
+import React, { useRef } from "react";
 import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, LogoCloud, Seo, Button } from "@/components";
+import {
+  Layout,
+  Container,
+  Hero,
+  Faq,
+  HsFormDemoSDK,
+  HsFormDemoBanner,
+  LogoCloud,
+  Seo,
+  Button,
+  Modal,
+} from "@/components";
+
+import { faqs } from "./faq";
 
 const Products: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const modalRefDemoSDK = useRef();
+  const modalRefDemoBanner = useRef();
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Our Products" />
       <Hero
-        title="Our Products"
+        title="Get started with SnapOdds"
         lead="SnapOdds technology instantly increases the number of sports bets taken on any platform or medium that it's added to. The best part, it can be easily added to any app, website or blog in two impactful ways."
       ></Hero>
-      <LogoCloud />
       <Container>
-        <article className="mx-auto prose prose-xl max-w-full space-y-8 divide-y divide-skin-base-muted">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 md:mr-16">
-              <StaticImage
-                src="../images/solution-sdk.png"
-                alt="SnapOdds SDK"
-                placeholder="blurred"
-                layout="fullWidth"
-              />
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="uppercase text-lg font-bold text-semibold mt-4 lg:mt-16">
-                SnapOdds SDK
-              </div>
-              <h2 className="mt-4">
+        <div className="grid grid-cols-1 gap-4 mb-4 mx-auto sm:mb-8 sm:gap-8 sm:grid-cols-2">
+          <div className="flex flex-col justify-between prose relative bg-skin-base-flash p-8 shadow-sm transition-all focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-light">
+            <div>
+              <h2 className="text-3xl mt-2">SnapOdds SDK</h2>
+              <p className="lead mt-4">
                 Enhance your betting app or mobile web page with a "Snapping"
                 function
-              </h2>
-              <p>
-                Sports betting and sports media apps that integrate the white
-                labeled SnapOdds SDK (Software Development Kit) enable users to
-                point their smartphone at any live sporting event, on TV or
-                streaming, and instantly be served all of the betting odds
-                relevant to that game. The SnapOdds SDK can be seamlessly
-                integrated into native iOS and Android apps as well as web apps.
               </p>
               <ul>
                 <li>
@@ -51,38 +46,29 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
                 <li>Drive engagement with live games</li>
                 <li>More “intuitive” experience vs. text search/paging</li>
               </ul>
-              <Button
-                as="link"
-                styleType="primary"
-                to="/contact"
-                className="mt-8"
-              >
-                Contact Sales
+            </div>
+            <div className="flex justify-end mt-6 space-x-8">
+              <Button as="link" styleType="ghost" to="/product-sdk">
+                Learn more
               </Button>
+              <Button
+                as="button"
+                styleType="primary"
+                onClick={() => modalRefDemoSDK.current.openModal()}
+              >
+                Get a demo
+              </Button>
+              <Modal ref={modalRefDemoSDK} title="Book a SDK Demo">
+                <HsFormDemoSDK />
+              </Modal>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 md:ml-16 md:order-2">
-              <StaticImage
-                src="../images/solution-banner.png"
-                alt="SnapOdds Web-Banner"
-                placeholder="blurred"
-                layout="fullWidth"
-              />
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="uppercase text-lg font-bold text-semibold mt-4 lg:mt-16">
-                SnapOdds Banner
-              </div>
-              <h2 className="mt-4">
+          <div className="flex flex-col justify-between prose relative bg-skin-base-flash p-8 shadow-sm transition-all focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-light">
+            <div>
+              <h2 className="text-3xl mt-2">SnapOdds Banner</h2>
+              <p className="lead mt-4">
                 Offer website visitors a simple, unobtrusive and better way to
                 access betting odds.
-              </h2>
-              <p>
-                When a website visitor clicks the banner, the smartphone camera
-                opens and activates the Snapping function. Any live sporting
-                event, on TV or streaming, can be snapped and all of the betting
-                odds relevant to that game instantly show up on the display.
               </p>
               <ul>
                 <li>
@@ -92,18 +78,42 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
                 <li>Open new opportunities for consumer acquisition</li>
                 <li>The smartest ad banner in history</li>
               </ul>
-              <Button
-                as="link"
-                styleType="primary"
-                to="/contact"
-                className="mt-8"
-              >
-                Contact Sales
+            </div>
+            <div className="flex justify-end mt-6 space-x-8">
+              <Button as="link" styleType="ghost" to="/product-banner">
+                Learn more
               </Button>
+              <Button
+                as="button"
+                styleType="primary"
+                onClick={() => modalRefDemoBanner.current.openModal()}
+              >
+                Get a demo
+              </Button>
+              <Modal ref={modalRefDemoBanner} title="Book a Banner Demo">
+                <HsFormDemoBanner />
+              </Modal>
             </div>
           </div>
-        </article>
+        </div>
+        <div className="pt-8 mt-16 border-t border-skin-base-muted">
+          <h2 className="text-center text-3xl">Product related FAQs</h2>
+          <dl className="prose prose-lg max-w-full mx-auto mb-8 divide-y divide-skin-base-muted">
+            {faqs
+              .filter((faq) => faq.category === "Product")
+              .map((filteredFaq) => (
+                <Faq
+                  key={filteredFaq.question}
+                  author={filteredFaq.author}
+                  category={filteredFaq.category}
+                  q={filteredFaq.question}
+                  a={filteredFaq.answer}
+                />
+              ))}
+          </dl>
+        </div>
       </Container>
+      <LogoCloud />
     </Layout>
   );
 };
