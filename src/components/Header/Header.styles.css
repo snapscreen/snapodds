@@ -60,6 +60,7 @@
 .header--mobile .brand {
   @apply text-skin-fg;
   @apply order-1;
+  @apply transition duration-300 ease-in-out;
 }
 
 .header .btn.primary {

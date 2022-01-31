@@ -15,11 +15,10 @@ export const Logo: React.FC<LogoProps> = ({
   className,
 }) => {
   return (
-    <Button as="link" to="/" styleType="ghost">
+    <Button as="link" to="/" styleType="icon">
       <span className={className}>
         {icon ? (
           <svg
-            className="h-16 w-16"
             viewBox="0 0 210 210"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

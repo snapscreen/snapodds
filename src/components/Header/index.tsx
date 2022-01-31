@@ -39,7 +39,7 @@ export const Header: React.FC<EmptyProps> = () => {
     <Popover className={`headerWrapper ${!top && "sticky"}`}>
       <header className="header">
         <div className="header__left">
-          <Logo className="brand" />
+          {top ? <Logo className="brand" /> : <Logo icon className="brand" />}
         </div>
         <div className="header__center">
           <div className="hidden lg:flex">
