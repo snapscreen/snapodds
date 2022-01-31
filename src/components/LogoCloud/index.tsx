@@ -10,10 +10,12 @@ export const LogoCloud: React.FC<EmptyProps> = () => {
       <Container>
         <div className="logoCloudContainer">
           <h2 className="max-w-md mx-auto text-3xl font-bold text-center lg:ml-0 lg:max-w-xl lg:text-left">
-            Our solution is best suited for sportsbooks and sports media.
+            Our B2B products are best suited for sportsbooks and sports media.
           </h2>
           <div className="flow-root self-center mt-8 lg:mt-0">
-            <div className="text-sm flex justify-center pt-4 border-t lg:-mt-4 lg:border-t-0">Clients using SnapOdds</div>
+            <div className="text-sm flex justify-center pt-4 border-t lg:-mt-4 lg:border-t-0">
+              Clients using SnapOdds
+            </div>
             <div className="-ml-8 flex flex-wrap justify-around lg:-ml-4">
               <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 justify-center lg:flex-grow-0 lg:ml-4">
                 <svg
