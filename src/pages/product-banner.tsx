@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, LogoCloud, Seo, Button } from "@/components";
+import {
+  Layout,
+  Container,
+  Hero,
+  LogoCloud,
+  Modal,
+  HsFormDemoBanner,
+  Seo,
+  Button,
+} from "@/components";
 
 const Products: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const modalRefDemoBanner = useRef();
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -47,14 +57,22 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
                 <li>Open new opportunities for consumer acquisition</li>
                 <li>The smartest ad banner in history</li>
               </ul>
-              <Button
-                as="link"
-                styleType="primary"
-                to="/contact"
-                className="mt-8"
-              >
-                Contact Sales
-              </Button>
+              <div className="flex mt-8">
+                <Button as="link" styleType="ghost" to="/contact">
+                  Contact Sales
+                </Button>
+                <Button
+                  as="button"
+                  styleType="primary"
+                  onClick={() => modalRefDemoBanner.current.openModal()}
+                  className="ml-8 my-auto"
+                >
+                  Get a demo
+                </Button>
+              </div>
+              <Modal ref={modalRefDemoBanner} title="Book a Banner Demo">
+                <HsFormDemoBanner />
+              </Modal>
             </div>
           </div>
         </article>
