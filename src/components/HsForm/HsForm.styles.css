@@ -2,6 +2,7 @@
   @apply flex flex-col;
   @apply p-8 my-8 mx-auto;
   @apply w-full;
+  @apply bg-skin-base-flash;
   @apply transition-all;
   @apply hover:shadow-light;
 }
@@ -39,8 +40,8 @@
   @apply text-skin-fg-focus font-semibold;
   @apply border-skin-primary;
   @apply rounded-md;
-  @apply py-4 px-8;
-  @apply text-xl lg:text-2xl;
+  @apply py-3 px-6;
+  @apply text-xl;
   @apply hover:text-skin-fg-focus hover:shadow-xl hover:cursor-pointer;
   @apply focus:outline-none focus:ring-2 focus:ring-skin-focus focus:bg-skin-focus focus:text-skin-fg-focus;
 }
@@ -50,7 +51,7 @@
   @apply block;
   @apply w-full;
   @apply px-0 py-2;
-  @apply border-0 border-b-2 border-skin-base-muted;
+  @apply border-0 border-b-2;
   @apply rounded-none;
   @apply bg-transparent;
   @apply focus:ring-0 focus:outline-none focus:border-skin-fg;

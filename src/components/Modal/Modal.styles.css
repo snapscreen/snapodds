@@ -1,0 +1,47 @@
+.modal {
+  @apply flex;
+  @apply fixed;
+  @apply inset-0;
+  @apply z-40;
+  @apply p-4;
+  @apply overscroll-contain;
+  @apply overflow-hidden;
+}
+
+.modal__header {
+  @apply sticky top-0 z-20;
+  @apply bg-skin-base;
+  @apply bg-opacity-0;
+  @apply border-b border-skin-base-muted border-opacity-10;
+  @apply flex items-center justify-between;
+  @apply px-4 py-3 md:px-8 md:py-6;
+}
+
+.modal__header :not(button) {
+  @apply text-xl;
+  @apply font-semibold;
+}
+
+.modal__body {
+  @apply relative;
+  @apply z-50;
+  @apply flex flex-col;
+  @apply w-full max-w-screen-sm;
+  @apply mx-auto sm:my-4;
+  @apply bg-skin-base;
+  @apply overscroll-none;
+  @apply overflow-auto;
+}
+
+.modal__backdrop {
+  @apply fixed;
+  @apply inset-0;
+  @apply z-40;
+  @apply bg-black/75;
+}
+
+.modal .formContainer {
+  @apply flex-1;
+  @apply my-0;
+  @apply hover:shadow-none;
+}
