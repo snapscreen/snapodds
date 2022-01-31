@@ -3,6 +3,8 @@
 Reach SnapOdds website via https://snapodds.com.
 The website is hosted on netlify and built with GatsbyJS and Gatsby MDX.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee345116-dce6-4643-bc59-8c514b5a6ce1/deploy-status)](https://app.netlify.com/sites/snapodds/deploys)
+
 ## Development Stack
 
 | What?           | Details / Where?                                            |
