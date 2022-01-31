@@ -1,5 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import { PageProps } from "@/definitions";
 import {
   Layout,
@@ -23,23 +24,24 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
         title="It’s a Snap converting viewers into bettors!"
         img={sportsBar}
       >
-        <div className="relative w-full flex flex-col h-full sm:pr-96 lg:pr-96">
+        <div className="w-full sm:pr-96 lg:pr-96">
           <p className="lead">
             Just snap the game on live TV and we find the odds in a flash. We
             enable your players a greater sports betting experience. Upgrade
             your Sportsbook experience or player acquisition with frictionless
             bet discovery!
           </p>
-          <img
-            src="iPhone.png"
-            alt="iPhone"
-            className="w-2/3 mx-auto sm:w-1/2 md:w-80 relative sm:absolute right-0 bottom-0 sm:translate-y-[30%] md:translate-y-[58%] lg:translate-y-[36%]"
-          />
-        </div>
-        <div className="flex justify-center md:justify-start">
           <Button as="link" to="/how-it-works" styleType="primary">
             How it works
           </Button>
+        </div>
+        <div className="hidden mx-auto sm:block sm:w-1/2 lg:w-1/3 sm:absolute right-0 -bottom-8">
+          <StaticImage
+            src="../images/iPhone.png"
+            alt="Snap TV"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
         </div>
       </Hero>
       <LogoCloud />

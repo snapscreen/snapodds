@@ -24,7 +24,7 @@
 
 .hero {
   @apply relative z-10 overflow-visible;
-  @apply py-16 lg:px-4;
+  @apply pb-16 sm:pt-16 sm:pb-16 lg:px-4;
   @apply max-w-screen-xl;
   @apply mx-auto;
 }

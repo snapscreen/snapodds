@@ -13,25 +13,25 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   let AOS;
-    useEffect(() => {
-      /**
-       * Server-side rendering does not provide the 'document' object
-       * therefore this import is required either in useEffect or componentDidMount as they
-       * are exclusively executed on a client
-       */
-      const AOS = require("aos");
-      AOS.init({
-        once: true,
-        duration: 300,
-        easing: "ease-out-cubic",
-      });
-    }, []);
-
-    useEffect(() => {
-      if (AOS) {
-        AOS.refresh();
-      }
+  useEffect(() => {
+    /**
+     * Server-side rendering does not provide the 'document' object
+     * therefore this import is required either in useEffect or componentDidMount as they
+     * are exclusively executed on a client
+     */
+    const AOS = require("aos");
+    AOS.init({
+      once: true,
+      duration: 300,
+      easing: "ease-out-cubic",
     });
+  }, []);
+
+  useEffect(() => {
+    if (AOS) {
+      AOS.refresh();
+    }
+  });
   return (
     <>
       <Header />
