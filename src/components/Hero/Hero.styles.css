@@ -1,7 +1,11 @@
 .heroBackground {
-  @apply min-h-[80vh] min-w-full;
+  @apply min-h-[70vh] min-w-full;
   @apply absolute inset-0 z-0 overflow-hidden;
-  @apply bg-skin-base;
+  @apply bg-black;
+}
+
+.heroBackground > video {
+  @apply opacity-60;
 }
 
 .heroBackground + .hero {
@@ -20,8 +24,8 @@
 
 .hero {
   @apply relative z-10 overflow-visible;
-  @apply py-16;
-  @apply max-w-screen-2xl;
+  @apply py-16 lg:px-4;
+  @apply max-w-screen-xl;
   @apply mx-auto;
 }
 
@@ -29,10 +33,10 @@
 .hero .lead,
 .hero > * {
   @apply lg:text-center;
-  @apply lg:mx-auto;
 }
 
-.lead {
-  @apply sm:text-xl lg:text-2xl;
+.hero h1,
+.hero .lead {
   @apply max-w-screen-md;
+  @apply mx-auto;
 }

@@ -9,9 +9,16 @@ type HeroProps = {
   title: string;
   lead?: string;
   img?: string;
+  video?: string;
 };
 
-export const Hero: React.FC<HeroProps> = ({ title, lead, img, children }) => {
+export const Hero: React.FC<HeroProps> = ({
+  title,
+  lead,
+  img,
+  video,
+  children,
+}) => {
   return (
     <div className="relative overflow-hidden">
       {!img ? null : (
@@ -20,11 +27,26 @@ export const Hero: React.FC<HeroProps> = ({ title, lead, img, children }) => {
           style={{ backgroundImage: `url(${img})` }}
         />
       )}
-      <div className="hero prose prose-xl lg:prose-2xl">
+      {!video ? null : (
+        <div className="heroBackground absolute inset-0 overflow-hidden bg-cover">
+          <video
+            width="640"
+            height="360"
+            controls
+            autoPlay
+            loop
+            preload="auto"
+            className="w-full mx-auto"
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        </div>
+      )}
+      <div className="hero prose prose-lg lg:prose-xl">
         <Container>
           <section>
             <CalloutHeading itemProp="headline" text={title} />
-            <p className="lead mt-16">{lead}</p>
+            <p className="lead mt-4">{lead}</p>
             {!children ? null : children}
           </section>
         </Container>
