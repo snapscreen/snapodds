@@ -26,14 +26,21 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
       >
         <div className="w-full sm:pr-96 lg:pr-96">
           <p className="lead">
-            Just snap the game on live TV and we find the odds in a flash. We
-            enable your players a greater sports betting experience. Upgrade
-            your Sportsbook experience or player acquisition with frictionless
-            bet discovery!
+            SnapOdds technology helps sportsbooks and sports media instantly
+            increase the number of bets users take while watching games. Upgrade
+            the betting experience for your users with frictionless bet
+            discovery
           </p>
-          <Button as="link" to="/how-it-works" styleType="primary">
-            How it works
-          </Button>
+          <div className="flex mt-8">
+            <Button
+              as="link"
+              to="/how-it-works"
+              styleType="primary"
+              className="my-auto"
+            >
+              How it works
+            </Button>
+          </div>
         </div>
         <div className="hidden mx-auto sm:block sm:w-1/2 lg:w-1/3 sm:absolute right-0 -bottom-8">
           <StaticImage
