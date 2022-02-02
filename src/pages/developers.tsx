@@ -43,16 +43,17 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Developers ressources" />
       <Hero
-        title="Developer ressources"
+        title="Developers"
         lead="We prepared developer how-to articles and a documentation."
       >
-
-        <Button as="externalLink" href="http://github.com/snapodds" styleType="ghost">
-          Github page
-        </Button>
-        <Button as="externalLink" href="https://docs.snapodds.com/docs/" styleType="primary" className="ml-8">
-          Documentation
-        </Button>
+        <div className="mt-8 flex flex-col justify-center items-center sm:flex-row">
+          <Button as="externalLink" href="http://github.com/snapodds" styleType="ghost">
+            Github page
+          </Button>
+          <Button as="externalLink" href="https://docs.snapodds.com/docs/" styleType="primary" className="mt-4 sm:mt-0 sm:ml-8">
+            Read documentation
+          </Button>
+        </div>
       </Hero>
       <Container>
         <h2 className="text-4xl text-center my-8">Framework SDKs</h2>
