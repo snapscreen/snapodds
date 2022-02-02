@@ -10,6 +10,14 @@
   @apply flex items-center space-x-3;
 }
 
+.card__header .gatsby-image-wrapper {
+  @apply w-20;
+}
+
+.card__header h3 {
+  @apply flex-1;
+}
+
 .card__footer {
   @apply flex justify-between;
   @apply text-sm text-skin-fg-muted;

@@ -14,7 +14,7 @@ const ressources = [
   {
     framework: "iOS",
     type: "mobile",
-    description: "Integrate SnapOdds with your native iOS app for iPhone or iPad.",
+    description: "Integrate SnapOdds with your native iOS app for Apple iPhone or iPad.",
     link:
       "https://docs.snapodds.com/docs/documentation/ios-sdk-documentation",
   },
@@ -30,7 +30,7 @@ const ressources = [
     framework: "Javascript",
     type: "frontend",
     description:
-      "Integrate SnapOdds with any website with our Javascript SDK.",
+      "Integrate SnapOdds with any website.",
     link:
       "https://docs.snapodds.com/docs/documentation/js-sdk-documentation",
   },
