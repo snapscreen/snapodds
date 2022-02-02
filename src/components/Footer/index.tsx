@@ -12,14 +12,14 @@ const navigation = {
   ],
   support: [
     { name: "How it works", to: "/how-it-works" },
-    { name: "FAQs", to: "/faq" },
+    { name: "Documentation", to: "https://docs.snapodds.com/", externalLink: true },
     {
       name: "Developers",
-      to: "https://github.com/snapodds/",
-      externalLink: true,
+      to: "/developers",
     },
   ],
   company: [
+    { name: "FAQs", to: "/faq" },
     { name: "Newsroom", to: "/news" },
     { name: "Contact", to: "/contact" },
   ],

@@ -16,8 +16,7 @@ const navigation = {
   rightNav: [
     {
       name: "Developers",
-      to: "https://github.com/snapodds/",
-      externalLink: true,
+      to: "/developers",
     },
   ],
 };
