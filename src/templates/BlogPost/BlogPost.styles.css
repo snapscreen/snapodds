@@ -6,7 +6,7 @@
 }
 
 .pageNav {
-  @apply mt-16 pt-16 border-t border-skin-base-muted;
+  @apply mt-16 mb-8 pt-16 border-t border-skin-base-muted;
   @apply mx-auto;
 }
 

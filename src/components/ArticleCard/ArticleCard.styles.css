@@ -7,15 +7,17 @@
 }
 
 .card__header {
-  @apply flex items-center space-x-3;
+  @apply flex items-center space-x-4;
 }
 
 .card__header .gatsby-image-wrapper {
-  @apply w-20;
+  @apply w-24;
 }
 
 .card__header h3 {
   @apply flex-1;
+  @apply my-0;
+  @apply font-semibold;
 }
 
 .card__footer {
@@ -41,7 +43,6 @@
 }
 
 .cardTitle {
-  @apply text-2xl font-display font-semibold;
   @apply transition-all;
 }
 
@@ -54,6 +55,6 @@
 }
 
 .cardCopy {
-  @apply text-lg text-skin-fg;
+  @apply text-skin-fg;
   @apply mt-3
 }

@@ -40,7 +40,7 @@ export const NewsLinkList: React.FC<EmptyProps> = () => {
           <div className="prose prose-lg sm:p-4 mb-8 md:mb-0">
             <h2>Coverage and mentions</h2>
           </div>
-          <ol className="-mx-4 sm:mx-0 lg:mx-1 space-y-4">
+          <ol className="-mx-4 sm:mx-0 space-y-4">
             {data.allMdx.edges.map(({ node }: { node: INode }) => {
               const title = node.frontmatter.title;
               const image = getImage(node.frontmatter.image);

@@ -18,7 +18,7 @@ export const ArticleCard: React.FC<CardProps> = ({
     <article
       itemScope
       itemType="http://schema.org/Article"
-      className="card group"
+      className="card group prose prose-lg"
     >
       <header className="card__header">
         <GatsbyImage image={image} alt={title} />

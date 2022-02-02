@@ -24,15 +24,15 @@ const News: React.FC<PageProps> = ({ data, location }) => {
         title="Newsroom and Press"
         lead="Below you will find our press releases and brand assets."
       >
-        <div className="flex justify-center sm:hidden">
-          <Button as="link" to="/news#articles">
-            Jump to press releases
-          </Button>
-        </div>
       </Hero>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-8">
-          <section>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-8">
+          <section id="articles" className="space-y-8 md:col-span-7">
+            <NewsReleaseList />
+            <NewsLinkList />
+            <HsFormSubscribe />
+          </section>
+          <section className="md:col-span-5">
             <div className="prose prose-lg sm:p-4">
               <h2>SnapOdds Brand Assets</h2>
               <div className="py-2">
@@ -61,16 +61,17 @@ const News: React.FC<PageProps> = ({ data, location }) => {
               </p>
               <h2>Images for Press</h2>
               <div className="py-2">
-                <div className="flex flex-col items-start sm:flex-row items-center">
+                <div className="flex flex-col items-start items-center">
                   <StaticImage
                     src="../images/Thomas-Willomitzer-Portrait-SnapOdds.jpg"
                     alt="Portrait of Thomas Willomitzer, CEO Snapscreen Inc."
                     placeholder="blurred"
                     layout="fixed"
-                    height={320}
+                    height={300}
+                    width={300}
                     className="w-full mr-auto"
                   />
-                  <figcaption className="w-full flex-1 sm:ml-8">
+                  <figcaption className="w-full flex-1">
                     <p>
                       Thomas Willomitzer
                       <br />
@@ -91,11 +92,6 @@ const News: React.FC<PageProps> = ({ data, location }) => {
             {/*
             <hr className="mt-4 border-skin-base-muted" />
             */}
-          </section>
-          <section id="articles" className="space-y-8">
-            <NewsReleaseList />
-            <NewsLinkList />
-            <HsFormSubscribe />
           </section>
         </div>
       </Container>
