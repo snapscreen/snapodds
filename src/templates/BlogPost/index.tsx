@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import {
@@ -49,7 +48,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
               {previous && (
                 <div className="pageNav__item">
                   <Link
-                    to={previous.fields.slug}
+                    to={`/news${previous.fields.slug}`}
                     rel="prev"
                     className="pageLink"
                   >
@@ -62,7 +61,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
               )}
               {next && (
                 <div className="pageNav__item">
-                  <Link to={next.fields.slug} rel="next" className="pageLink">
+                  <Link to={`/news${next.fields.slug}`} rel="next" className="pageLink">
                     <h4 className="pageLink__text">{next.frontmatter.title}</h4>
                   </Link>
                   <p>{next.frontmatter.description}</p>

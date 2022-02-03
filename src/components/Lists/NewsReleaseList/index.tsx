@@ -15,10 +15,11 @@ export const NewsReleaseList: React.FC<EmptyProps> = () => {
             totalCount
             edges {
               node {
-                excerpt
+                id
                 fields {
                   slug
                 }
+                excerpt
                 frontmatter {
                   date(formatString: "MMMM DD, YYYY")
                   title
@@ -40,14 +41,13 @@ export const NewsReleaseList: React.FC<EmptyProps> = () => {
             {data.allMdx.edges.map(({ node }: { node: INode }) => {
               const title = node.frontmatter.title || node.fields.slug;
               return (
-                <li key={node.fields.slug} className="group">
+                <li key={node.id} className="group">
                   <ArticleCard
-                    link={node.fields.slug}
                     title={title}
                     description={node.frontmatter.description}
-                    tags={node.frontmatter.tags}
                     date={node.frontmatter.date}
                     type={node.frontmatter.type}
+                    link={node.fields.slug}
                   />
                 </li>
               );

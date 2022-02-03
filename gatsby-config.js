@@ -83,6 +83,14 @@ module.exports = {
         name: `coverage`,
       },
     },
+    // Products
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/products`,
+        name: `products`,
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {

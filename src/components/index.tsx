@@ -1,4 +1,4 @@
-export { ArticleCard } from "./ArticleCard";
+export { ArticleCard, ProductCard } from "./Cards";
 export { Container } from "./Container";
 export { Button } from "./Button";
 export { DownloadBadge } from "./DownloadBadge";
@@ -17,6 +17,7 @@ export {
   InlineList,
   NewsReleaseList,
   NewsLinkList,
+  ProductsList,
 } from "./Lists";
 export { CalloutHeading, ArticleHeading } from "./Headings";
 export {
@@ -29,6 +30,5 @@ export { Portal } from "./Portal";
 export { Modal } from "./Modal";
 export { Nav } from "./Nav";
 export { ThemeSwitch } from "./ThemeSwitch";
-export { Tags } from "./Tags";
 export { ScrollTop } from "./ScrollTop";
 export { Seo } from "./Seo";

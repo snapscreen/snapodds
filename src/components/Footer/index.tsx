@@ -7,8 +7,9 @@ import "./Footer.styles.css";
 
 const navigation = {
   solutions: [
-    { name: "SnapOdds SDK", to: "/product-sdk" },
-    { name: "SnapOdds Banner", to: "/product-banner" },
+    { name: "Overview", to: "/products" },
+    { name: "SnapOdds SDK", to: "/products/snap" },
+    { name: "SnapOdds Banner", to: "/products/snapodds" },
   ],
   support: [
     { name: "How it works", to: "/how-it-works" },

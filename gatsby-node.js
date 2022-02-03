@@ -14,6 +14,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
+  ///////////////////////////////////////////////
   // Define a template for blog post
   const blogPostTemplate = path.resolve(`./src/templates/BlogPost/index.tsx`);
   // Get all markdown blog posts sorted by date
@@ -46,7 +47,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     );
     return;
   }
-
   // Create blog posts pages
   const posts = result.data.allMdx.edges;
   if (posts.length > 0) {
@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId =
         index === posts.length - 1 ? null : posts[index + 1].node.id;
       createPage({
-        path: post.node.slug,
+        path: `/news/${post.node.slug}`,
         component: blogPostTemplate,
         context: {
           id: post.node.id,
@@ -66,37 +66,53 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   }
 
-  // Define a template for tag page
-  const tagTemplate = path.resolve(`./src/templates/TagPage/index.tsx`);
-  // Create tag pages
-  const tags = {};
-
-  result.data.allMdx.edges
-    .filter(({ node }) => node.frontmatter.tags)
-    .forEach(({ node }) => {
-      const tagsList = node.frontmatter.tags
-        .split(",")
-        .map((tag) => tag.trim())
-        .filter((tag) => tag.length > 0);
-
-      tagsList.forEach((tag) => {
-        if (!tags[tag]) {
-          tags[tag] = [];
+  ///////////////////////////////////////////////
+  // Define a template for product page
+  const productPageTemplate = path.resolve(`./src/templates/ProductPage/index.tsx`);
+  // Get all markdown products sorted by name
+  const productResult = await graphql(
+    `
+      {
+        allMdx(
+          filter: { frontmatter: { type: { eq: "product" } } }
+          sort: { fields: [frontmatter___order], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              id
+              slug
+              frontmatter {
+                order
+              }
+            }
+          }
         }
-        tags[tag].push(node.slug);
+      }
+    `
+  );
+
+  if (productResult.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading the products.`,
+      productResult.errors
+    );
+    return;
+  }
+  // Create product pages
+  const products = productResult.data.allMdx.edges;
+  if (products.length > 0) {
+    products.forEach((product) => {
+      createPage({
+        path: `/products/${product.node.slug}`,
+        component: productPageTemplate,
+        context: {
+          id: product.node.id,
+          product,
+        },
       });
     });
-
-  Object.keys(tags).forEach((tag) => {
-    createPage({
-      path: `/tag/${tag}`,
-      component: tagTemplate,
-      context: {
-        tag,
-        slugs: tags[tag],
-      },
-    });
-  });
+  }
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -139,7 +155,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Frontmatter {
+      linkType: String
       title: String
+      name: String
       description: String
       tags: String
       date: Date @dateformat

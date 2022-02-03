@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { CardProps } from "@/definitions";
 // import { Tags } from "@/components";
 
-import "./ArticleCard.styles.css";
+import "../Card.styles.css";
 
 export const ArticleCard: React.FC<CardProps> = ({
   link,
@@ -28,7 +28,7 @@ export const ArticleCard: React.FC<CardProps> = ({
               <span itemProp="headline">{title}</span>
             </a>
           ) : (
-            <Link to={link} itemProp="url">
+            <Link to={`/news${link}`} itemProp="url">
               <span itemProp="headline">{title}</span>
             </Link>
           )}
@@ -42,7 +42,6 @@ export const ArticleCard: React.FC<CardProps> = ({
           itemProp="description"
           className="cardCopy"
         />
-        {/* <Tags tags={tags} /> */}
       </section>
       <footer className="card__footer">
         <span>{date}</span>
@@ -51,7 +50,7 @@ export const ArticleCard: React.FC<CardProps> = ({
             <span>{link}</span>
           </a>
         ) : (
-          <Link to={link} itemProp="url">
+          <Link to={`/news${link}`} itemProp="url">
             <span>Read more</span>
           </Link>
         )}

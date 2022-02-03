@@ -31,11 +31,13 @@ interface FaqProps {
 interface CardProps {
   link?: any;
   title: string;
+  name?: string;
   description?: any;
-  tags?: keyof JSX.IntrinsicElements | string;
   date?: string;
-  image?: string;
-  type: string;
+  image?: any;
+  type?: string;
+  body?: any;
+  slug?: string;
 }
 
 interface PageProps {
@@ -43,7 +45,6 @@ interface PageProps {
     mdx: INode;
     previous: INode;
     next: INode;
-    tag: INode;
     slug: INode;
     allMdx: {
       totalCount: INode;
@@ -76,11 +77,8 @@ interface IEdge {
   node: INode;
 }
 
-interface ITag {
-  tags?: keyof JSX.IntrinsicElements | string;
-}
-
 interface INode {
+  id: string;
   excerpt: string;
   body: string;
   fields: {
@@ -89,9 +87,11 @@ interface INode {
   frontmatter: {
     date: string;
     title: string;
-    tags?: string | undefined;
+    name: string;
+    claim: string;
     description: string;
     link: string;
     image?: any;
+    type?: string;
   };
 }

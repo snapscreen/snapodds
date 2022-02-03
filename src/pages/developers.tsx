@@ -58,8 +58,8 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
       <Container>
         <h2 className="text-4xl text-center my-8">Framework SDKs</h2>
         <div className="grid grid-cols-1 gap-4 mb-4 mx-auto sm:mb-8 sm:gap-8 lg:grid-cols-3">
-          {ressources.map((ressource) => (
-            <div className="flex flex-col justify-between prose relative bg-skin-base-flash p-8 shadow-sm transition-all focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-light">
+          {ressources.map((ressource, key) => (
+            <div key={key} className="flex flex-col justify-between prose relative bg-skin-base-flash p-8 shadow-sm transition-all focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-light">
               <div>
                 <h2 className="text-3xl mt-2">
                   <span>{ressource.framework}</span>

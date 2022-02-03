@@ -15,6 +15,7 @@ export const NewsLinkList: React.FC<EmptyProps> = () => {
           ) {
             edges {
               node {
+                id
                 frontmatter {
                   date(formatString: "MMMM DD, YYYY")
                   title
@@ -45,13 +46,13 @@ export const NewsLinkList: React.FC<EmptyProps> = () => {
               const title = node.frontmatter.title;
               const image = getImage(node.frontmatter.image);
               return (
-                <li key={node.frontmatter.link} className="group">
+                <li key={node.id} className="group">
                   <ArticleCard
                     title={title}
                     image={image}
-                    link={node.frontmatter.link}
                     date={node.frontmatter.date}
                     type={node.frontmatter.type}
+                    link={node.frontmatter.link}
                   />
                 </li>
               );

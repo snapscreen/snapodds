@@ -19,10 +19,10 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="SnapOdds SDK" />
+      <Seo title="SnapOdds All-in-one" />
       <Hero
         title="Yes, it’s possible to snap with your website."
-        lead="SnapOdds Banner for sportsbooks and sports media apps."
+        lead="SnapOdds All-in-one for sportsbooks and sports media apps."
       ></Hero>
       <Container>
         <article className="mx-auto prose prose-xl max-w-full space-y-8 divide-y divide-skin-base-muted mb-16">

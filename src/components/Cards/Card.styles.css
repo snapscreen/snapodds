@@ -20,6 +20,11 @@
   @apply font-semibold;
 }
 
+.card__header h3 a {
+  @apply text-current;
+  @apply font-semibold;
+}
+
 .card__footer {
   @apply flex justify-between;
   @apply text-sm text-skin-fg-muted;
@@ -57,4 +62,8 @@
 .cardCopy {
   @apply text-skin-fg;
   @apply mt-3
+}
+
+.cardTeaserCopy p {
+  @apply hidden;
 }

@@ -19,10 +19,10 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="SnapOdds SDK" />
+      <Seo title="Snap SDK" />
       <Hero
         title="Yes, it’s possible to snap with your mobile app."
-        lead="SnapOdds SDK for sportsbooks and sports media apps."
+        lead="Snap SDK for sportsbooks and sports media apps."
       ></Hero>
       <Container>
         <article className="mx-auto prose prose-xl max-w-full space-y-8 divide-y divide-skin-base-muted mb-16">

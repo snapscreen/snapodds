@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
 import {
@@ -6,20 +6,15 @@ import {
   Container,
   Hero,
   Faq,
-  HsFormDemoSDK,
-  HsFormDemoBanner,
   LogoCloud,
+  ProductsList,
   Seo,
-  Button,
-  Modal,
 } from "@/components";
 
 import { faqs } from "./faq";
 
 const Products: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const modalRefDemoSDK = useRef();
-  const modalRefDemoBanner = useRef();
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -29,10 +24,12 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
         lead="SnapOdds technology instantly increases the number of sports bets taken on any platform or medium that it's added to. The best part, it can be easily added to any app, website or blog in two impactful ways."
       ></Hero>
       <Container>
+        <ProductsList />
+        {/*
         <div className="grid grid-cols-1 gap-4 mb-4 mx-auto sm:mb-8 sm:gap-8 sm:grid-cols-2">
           <div className="flex flex-col justify-between prose relative bg-skin-base-flash p-8 shadow-sm transition-all focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-light">
             <div>
-              <h2 className="text-3xl mt-2">SnapOdds SDK</h2>
+              <h2 className="text-3xl mt-2">Snap SDK</h2>
               <p className="lead mt-4">
                 Enhance your betting app or mobile web page with a "Snapping"
                 function
@@ -48,7 +45,7 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
               </ul>
             </div>
             <div className="flex justify-end mt-6 space-x-8">
-              <Button as="link" styleType="ghost" to="/product-sdk">
+              <Button as="link" styleType="ghost" to="/products/snap">
                 Learn more
               </Button>
               <Button
@@ -65,7 +62,7 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
           </div>
           <div className="flex flex-col justify-between prose relative bg-skin-base-flash p-8 shadow-sm transition-all focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-light">
             <div>
-              <h2 className="text-3xl mt-2">SnapOdds Banner</h2>
+              <h2 className="text-3xl mt-2">SnapOdds</h2>
               <p className="lead mt-4">
                 Offer website visitors a simple, unobtrusive and better way to
                 access betting odds.
@@ -80,7 +77,7 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
               </ul>
             </div>
             <div className="flex justify-end mt-6 space-x-8">
-              <Button as="link" styleType="ghost" to="/product-banner">
+              <Button as="link" styleType="ghost" to="/products/snapodds">
                 Learn more
               </Button>
               <Button
@@ -96,6 +93,7 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
             </div>
           </div>
         </div>
+        */}
         <div className="pt-8 mt-16 border-t border-skin-base-muted">
           <h2 className="text-center text-3xl">Product related FAQs</h2>
           <dl className="prose prose-lg max-w-full mx-auto mb-8 divide-y divide-skin-base-muted">
