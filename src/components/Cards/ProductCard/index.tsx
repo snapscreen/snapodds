@@ -1,9 +1,7 @@
 import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { CardProps } from "@/definitions";
-import {
-  Button,
-} from "@/components";
+import { Button } from "@/components";
 
 import "../Card.styles.css";
 
@@ -12,9 +10,8 @@ export const ProductCard: React.FC<CardProps> = ({
   title,
   body,
   slug,
-  children
+  children,
 }) => {
-
   return (
     <article
       itemScope
@@ -27,7 +24,7 @@ export const ProductCard: React.FC<CardProps> = ({
         <MDXRenderer>{body}</MDXRenderer>
       </section>
       <div className="flex justify-end mt-6 space-x-8">
-        <Button as="link" styleType="ghost" to={`/products${slug}`} >
+        <Button as="link" styleType="ghost" to={`/products${slug}`}>
           Learn more
         </Button>
         {children}

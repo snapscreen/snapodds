@@ -1,8 +1,12 @@
 import React, { useRef } from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { ProductCard, Modal, Button,
-HsFormDemoSDK,
-HsFormDemoBanner } from "@/components";
+import {
+  ProductCard,
+  Modal,
+  Button,
+  HsFormDemoSDK,
+  HsFormDemoBanner,
+} from "@/components";
 import { INode, EmptyProps } from "@/definitions";
 
 export const ProductsList: React.FC<EmptyProps> = () => {
@@ -48,9 +52,8 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                     body={node.body}
                     slug={node.fields.slug}
                   >
-                    {node.frontmatter.name === "Snap" &&
-                      (
-                        <>
+                    {node.frontmatter.name === "Snap" && (
+                      <>
                         <Button
                           as="button"
                           styleType="primary"
@@ -62,12 +65,10 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                         <Modal ref={modalRefDemoSDK} title="Book a Snap Demo">
                           <HsFormDemoSDK />
                         </Modal>
-                        </>
-                      )
-                    }
-                    {node.frontmatter.name === "SnapOdds" &&
-                      (
-                        <>
+                      </>
+                    )}
+                    {node.frontmatter.name === "SnapOdds" && (
+                      <>
                         <Button
                           as="button"
                           styleType="primary"
@@ -78,12 +79,14 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                         >
                           Get a demo
                         </Button>
-                        <Modal ref={modalRefDemoBanner} title="Book a SnapOdds Demo">
+                        <Modal
+                          ref={modalRefDemoBanner}
+                          title="Book a SnapOdds Demo"
+                        >
                           <HsFormDemoBanner />
                         </Modal>
-                        </>
-                      )
-                    }
+                      </>
+                    )}
                   </ProductCard>
                 </li>
               );

@@ -61,7 +61,11 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
               )}
               {next && (
                 <div className="pageNav__item">
-                  <Link to={`/news${next.fields.slug}`} rel="next" className="pageLink">
+                  <Link
+                    to={`/news${next.fields.slug}`}
+                    rel="next"
+                    className="pageLink"
+                  >
                     <h4 className="pageLink__text">{next.frontmatter.title}</h4>
                   </Link>
                   <p>{next.frontmatter.description}</p>

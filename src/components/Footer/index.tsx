@@ -13,7 +13,11 @@ const navigation = {
   ],
   support: [
     { name: "How it works", to: "/how-it-works" },
-    { name: "Documentation", to: "https://docs.snapodds.com/", externalLink: true },
+    {
+      name: "Documentation",
+      to: "https://docs.snapodds.com/",
+      externalLink: true,
+    },
     {
       name: "Developers",
       to: "/developers",

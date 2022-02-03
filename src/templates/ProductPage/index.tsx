@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
   Layout,
@@ -18,10 +18,10 @@ import "./ProductPage.styles.css";
 
 const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
   const product = data.mdx;
-  const image = getImage(product.frontmatter.image)
+  const image = getImage(product.frontmatter.image);
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const modalRefDemoSDK:React.MutableRefObject<undefined> = useRef();
-  const modalRefDemoBanner:React.MutableRefObject<undefined> = useRef();
+  const modalRefDemoSDK: React.MutableRefObject<undefined> = useRef();
+  const modalRefDemoBanner: React.MutableRefObject<undefined> = useRef();
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -53,7 +53,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                 <Button as="link" styleType="ghost" to="/contact">
                   Contact Sales
                 </Button>
-                {product.frontmatter.name === "Snap" &&
+                {product.frontmatter.name === "Snap" && (
                   <Button
                     as="button"
                     styleType="primary"
@@ -62,8 +62,8 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                   >
                     Get a demo
                   </Button>
-                }
-                {product.frontmatter.name === "SnapOdds" &&
+                )}
+                {product.frontmatter.name === "SnapOdds" && (
                   <Button
                     as="button"
                     styleType="primary"
@@ -74,18 +74,18 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                   >
                     Get a demo
                   </Button>
-                }
+                )}
               </div>
-              {product.frontmatter.name === "Snap" &&
+              {product.frontmatter.name === "Snap" && (
                 <Modal ref={modalRefDemoSDK} title="Book a Snap Demo">
                   <HsFormDemoSDK />
                 </Modal>
-              }
-              {product.frontmatter.name === "SnapOdds" &&
+              )}
+              {product.frontmatter.name === "SnapOdds" && (
                 <Modal ref={modalRefDemoBanner} title="Book a SnapOdds Demo">
                   <HsFormDemoBanner />
                 </Modal>
-              }
+              )}
             </div>
           </div>
         </article>
@@ -97,9 +97,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
 export default ProductPageTemplate;
 
 export const pageQuery = graphql`
-  query ProductBySlug(
-    $id: String!
-  ) {
+  query ProductBySlug($id: String!) {
     site {
       siteMetadata {
         title
@@ -116,10 +114,7 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            gatsbyImageData(
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
         }
       }

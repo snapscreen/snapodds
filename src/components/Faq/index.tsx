@@ -55,7 +55,10 @@ export const Faq: React.FC<FaqProps> = ({ q, a, category, author }) => {
                   {team
                     .filter((person) => person.user === author)
                     .map((filteredPerson, key) => (
-                      <span key={key} className="inline-flex text-sm text-skin-fg-muted">
+                      <span
+                        key={key}
+                        className="inline-flex text-sm text-skin-fg-muted"
+                      >
                         {filteredPerson.name} ({filteredPerson.role})
                       </span>
                     ))}

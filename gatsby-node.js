@@ -68,7 +68,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   ///////////////////////////////////////////////
   // Define a template for product page
-  const productPageTemplate = path.resolve(`./src/templates/ProductPage/index.tsx`);
+  const productPageTemplate = path.resolve(
+    `./src/templates/ProductPage/index.tsx`
+  );
   // Get all markdown products sorted by name
   const productResult = await graphql(
     `

@@ -23,8 +23,7 @@ const News: React.FC<PageProps> = ({ data, location }) => {
       <Hero
         title="Newsroom and Press"
         lead="Below you will find our press releases and brand assets."
-      >
-      </Hero>
+      ></Hero>
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-8">
           <section id="articles" className="space-y-8 md:col-span-7">
