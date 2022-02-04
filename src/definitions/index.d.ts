@@ -34,7 +34,7 @@ interface CardProps {
   name?: string;
   description?: any;
   date?: string;
-  image?: any;
+  image?: GatsbyImage;
   type?: string;
   body?: any;
   slug?: string;
@@ -54,6 +54,7 @@ interface PageProps {
   };
   location: Location;
   pageContext: any;
+  image?: GatsbyImage;
 }
 
 interface ISite {

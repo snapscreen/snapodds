@@ -14,7 +14,7 @@ export const Socials: React.FC<EmptyProps> = () => {
           href="https://twitter.com/snapodds"
         >
           <svg className="h-10 w-10" viewBox="0 0 49 49" aria-hidden="true">
-            <title>Twitter icon</title>
+            <title>Follow us on Twitter</title>
             <path
               d="M24.081 48.541c13.255 0 24-10.745 24-24 0-13.254-10.745-24-24-24-13.254 0-24 10.746-24 24 0 13.255 10.746 24 24 24z"
               fill="#1B9DF0"
@@ -34,7 +34,7 @@ export const Socials: React.FC<EmptyProps> = () => {
           href="https://www.linkedin.com/products/snapscreen-snapodds/"
         >
           <svg className="h-10 w-10" viewBox="0 0 50 49" aria-hidden="true">
-            <title>LinkedIn icon</title>
+            <title>Follow us on LinkedIn</title>
             <path
               d="M41.901 40.9h-7.099V29.763c0-2.657-.045-6.076-3.699-6.076s-4.285 2.892-4.285 5.881V40.9h-7.1V17.993h6.816v3.131h.097a7.473 7.473 0 016.725-3.699c7.207 0 8.538 4.742 8.538 10.91L41.9 40.9zM11.678 14.862a4.11 4.11 0 11.038-8.22 4.11 4.11 0 01-.038 8.22zM15.235 40.9H8.136V17.993h7.1V40.9zM45.462 0H4.542A3.505 3.505 0 001 3.462v41.073a3.5 3.5 0 003.542 3.463h40.92a3.507 3.507 0 003.557-3.463V3.459A3.51 3.51 0 0045.462 0z"
               fill="#0A66C1"
@@ -54,7 +54,7 @@ export const Socials: React.FC<EmptyProps> = () => {
           href="https://github.com/snapodds/"
         >
           <svg className="h-10 w-10" viewBox="0 0 1024 1024" aria-hidden="true">
-            <title>Github icon</title>
+            <title>Follow us on Github</title>
             <path
               xmlns="http://www.w3.org/2000/svg"
               fillRule="evenodd"

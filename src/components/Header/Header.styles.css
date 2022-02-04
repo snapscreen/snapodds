@@ -1,18 +1,13 @@
 .headerWrapper {
   @apply sticky top-0 z-20;
   @apply bg-skin-header;
-  @apply bg-opacity-0;
   @apply border-b border-white border-opacity-0;
   @apply transition duration-300 ease-in-out;
-  /* @apply backdrop-filter-none; */
-  backdrop-filter: saturate(140%) blur(.8rem);
 }
 
 .headerWrapper.sticky {
-  @apply bg-opacity-80 dark:bg-opacity-40;
   @apply shadow-lg;
   @apply border-opacity-10;
-  /* @apply backdrop-blur-md backdrop-saturate-150; */
 }
 
 .headerWrapper.sticky .header,

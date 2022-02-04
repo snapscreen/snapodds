@@ -18,10 +18,12 @@ import "./ProductPage.styles.css";
 
 const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
   const product = data.mdx;
-  const image = getImage(product.frontmatter.image);
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const modalRefDemoSDK: React.MutableRefObject<undefined> = useRef();
-  const modalRefDemoBanner: React.MutableRefObject<undefined> = useRef();
+
+  const image = getImage(product.frontmatter.image);
+
+  const modalRefDemoSDK = useRef() as React.MutableRefObject<any>;
+  const modalRefDemoBanner = useRef() as React.MutableRefObject<any>;
 
   return (
     <Layout location={location} title={siteTitle}>

@@ -1,5 +1,6 @@
 .nav {
   @apply flex items-center;
+  @apply transition duration-300 ease-in-out;
 }
 
 .nav + .nav {

@@ -52,7 +52,7 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                     body={node.body}
                     slug={node.fields.slug}
                   >
-                    {node.frontmatter.name === "Snap" && (
+                    {node.fields.slug === "/snap/" && (
                       <>
                         <Button
                           as="button"
@@ -67,7 +67,7 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                         </Modal>
                       </>
                     )}
-                    {node.frontmatter.name === "SnapOdds" && (
+                    {node.fields.slug === "/snapodds/" && (
                       <>
                         <Button
                           as="button"
