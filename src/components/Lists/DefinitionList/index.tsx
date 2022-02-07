@@ -6,8 +6,10 @@ import "./DefinitionList.styles.css";
 export const DefinitionList: React.FC<ListProps> = ({ term, definition }) => {
   return (
     <dl className="definitionList">
-      <dt>{term}</dt>
-      <dd>{definition}</dd>
+      <div className="flex flex-col">
+        <dt>{term}</dt>
+        <dd>{definition}</dd>
+      </div>
     </dl>
   );
 };

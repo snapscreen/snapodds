@@ -1,12 +1,13 @@
 .definitionList {
-  @apply mt-8;
-  @apply flex;
+  @apply items-end;
 }
 
 .definitionList dt {
-  @apply text-sm;
+  @apply text-lg truncate;
+  @apply order-2;
 }
+
 .definitionList dd {
-  @apply text-sm;
-  @apply ml-1;
+  @apply text-4xl font-semibold;
+  @apply order-1;
 }

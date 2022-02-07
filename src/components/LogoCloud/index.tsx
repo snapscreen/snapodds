@@ -6,7 +6,7 @@ import "./LogoCloud.styles.css";
 
 export const LogoCloud: React.FC<EmptyProps> = () => {
   return (
-    <div className="bg-sky-700 text-white">
+    <div className="bg-gradient-to-b from-blue-500 to-blue-600 text-white">
       <Container>
         <div className="logoCloudContainer">
           <h2 className="max-w-md mx-auto text-3xl font-bold text-center lg:ml-0 lg:max-w-xl lg:text-left">
