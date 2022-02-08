@@ -41,7 +41,7 @@
 .brand {
   @apply h-12;
   @apply border-transparent hover:border-transparent;
-  @apply focus:outline-none focus:ring-2 focus:ring-skin-focus;
+  @apply focus:bg-transparent focus:outline-none focus:ring-2 focus:ring-skin-focus;
 }
 
 .header--mobile {
