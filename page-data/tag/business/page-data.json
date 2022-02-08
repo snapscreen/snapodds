@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tag-page-index-tsx",
-    "path": "/tag/business",
-    "result": {"data":{"site":{"siteMetadata":{"title":"SnapOdds"}},"allMdx":{"edges":[{"node":{"frontmatter":{"date":"November 18, 2021","title":"Sharp Alpha Advisors Bets on SnapOdds.tv","description":"Snapscreen announced today a $1.2m seed funding round led by New York based VC Sharp Alpha Advisors.","tags":"business"},"fields":{"slug":"/seed-round/"}}}]}},"pageContext":{"tag":"business","slugs":["seed-round/"]}},
-    "staticQueryHashes": ["1765611749","2841359383","3935214766"]}

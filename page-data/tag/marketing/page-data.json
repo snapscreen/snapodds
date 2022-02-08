@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tag-page-index-tsx",
-    "path": "/tag/marketing",
-    "result": {"data":{"site":{"siteMetadata":{"title":"SnapOdds"}},"allMdx":{"edges":[{"node":{"frontmatter":{"date":"November 17, 2021","title":"Meet SnapOdds at the SBC Summit North America","description":"SnapOdds will be part of the leading sports betting event in North America.","tags":"marketing"},"fields":{"slug":"/sbc/"}}}]}},"pageContext":{"tag":"marketing","slugs":["sbc/"]}},
-    "staticQueryHashes": ["1765611749","2841359383","3935214766"]}
