@@ -36,22 +36,18 @@ export const Faq: React.FC<FaqProps> = ({ q, a, category, author }) => {
       {({ open }) => (
         <div className="card">
           <dt>
-            <Disclosure.Button className="text-left w-full flex justify-between items-start focus:outline-none">
-              <div className="flex items-start space-x-4">
-                <img
-                  className="rounded-full w-12 h-12 mt-2"
-                  src={
-                    "https://f.hubspotusercontent20.net/hubfs/7433878/team/" +
-                    author +
-                    ".png"
-                  }
-                  alt={author}
-                />
-                <div className="">
-                  <span className="inline-flex text-sm text-skin-fg-muted">
-                    {category}
-                  </span>
-                  <p className="my-1 text-2xl font-semibold">{q}</p>
+            <Disclosure.Button className="text-left w-full flex flex-col items-start focus:outline-none">
+              <div className="flex w-full items-center justify-between space-x-4">
+                <div className="flex items-center space-x-4 mb-2">
+                  <img
+                    className="rounded-full my-0 w-8 h-8 sm:w-12 sm:h-12"
+                    src={
+                      "https://f.hubspotusercontent20.net/hubfs/7433878/team/" +
+                      author +
+                      ".png"
+                    }
+                    alt={author}
+                  />
                   {team
                     .filter((person) => person.user === author)
                     .map((filteredPerson, key) => (
@@ -59,24 +55,25 @@ export const Faq: React.FC<FaqProps> = ({ q, a, category, author }) => {
                         key={key}
                         className="inline-flex text-sm text-skin-fg-muted"
                       >
-                        {filteredPerson.name} ({filteredPerson.role})
+                        {filteredPerson.name} ({filteredPerson.role}) about {category}
                       </span>
                     ))}
                 </div>
+                <span className="ml-auto h-7 flex items-center">
+                  <ChevronDownIcon
+                    className={classNames(
+                      open ? "-rotate-180" : "rotate-0",
+                      "h-5 w-5 transform"
+                    )}
+                    aria-hidden="true"
+                  />
+                </span>
               </div>
-              <span className="ml-6 h-7 flex items-center">
-                <ChevronDownIcon
-                  className={classNames(
-                    open ? "-rotate-180" : "rotate-0",
-                    "h-5 w-5 transform"
-                  )}
-                  aria-hidden="true"
-                />
-              </span>
+              <p className="font-semibold my-1 text-xl sm:text-2xl sm:pl-16">{q}</p>
             </Disclosure.Button>
           </dt>
-          <Disclosure.Panel as="dd" className="pl-16 pr-8">
-            <p className="mt-0 mb-2">{a}</p>
+          <Disclosure.Panel as="dd" className="mt-4">
+            <p className="mt-0 mb-2 sm:pl-16">{a}</p>
           </Disclosure.Panel>
         </div>
       )}

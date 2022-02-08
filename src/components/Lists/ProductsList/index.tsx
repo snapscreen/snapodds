@@ -58,7 +58,7 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                           as="button"
                           styleType="primary"
                           onClick={() => modalRefDemoSDK.current.openModal()}
-                          className="ml-8 my-auto"
+                          className="my-auto sm:ml-8"
                         >
                           Get a demo
                         </Button>
@@ -75,7 +75,7 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                           onClick={() => {
                             return modalRefDemoBanner.current.openModal();
                           }}
-                          className="ml-8 my-auto"
+                          className="my-auto sm:ml-8"
                         >
                           Get a demo
                         </Button>

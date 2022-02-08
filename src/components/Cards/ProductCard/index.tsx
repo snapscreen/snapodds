@@ -25,7 +25,7 @@ export const ProductCard: React.FC<CardProps> = ({
           <MDXRenderer>{body}</MDXRenderer>
         </section>
       </div>
-      <div className="flex justify-end mt-6 space-x-8">
+      <div className="flex flex-col sm:flex-row justify-end mt-6 space-y-4 sm:space-y-0 sm:space-x-8">
         <Button as="link" styleType="ghost" to={`/products${slug}`}>
           Learn more
         </Button>
