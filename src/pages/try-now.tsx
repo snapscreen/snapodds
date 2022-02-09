@@ -74,6 +74,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               <video
                 controls
                 loop
+                muted
                 autoPlay
                 className="w-full mx-auto"
                 preload="auto"

@@ -51,7 +51,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                 {product.frontmatter.name}
               </div>
               <MDXRenderer>{product.body}</MDXRenderer>
-              <div className="flex mt-8">
+              <div className="flex flex-col sm:flex-row justify-start mt-12 space-y-4 sm:space-y-0 sm:space-x-8">
                 <Button as="link" styleType="ghost" to="/contact">
                   Contact Sales
                 </Button>
@@ -60,7 +60,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                     as="button"
                     styleType="primary"
                     onClick={() => modalRefDemoSDK.current.openModal()}
-                    className="ml-8 my-auto"
+                    className="my-auto sm:ml-8"
                   >
                     Get a demo
                   </Button>
@@ -72,7 +72,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                     onClick={() => {
                       return modalRefDemoBanner.current.openModal();
                     }}
-                    className="ml-8 my-auto"
+                    className="my-auto sm:ml-8"
                   >
                     Get a demo
                   </Button>
