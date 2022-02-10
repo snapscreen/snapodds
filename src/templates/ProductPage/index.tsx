@@ -8,6 +8,7 @@ import {
   Hero,
   Seo,
   Modal,
+  LogoCloud,
   HsFormDemoSDK,
   HsFormDemoBanner,
   Button,
@@ -33,6 +34,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
       />
       <Hero
         title={product.frontmatter.claim}
+        preTitle={product.frontmatter.name}
         lead={product.frontmatter.description}
       ></Hero>
       <Container>
@@ -47,15 +49,12 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
               />
             </div>
             <div className="w-full md:w-1/2">
-              <div className="uppercase text-lg font-bold text-semibold mt-4 lg:mt-16">
-                {product.frontmatter.name}
-              </div>
               <MDXRenderer>{product.body}</MDXRenderer>
               <div className="flex flex-col sm:flex-row justify-start mt-12 space-y-4 sm:space-y-0 sm:space-x-8">
                 <Button as="link" styleType="ghost" to="/contact">
                   Contact Sales
                 </Button>
-                {product.frontmatter.name === "Snap" && (
+                {product.slug === "operators" && (
                   <Button
                     as="button"
                     styleType="primary"
@@ -65,7 +64,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                     Get a demo
                   </Button>
                 )}
-                {product.frontmatter.name === "SnapOdds" && (
+                {product.slug === "sports-media" && (
                   <Button
                     as="button"
                     styleType="primary"
@@ -78,13 +77,13 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                   </Button>
                 )}
               </div>
-              {product.frontmatter.name === "Snap" && (
-                <Modal ref={modalRefDemoSDK} title="Book a Snap Demo">
+              {product.slug === "operators" && (
+                <Modal ref={modalRefDemoSDK} title="Book a Demo">
                   <HsFormDemoSDK />
                 </Modal>
               )}
-              {product.frontmatter.name === "SnapOdds" && (
-                <Modal ref={modalRefDemoBanner} title="Book a SnapOdds Demo">
+              {product.slug === "sports-media" && (
+                <Modal ref={modalRefDemoBanner} title="Book a Demo">
                   <HsFormDemoBanner />
                 </Modal>
               )}
@@ -92,6 +91,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
           </div>
         </article>
       </Container>
+      <LogoCloud />
     </Layout>
   );
 };
@@ -109,6 +109,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       body
+      slug
       frontmatter {
         title
         claim

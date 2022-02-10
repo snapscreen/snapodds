@@ -64,6 +64,10 @@
   @apply mt-3
 }
 
-.cardTeaserCopy p {
+.cardTeaserCopy > * {
   @apply hidden;
+}
+
+.cardTeaserCopy ul {
+  @apply block;
 }

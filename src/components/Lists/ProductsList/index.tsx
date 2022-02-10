@@ -52,7 +52,7 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                     body={node.body}
                     slug={node.fields.slug}
                   >
-                    {node.fields.slug === "/snap/" && (
+                    {node.fields.slug === "/operators/" && (
                       <>
                         <Button
                           as="button"
@@ -67,7 +67,7 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                         </Modal>
                       </>
                     )}
-                    {node.fields.slug === "/snapodds/" && (
+                    {node.fields.slug === "/sports-media/" && (
                       <>
                         <Button
                           as="button"

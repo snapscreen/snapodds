@@ -7,6 +7,7 @@ type HeroProps = {
   children?: React.ReactNode;
   className?: string;
   title: string;
+  preTitle?: string;
   lead?: string;
   img?: string;
   video?: string;
@@ -14,6 +15,7 @@ type HeroProps = {
 
 export const Hero: React.FC<HeroProps> = ({
   title,
+  preTitle,
   lead,
   img,
   video,
@@ -45,6 +47,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="hero prose prose-lg lg:prose-xl">
         <Container>
           <section>
+            <div className="uppercase">{preTitle}</div>
             <CalloutHeading itemProp="headline" text={title} />
             <p className="lead mt-4">{lead}</p>
             {!children ? null : children}

@@ -8,8 +8,8 @@ import "./Footer.styles.css";
 const navigation = {
   solutions: [
     { name: "Overview", to: "/products" },
-    { name: "SnapOdds SDK", to: "/products/snap" },
-    { name: "SnapOdds Banner", to: "/products/snapodds" },
+    { name: "Operator", to: "/products/operators" },
+    { name: "Sports media", to: "/products/sports-media" },
   ],
   support: [
     { name: "How it works", to: "/how-it-works" },

@@ -8,7 +8,6 @@ import {
   Faq,
   LogoCloud,
   ProductsList,
-  DefinitionList,
   Seo,
 } from "@/components";
 
