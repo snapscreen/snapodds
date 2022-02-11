@@ -69,11 +69,11 @@ export const Faq: React.FC<FaqProps> = ({ q, a, category, author }) => {
                   />
                 </span>
               </div>
-              <p className="font-semibold my-1 text-xl sm:text-2xl sm:pl-16">{q}</p>
+              <p className="font-semibold my-1 text-xl max-w-screen-lg sm:text-2xl sm:pl-16">{q}</p>
             </Disclosure.Button>
           </dt>
           <Disclosure.Panel as="dd" className="mt-4">
-            <p className="mt-0 mb-2 sm:pl-16">{a}</p>
+            <p className="mt-0 mb-2 max-w-screen-lg sm:pl-16">{a}</p>
           </Disclosure.Panel>
         </div>
       )}
