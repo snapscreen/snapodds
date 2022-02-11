@@ -1,16 +1,18 @@
 .heroBackground {
+  @apply hidden sm:block;
   @apply min-h-[70vh] min-w-full;
   @apply absolute inset-0 z-0 overflow-hidden;
   @apply bg-black;
 }
 
 .heroBackground > video {
+  @apply hidden sm:block;
   @apply opacity-60;
 }
 
 .heroBackground + .hero {
   @apply min-h-[70vh];
-  @apply text-white;
+  @apply sm:text-white;
 }
 
 .heroBackground + .hero h1,
