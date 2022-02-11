@@ -3,13 +3,20 @@ import { ListProps } from "@/definitions";
 
 import "./DefinitionList.styles.css";
 
-export const DefinitionList: React.FC<ListProps> = ({ term, definition }) => {
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
+
+export const DefinitionList: React.FC<ListProps> = ({ term, definition, inline }) => {
   return (
-    <dl className="definitionList">
-      <div className="flex flex-col">
-        <dt>{term}</dt>
-        <dd>{definition}</dd>
-      </div>
+    <dl
+      className={classNames(
+        "definitionList",
+        inline ? "-inline" : ""
+      )}
+    >
+      <dt>{term}</dt>
+      <dd>{definition}</dd>
     </dl>
   );
 };

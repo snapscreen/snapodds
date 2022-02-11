@@ -13,6 +13,7 @@ interface EmptyProps {}
 interface ListProps {
   term?: string;
   definition?: string;
+  inline?: boolean;
 }
 
 interface HeadingsProps {

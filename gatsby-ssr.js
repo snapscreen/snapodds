@@ -3,6 +3,7 @@ const React = require("react");
 exports.onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <script
+      defer
       key="darkmode"
       dangerouslySetInnerHTML={{
         __html: `(function() {

@@ -35,6 +35,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
           >
             <ArticleHeading itemProp="headline" text={post.frontmatter.title} />
             <DefinitionList
+              inline
               term="Published on"
               definition={post.frontmatter.date}
             />
