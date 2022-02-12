@@ -114,7 +114,11 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
                   styleType="icon"
                   href={ressource.gitLink}
                 >
-                  <svg className="h-8 w-8" viewBox="0 0 1024 1024" aria-hidden="true">
+                  <svg
+                    className="h-8 w-8"
+                    viewBox="0 0 1024 1024"
+                    aria-hidden="true"
+                  >
                     <title>Visit Github Repo</title>
                     <path
                       xmlns="http://www.w3.org/2000/svg"
