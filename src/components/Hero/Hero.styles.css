@@ -37,8 +37,15 @@
   @apply lg:text-center;
 }
 
+
 .hero h1,
+.hero .preTitle,
 .hero .lead {
   @apply max-w-screen-md;
   @apply mx-auto;
+}
+
+.hero .preTitle {
+  @apply uppercase font-semibold;
+  @apply mt-8;
 }

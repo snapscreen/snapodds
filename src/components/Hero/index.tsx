@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="hero prose prose-lg lg:prose-xl">
         <Container>
           <section>
-            <div className="uppercase">{preTitle}</div>
+            <div className="preTitle">{preTitle}</div>
             <CalloutHeading itemProp="headline" text={title} />
             <p className="lead mt-4">{lead}</p>
             {!children ? null : children}
