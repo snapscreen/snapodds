@@ -55,7 +55,8 @@ export const Faq: React.FC<FaqProps> = ({ q, a, category, author }) => {
                         key={key}
                         className="inline-flex text-sm text-skin-fg-muted"
                       >
-                        {filteredPerson.name} ({filteredPerson.role}) about {category}
+                        {filteredPerson.name} ({filteredPerson.role}) about{" "}
+                        {category}
                       </span>
                     ))}
                 </div>
@@ -69,7 +70,9 @@ export const Faq: React.FC<FaqProps> = ({ q, a, category, author }) => {
                   />
                 </span>
               </div>
-              <p className="font-semibold my-1 text-xl max-w-screen-lg sm:text-2xl sm:pl-16">{q}</p>
+              <p className="font-semibold my-1 text-xl max-w-screen-lg sm:text-2xl sm:pl-16">
+                {q}
+              </p>
             </Disclosure.Button>
           </dt>
           <Disclosure.Panel as="dd" className="mt-4">
