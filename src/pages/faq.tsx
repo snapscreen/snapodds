@@ -15,9 +15,9 @@ export const faqs = [
     author: "matthias",
     category: "Product",
     question:
-      "SnapOdds signed Station Casinos as first client, does it make a difference that it is a retail operator?",
+      "SnapOdds signed Station Casinos as first client, does it make a difference that it is a land based casino?",
     answer:
-      "The best part of SnapOdds is it works for any type of business within the sports betting and sports media industry. With retail operators, it generates excitement and increased betting in the sportsbook and casino. With online operators, it’s proven to increase the number of live bets placed. With sports media, it increases the number of sign ups and bets placed through the site which helps tremendously with increasing their affiliate revenue. Plus, it’s a value add for their readers as SnapOdds technology help provide them with a tool to get the best live odds.",
+      "The best part of SnapOdds is it works for any type of business within the sports betting and sports media industry. With retail operators and in this specific success story a casino, it generates excitement and increased betting in the sportsbook and casino. It’s proven to increase the number of live bets placed. With sports media, it increases the number of sign ups and bets placed through the site which helps tremendously with increasing their affiliate revenue. Plus, it’s a value add for their readers as SnapOdds technology help provide them with a tool to get the best live odds.",
   },
   {
     author: "markus",
