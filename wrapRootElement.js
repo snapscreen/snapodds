@@ -14,7 +14,7 @@ const App = ({ element, location }) => {
 const wrapRootElement = ({ element }) => (
   <Location>
     {(location) => (
-      <IntercomProvider appId={INTERCOM_APP_ID} autoBoot initializeDelay={100}>
+      <IntercomProvider appId={INTERCOM_APP_ID} initializeDelay={100}>
         <App {...{ element }} {...location} />
       </IntercomProvider>
     )}
