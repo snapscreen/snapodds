@@ -30,7 +30,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
             SnapOdds technology helps sportsbooks and sports media instantly
             increase the number of bets users take while watching games. Upgrade
             the betting experience for your users with frictionless bet
-            discovery
+            discovery.
           </p>
           <div className="flex mt-8">
             <Button

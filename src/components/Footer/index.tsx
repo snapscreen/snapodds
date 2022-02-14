@@ -1,6 +1,7 @@
 import React from "react";
 import { EmptyProps } from "@/definitions";
-import { Logo, ScrollTop, Nav } from "@/components";
+import { Logo, Nav } from "@/components";
+// import { ScrollTop } from "@/components";
 
 import { Socials } from "./socials";
 import "./Footer.styles.css";
@@ -98,7 +99,9 @@ export const Footer: React.FC<EmptyProps> = () => {
             </p>
           </div>
         </div>
+        {/*
         <ScrollTop />
+        */}
       </footer>
     </>
   );

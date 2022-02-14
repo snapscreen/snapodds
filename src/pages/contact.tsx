@@ -10,9 +10,13 @@ import {
   HsFormContact,
 } from "@/components";
 
+import { useIntercom } from 'react-use-intercom';
+
+
 const Contact: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const email = data.site.siteMetadata.email;
+  const { show } = useIntercom();
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -20,7 +24,15 @@ const Contact: React.FC<PageProps> = ({ data, location }) => {
       <Hero
         title="Your bright future starts with a simple conversation!"
         lead="Whether you are curious how SnapOdds works with you, or you’d like to know your growth content potential, we’d love to chat with you."
-      ></Hero>
+      >
+        <Button as="button" onClick={show} styleType="primary">
+          Chat with SnapOdds
+        </Button>
+      {/*
+      <button onClick={boot}>Boot intercom</button>
+      <button onClick={shutdown}>shutdown</button>
+      */}
+      </Hero>
       <Container>
         <div className="mx-auto mb-16">
           <HsFormContact />
