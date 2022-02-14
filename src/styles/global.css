@@ -162,6 +162,6 @@ div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-declin
   color: inherit !important;
 }
 
-.intercom-app iframe:last-of-type {
+.intercom-app iframe:not(:only-child):last-of-type {
   position: absolute !important;
 }
