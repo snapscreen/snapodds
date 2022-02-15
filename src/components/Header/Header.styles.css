@@ -6,7 +6,6 @@
 }
 
 .headerWrapper.sticky {
-  @apply shadow-lg;
   @apply border-opacity-10;
 }
 
