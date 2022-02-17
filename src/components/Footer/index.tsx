@@ -11,6 +11,11 @@ const navigation = {
     { name: "Overview", to: "/products" },
     { name: "Operator", to: "/products/operators" },
     { name: "Sports media", to: "/products/sports-media" },
+    {
+      name: "Book a demo",
+      to: "https://meetings.hubspot.com/willo1/talk-to-snapodds",
+      externalLink: true,
+    },
   ],
   support: [
     { name: "How it works", to: "/how-it-works" },
