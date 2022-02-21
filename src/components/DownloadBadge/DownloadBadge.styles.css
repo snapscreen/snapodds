@@ -1,7 +1,7 @@
 .badge {
-  @apply flex justify-start;
-  @apply w-[7.25rem] h-10;
-  @apply my-auto mx-4;
+  @apply flex justify-center;
+  @apply w-auto h-10;
+  @apply m-2 p-0;
 }
 
 .badge img {
