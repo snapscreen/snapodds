@@ -50,16 +50,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
                 https://demo.snapodds.com
               </a>
               <br /> – or – <br />
-              For the best experience{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-current underline"
-                href="https://apps.apple.com/at/app/snapodds/id1596532274?l=en"
-              >
-                download our iPhone app
-              </a>{" "}
-              in the App Store.
+              For the best experience download our demo app for iOS or Android.
             </p>
             <div className="flex justify-center">
               <DownloadBadge />
