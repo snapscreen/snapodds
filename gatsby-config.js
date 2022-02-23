@@ -1,4 +1,7 @@
-require("dotenv").config();
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
@@ -19,6 +22,15 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sitemap`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+        enableTags: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-portal`,
       options: {
@@ -32,14 +44,6 @@ module.exports = {
         trackingCode: "7433878",
         respectDNT: false,
         productionOnly: true,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-build-date`,
-      options: {
-        formatting: {
-          format: `MMM DD YYYY`,
-        },
       },
     },
     {

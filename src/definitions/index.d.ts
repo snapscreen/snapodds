@@ -1,13 +1,5 @@
 import { Location } from "history";
 
-export interface MdxProps {
-  colorCode?: string;
-  colorName?: string;
-  colorHEX?: string;
-  colorHEXDark: string;
-  colors?: sting[];
-}
-
 interface EmptyProps {}
 
 interface ListProps {
@@ -26,7 +18,7 @@ interface FaqProps {
   category: string;
   author?: string;
   q: string;
-  a: string;
+  a: any;
 }
 
 interface CardProps {
@@ -83,6 +75,10 @@ interface INode {
   id: string;
   excerpt: string;
   body: string;
+  author: string;
+  answer: any;
+  createdAt: string;
+  question: string;
   fields: {
     slug: string;
   };
