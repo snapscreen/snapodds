@@ -11,7 +11,7 @@ import "../Card.styles.css";
 export const ArticleCard: React.FC<CardProps> = ({
   link,
   title,
-  description,
+  shortText,
   date,
   image,
   type,
@@ -41,10 +41,10 @@ export const ArticleCard: React.FC<CardProps> = ({
           )}
         </h3>
       </header>
-      {description &&
+      {shortText &&
         <section className="card__body">
           <div itemProp="description" className="cardCopy">
-            <MDXRenderer>{description}</MDXRenderer>
+            <MDXRenderer>{shortText}</MDXRenderer>
           </div>
         </section>
       }

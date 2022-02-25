@@ -36,7 +36,7 @@ export const NewsReleaseList: React.FC<EmptyProps> = () => {
                 <li key={node.id} className="group">
                   <ArticleCard
                     title={node.title}
-                    description={node.shortText.childMdx.body}
+                    shortText={node.shortText.childMdx.body}
                     date={node.publishDate}
                     type="article"
                     link={node.slug}

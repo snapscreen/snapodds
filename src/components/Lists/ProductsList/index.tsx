@@ -16,21 +16,23 @@ export const ProductsList: React.FC<EmptyProps> = () => {
     <StaticQuery
       query={graphql`
         query {
-          allMdx(
-            filter: { frontmatter: { type: { eq: "product" } } }
-            sort: { order: ASC, fields: frontmatter___order }
-          ) {
+          allContentfulProduct {
             edges {
               node {
                 id
-                fields {
-                  slug
+                title
+                slug
+                customers
+                shortText {
+                  childMdx {
+                    body
+                  }
                 }
-                frontmatter {
-                  name
-                  title
+                benefits {
+                  childMdx {
+                    body
+                  }
                 }
-                body
               }
             }
           }
@@ -42,17 +44,17 @@ export const ProductsList: React.FC<EmptyProps> = () => {
             <h2 className="text-center mx-auto">Our products</h2>
           </div>
           <ol className="grid grid-cols-1 gap-4 mb-4 mx-auto sm:mb-8 sm:gap-8 sm:grid-cols-2">
-            {data.allMdx.edges.map(({ node }: { node: INode }) => {
+            {data.allContentfulProduct.edges.map(({ node }: { node: INode }) => {
               return (
                 <li key={node.id} className="group flex">
                   <ProductCard
-                    name={node.frontmatter.name}
-                    title={node.frontmatter.title}
-                    description={node.frontmatter.description}
-                    body={node.body}
-                    slug={node.fields.slug}
+                    customers={node.customers}
+                    title={node.title}
+                    shortText={node.shortText.childMdx.body}
+                    benefits={node.benefits.childMdx.body}
+                    slug={node.slug}
                   >
-                    {node.fields.slug === "/operators/" && (
+                    {node.slug === "operators" && (
                       <>
                         <Button
                           as="button"
@@ -67,7 +69,7 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                         </Modal>
                       </>
                     )}
-                    {node.fields.slug === "/sports-media/" && (
+                    {node.slug === "sports-media" && (
                       <>
                         <Button
                           as="button"

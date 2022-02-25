@@ -24,12 +24,14 @@ interface FaqProps {
 interface CardProps {
   link?: any;
   title: string;
-  name?: string;
+  customers?: string;
   description?: any;
   date?: string;
   image?: GatsbyImage;
   type?: string;
   body?: any;
+  shortText: string;
+  benefits?: string & ReactNode;
   slug?: string;
 }
 
@@ -75,6 +77,11 @@ interface INode {
   id: string;
   excerpt: string;
   body: string;
+  benefits: {
+    childMdx: {
+      body: string;
+    }
+  };
   shortText: {
     childMdx: {
       body: string;
@@ -84,6 +91,7 @@ interface INode {
   link: string;
   slug: string;
   author: string;
+  customers: string;
   answer: any;
   publishDate: string;
   createdAt: string;

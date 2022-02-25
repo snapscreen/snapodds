@@ -66,19 +66,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const productResult = await graphql(
     `
       {
-        allMdx(
-          filter: { frontmatter: { type: { eq: "product" } } }
-          sort: { fields: [frontmatter___order], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              id
-              slug
-              frontmatter {
-                order
-              }
-            }
+        allContentfulProduct {
+          nodes {
+            title
+            slug
           }
         }
       }
@@ -93,14 +84,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
   // Create product pages
-  const products = productResult.data.allMdx.edges;
+  const products = productResult.data.allContentfulProduct.nodes;
   if (products.length > 0) {
     products.forEach((product) => {
       createPage({
-        path: `/products/${product.node.slug}`,
+        path: `/products/${product.slug}`,
         component: productPageTemplate,
         context: {
-          id: product.node.id,
+          slug: product.slug,
           product,
         },
       });

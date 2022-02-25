@@ -5,10 +5,6 @@
   @apply break-all whitespace-pre-wrap;
 }
 
-.article h2 {
-  @apply text-lg;
-}
-
 .pageNav {
   @apply mt-16 mb-8 pt-16 border-t border-skin-base-muted;
   @apply mx-auto;
