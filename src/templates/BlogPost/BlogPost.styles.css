@@ -17,7 +17,7 @@
 }
 
 .pageNav__nav {
-  @apply grid grid-cols-1 gap-y-10 gap-x-8 md:grid-cols-2;
+  @apply grid grid-cols-1 gap-y-10 gap-x-8 md:grid-cols-2 mt-8;
 }
 
 .pageLink {
@@ -33,4 +33,8 @@
   @apply inline;
   @apply mx-2;
   @apply h-5 w-5;
+}
+
+.pageLink__text {
+  @apply text-lg;
 }

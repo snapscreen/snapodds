@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
+import { AtSymbolIcon } from "@heroicons/react/outline";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 import { CardProps } from "@/definitions";
 // import { Tags } from "@/components";
 
@@ -21,28 +23,31 @@ export const ArticleCard: React.FC<CardProps> = ({
       className="card group prose prose-lg"
     >
       <header className="card__header">
-        <GatsbyImage image={image} alt={title} />
+        {image &&
+          <GatsbyImage image={image} alt={title} />
+        }
+        {type === "link" &&
+          <AtSymbolIcon className="h-6 w-6" aria-hidden="true" />
+        }
         <h3 className="cardTitle">
           {type === "link" ? (
             <a href={link} itemProp="url" target="_blank">
               <span itemProp="headline">{title}</span>
             </a>
           ) : (
-            <Link to={`/news${link}`} itemProp="url">
+            <Link to={`/news/${link}`} itemProp="url">
               <span itemProp="headline">{title}</span>
             </Link>
           )}
         </h3>
       </header>
-      <section className="card__body">
-        <p
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-          itemProp="description"
-          className="cardCopy"
-        />
-      </section>
+      {description &&
+        <section className="card__body">
+          <div itemProp="description" className="cardCopy">
+            <MDXRenderer>{description}</MDXRenderer>
+          </div>
+        </section>
+      }
       <footer className="card__footer">
         <span>{date}</span>
         {type === "link" ? (
@@ -50,7 +55,7 @@ export const ArticleCard: React.FC<CardProps> = ({
             <span>{link}</span>
           </a>
         ) : (
-          <Link to={`/news${link}`} itemProp="url">
+          <Link to={`/news/${link}`} itemProp="url">
             <span>Read more</span>
           </Link>
         )}

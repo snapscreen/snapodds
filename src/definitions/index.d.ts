@@ -75,8 +75,17 @@ interface INode {
   id: string;
   excerpt: string;
   body: string;
+  shortText: {
+    childMdx: {
+      body: string;
+    }
+  };
+  title: string;
+  link: string;
+  slug: string;
   author: string;
   answer: any;
+  publishDate: string;
   createdAt: string;
   question: string;
   fields: {
