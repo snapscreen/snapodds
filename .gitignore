@@ -7,7 +7,7 @@ yarn-error.log*
 lerna-debug.log
 
 # gatsby files
-.env
+.env.*
 .cache/
 public
 build
@@ -33,3 +33,6 @@ yarn.lock
 package-lock.json
 # ignore any lock file other than main lock file
 !/yarn.lock
+
+# Local Netlify folder
+.netlify
