@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
 import { Layout, Container, Hero, Seo, Button } from "@/components";
-import DemoVideo from "../videos/SnapOdds-video.mp4";
 
 const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -29,7 +28,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
             preload="auto"
             className="w-full mx-auto"
           >
-            <source src={DemoVideo} type="video/mp4" />
+            <source src="./videos/SnapOdds-video.mp4" type="video/mp4" />
           </video>
         </div>
       </Container>

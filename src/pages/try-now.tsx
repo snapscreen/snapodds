@@ -10,8 +10,6 @@ import {
   DownloadBadge,
 } from "@/components";
 
-import DemoVideo from "../videos/SnapOdds-demo-game.mp4";
-
 var QRCode = require("qrcode.react");
 
 const TryNow: React.FC<PageProps> = ({ data, location }) => {
@@ -72,7 +70,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
                 className="w-full mx-auto"
                 preload="auto"
               >
-                <source src={DemoVideo} type="video/mp4" />
+                <source src="./videos/SnapOdds-demo-game.mp4" type="video/mp4" />
               </video>
             </div>
             <p>
