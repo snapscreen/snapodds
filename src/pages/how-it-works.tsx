@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
 import { Layout, Container, Hero, Seo, Button } from "@/components";
-import DemoVideo from "../videos/SnapOdds-video.mp4";
 
 const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -19,18 +18,15 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
         </Button>
       </Hero>
       <Container>
-        <div className="aspect-video mb-8">
-          <video
-            width="640"
-            height="360"
-            controls
-            loop
-            autoPlay
-            preload="auto"
-            className="w-full mx-auto"
-          >
-            <source src={DemoVideo} type="video/mp4" />
-          </video>
+        <div className="w-full relative aspect-video mb-8" style={{paddingBottom: "56.25%"}}>
+          <iframe
+            src="https://player.vimeo.com/video/682945888?h=348e48fdad&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479autoplay=1&loop=1&autopause=0"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            title="SnapOdds-demo-game.mp4"
+            allowFullScreen
+            className="absolute top-0 left-0 w-full h-full"
+          ></iframe>
         </div>
       </Container>
     </Layout>
