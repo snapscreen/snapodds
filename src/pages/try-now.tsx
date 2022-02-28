@@ -10,8 +10,6 @@ import {
   DownloadBadge,
 } from "@/components";
 
-import DemoVideo from "../videos/SnapOdds-demo-game.mp4";
-
 var QRCode = require("qrcode.react");
 
 const TryNow: React.FC<PageProps> = ({ data, location }) => {
@@ -64,16 +62,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               2. Play and snap the demo game below.
             </h2>
             <div className="w-full aspect-video">
-              <video
-                controls
-                loop
-                muted
-                autoPlay
-                className="w-full mx-auto"
-                preload="auto"
-              >
-                <source src={DemoVideo} type="video/mp4" />
-              </video>
+              <iframe src="https://player.vimeo.com/video/682935258?h=96805b468f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" title="SnapOdds-demo-game.mp4"></iframe>
             </div>
             <p>
               <small>The video above is only for demo reasons.</small>
