@@ -27,6 +27,7 @@ export const ArticleCard: React.FC<CardProps> = ({
           {type === "link" ? (
             <a href={link} itemProp="url" target="_blank">
               <span itemProp="headline">{title}</span>
+              <span className="flex text-sm font-normal mt-2">{link}</span>
             </a>
           ) : (
             <Link to={`/news/${link}`} itemProp="url">
@@ -46,7 +47,7 @@ export const ArticleCard: React.FC<CardProps> = ({
         <span>{date}</span>
         {type === "link" ? (
           <a href={link} itemProp="url" target="_blank">
-            <span>{link}</span>
+            <span>Follow link</span>
           </a>
         ) : (
           <Link to={`/news/${link}`} itemProp="url">

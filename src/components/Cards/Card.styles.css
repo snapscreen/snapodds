@@ -7,11 +7,11 @@
 }
 
 .card__header {
-  @apply flex items-center space-x-4;
+  @apply flex items-start space-x-4;
 }
 
 .card__header .gatsby-image-wrapper {
-  @apply w-16;
+  @apply w-20;
 }
 
 .card__header h3 {
