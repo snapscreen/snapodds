@@ -6,6 +6,14 @@
   @apply focus-within:bg-skin-base-flash focus-within:shadow-light focus-within:z-10;
 }
 
+.card p {
+  @apply my-2;
+}
+
+.card a {
+  @apply focus:bg-skin-focus focus:text-skin-fg-focus focus:outline-none;
+}
+
 .card__header {
   @apply grid grid-cols-6 items-start gap-4;
 }
@@ -22,7 +30,7 @@
 }
 
 .card__header .cardTitle h3 {
-  @apply my-0;
+  @apply my-2;
   @apply font-semibold;
   @apply leading-tight;
 }
@@ -61,14 +69,6 @@
 
 .cardTitle {
   @apply transition-all;
-}
-
-.cardTitle a {
-  @apply group-hover:text-skin-fg;
-}
-
-.card a {
-  @apply focus:bg-skin-focus focus:text-skin-fg-focus focus:outline-none;
 }
 
 .cardCopy {
