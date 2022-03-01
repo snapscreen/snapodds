@@ -159,12 +159,12 @@ export const DownloadBadge: React.FC<EmptyProps> = () => {
                 gradientTransform="translate(-42177.44 1213.67) scale(11.64 22.55)"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stop-color="#00a0ff" />
-                <stop offset="0.01" stop-color="#00a1ff" />
-                <stop offset="0.26" stop-color="#00beff" />
-                <stop offset="0.51" stop-color="#00d2ff" />
-                <stop offset="0.76" stop-color="#00dfff" />
-                <stop offset="1" stop-color="#00e3ff" />
+                <stop offset="0" stopColor="#00a0ff" />
+                <stop offset="0.01" stopColor="#00a1ff" />
+                <stop offset="0.26" stopColor="#00beff" />
+                <stop offset="0.51" stopColor="#00d2ff" />
+                <stop offset="0.76" stopColor="#00dfff" />
+                <stop offset="1" stopColor="#00e3ff" />
               </linearGradient>
               <linearGradient
                 id="linear-gradient-2"
@@ -175,10 +175,10 @@ export const DownloadBadge: React.FC<EmptyProps> = () => {
                 gradientTransform="translate(-32273.41 790.45) scale(9.15 7.7)"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stop-color="#ffe000" />
-                <stop offset="0.41" stop-color="#ffbd00" />
-                <stop offset="0.78" stop-color="orange" />
-                <stop offset="1" stop-color="#ff9c00" />
+                <stop offset="0" stopColor="#ffe000" />
+                <stop offset="0.41" stopColor="#ffbd00" />
+                <stop offset="0.78" stopColor="orange" />
+                <stop offset="1" stopColor="#ff9c00" />
               </linearGradient>
               <linearGradient
                 id="linear-gradient-3"
@@ -189,8 +189,8 @@ export const DownloadBadge: React.FC<EmptyProps> = () => {
                 gradientTransform="translate(-55578.35 906.81) scale(15.02 11.58)"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stop-color="#ff3a44" />
-                <stop offset="1" stop-color="#c31162" />
+                <stop offset="0" stopColor="#ff3a44" />
+                <stop offset="1" stopColor="#c31162" />
               </linearGradient>
               <linearGradient
                 id="linear-gradient-4"
@@ -201,11 +201,11 @@ export const DownloadBadge: React.FC<EmptyProps> = () => {
                 gradientTransform="translate(-55578.35 895.04) scale(15.02 11.57)"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stop-color="#32a071" />
-                <stop offset="0.07" stop-color="#2da771" />
-                <stop offset="0.48" stop-color="#15cf74" />
-                <stop offset="0.8" stop-color="#06e775" />
-                <stop offset="1" stop-color="#00f076" />
+                <stop offset="0" stopColor="#32a071" />
+                <stop offset="0.07" stopColor="#2da771" />
+                <stop offset="0.48" stopColor="#15cf74" />
+                <stop offset="0.8" stopColor="#06e775" />
+                <stop offset="1" stopColor="#00f076" />
               </linearGradient>
             </defs>
             <path
