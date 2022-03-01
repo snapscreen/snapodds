@@ -3,8 +3,10 @@ import { MoonIcon, SunIcon } from "@heroicons/react/outline";
 import { EmptyProps } from "@/definitions";
 import { Button } from "@/components";
 
+declare const window: any;
+
 export const ThemeSwitch: React.FC<EmptyProps> = () => {
-  let websiteTheme;
+  let websiteTheme: string | undefined = undefined;
   if (typeof window !== `undefined`) {
     websiteTheme = window.__theme;
   }
@@ -12,12 +14,13 @@ export const ThemeSwitch: React.FC<EmptyProps> = () => {
     setTheme(window.__theme);
   }, []);
 
-  const [theme, setTheme] = useState(websiteTheme);
 
   const ThemeToggle = () => {
     window.__setPreferredTheme(websiteTheme === "dark" ? "light" : "dark");
     setTheme(websiteTheme === "dark" ? "light" : "dark");
   };
+
+  const [theme, setTheme] = useState(websiteTheme);
 
   return (
     <Button

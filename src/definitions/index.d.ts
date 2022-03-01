@@ -1,13 +1,5 @@
 import { Location } from "history";
 
-export interface MdxProps {
-  colorCode?: string;
-  colorName?: string;
-  colorHEX?: string;
-  colorHEXDark: string;
-  colors?: sting[];
-}
-
 interface EmptyProps {}
 
 interface ListProps {
@@ -22,22 +14,24 @@ interface HeadingsProps {
 }
 
 interface FaqProps {
-  key: string;
-  category: string;
-  author?: string;
-  q: string;
-  a: string;
+  data: {
+    allContentfulFaq: INode;
+    slug: INode;
+  };
+  image?: GatsbyImage;
 }
 
 interface CardProps {
   link?: any;
   title: string;
-  name?: string;
+  customers?: string;
   description?: any;
   date?: string;
   image?: GatsbyImage;
   type?: string;
   body?: any;
+  shortText: string;
+  benefits?: string & ReactNode;
   slug?: string;
 }
 
@@ -83,17 +77,24 @@ interface INode {
   id: string;
   excerpt: string;
   body: string;
-  fields: {
-    slug: string;
+  edges: IEdge[];
+  benefits: {
+    childMdx: {
+      body: string;
+    };
   };
-  frontmatter: {
-    date: string;
-    title: string;
-    name: string;
-    claim: string;
-    description: string;
-    link: string;
-    image?: any;
-    type?: string;
+  shortText: {
+    childMdx: {
+      body: string;
+    };
   };
+  title: string;
+  link: string;
+  slug: string;
+  author: string;
+  customers: string;
+  answer: any;
+  publishDate: string;
+  createdAt: string;
+  question: string;
 }

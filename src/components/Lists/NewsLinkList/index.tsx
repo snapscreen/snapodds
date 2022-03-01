@@ -1,6 +1,5 @@
 import * as React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 import { INode, EmptyProps } from "@/definitions";
 import { ArticleCard } from "@/components";
 
@@ -9,27 +8,17 @@ export const NewsLinkList: React.FC<EmptyProps> = () => {
     <StaticQuery
       query={graphql`
         query {
-          allMdx(
-            filter: { frontmatter: { type: { eq: "link" } } }
-            sort: { order: DESC, fields: frontmatter___date }
+          allContentfulPressCoverage(
+            sort: { order: DESC, fields: publishDate }
           ) {
             edges {
               node {
                 id
-                frontmatter {
-                  date(formatString: "MMMM DD, YYYY")
-                  title
-                  link
-                  type
-                  image {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 160
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP, AVIF]
-                      )
-                    }
-                  }
+                publishDate(formatString: "MMM Do, YYYY")
+                title
+                link
+                image {
+                  gatsbyImageData(layout: FULL_WIDTH)
                 }
               }
             }
@@ -42,21 +31,21 @@ export const NewsLinkList: React.FC<EmptyProps> = () => {
             <h2>Coverage and mentions</h2>
           </div>
           <ol className="-mx-4 sm:mx-0 space-y-4">
-            {data.allMdx.edges.map(({ node }: { node: INode }) => {
-              const title = node.frontmatter.title;
-              const image = getImage(node.frontmatter.image);
-              return (
-                <li key={node.id} className="group">
-                  <ArticleCard
-                    title={title}
-                    image={image}
-                    date={node.frontmatter.date}
-                    type={node.frontmatter.type}
-                    link={node.frontmatter.link}
-                  />
-                </li>
-              );
-            })}
+            {data.allContentfulPressCoverage.edges.map(
+              ({ node }: { node: INode }) => {
+                return (
+                  <li key={node.id} className="group">
+                    <ArticleCard
+                      title={node.title}
+                      date={node.publishDate}
+                      link={node.link}
+                      type="link"
+                      image={node.image}
+                    />
+                  </li>
+                );
+              }
+            )}
           </ol>
         </section>
       )}

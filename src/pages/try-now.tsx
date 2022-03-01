@@ -61,7 +61,10 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             <h2 className="text-center">
               2. Play and snap the demo game below.
             </h2>
-            <div className="w-full relative aspect-video" style={{paddingBottom: "56.25%"}}>
+            <div
+              className="w-full relative aspect-video"
+              style={{ paddingBottom: "56.25%" }}
+            >
               <iframe
                 src="https://player.vimeo.com/video/682935258?h=96805b468f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 frameBorder="0"

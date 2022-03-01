@@ -6,23 +6,43 @@
   @apply focus-within:bg-skin-base-flash focus-within:shadow-light focus-within:z-10;
 }
 
+.card p {
+  @apply my-2;
+}
+
+.card a {
+  @apply focus:bg-skin-focus focus:text-skin-fg-focus focus:outline-none;
+}
+
 .card__header {
-  @apply flex items-center space-x-4;
+  @apply grid grid-cols-6 items-start gap-4;
 }
 
 .card__header .gatsby-image-wrapper {
-  @apply w-24;
+  @apply w-full;
+  @apply flex-none;
+  @apply col-span-1;
 }
 
-.card__header h3 {
+.card__header .cardTitle {
   @apply flex-1;
-  @apply my-0;
+  @apply col-span-5;
+}
+
+.card__header .cardTitle h3 {
+  @apply my-2;
+  @apply font-semibold;
+  @apply leading-tight;
+}
+
+.card__header .cardTitle a {
+  @apply max-w-full;
   @apply font-semibold;
 }
 
-.card__header h3 a {
-  @apply text-current;
-  @apply font-semibold;
+.cardTitle .url {
+  @apply text-sm font-normal;
+  @apply mt-2;
 }
 
 .card__footer {
@@ -49,14 +69,6 @@
 
 .cardTitle {
   @apply transition-all;
-}
-
-.cardTitle a {
-  @apply group-hover:text-skin-fg;
-}
-
-.card a {
-  @apply focus:bg-skin-focus focus:text-skin-fg-focus focus:outline-none;
 }
 
 .cardCopy {

@@ -17,23 +17,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   ///////////////////////////////////////////////
   // Define a template for blog post
   const blogPostTemplate = path.resolve(`./src/templates/BlogPost/index.tsx`);
-  // Get all markdown blog posts sorted by date
+
   const result = await graphql(
     `
       {
-        allMdx(
-          filter: { frontmatter: { type: { eq: "article" } } }
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              id
-              slug
-              frontmatter {
-                tags
-              }
-            }
+        allContentfulPressArticle {
+          nodes {
+            title
+            slug
           }
         }
       }
@@ -48,19 +39,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
   // Create blog posts pages
-  const posts = result.data.allMdx.edges;
+  const posts = result.data.allContentfulPressArticle.nodes;
   if (posts.length > 0) {
     posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].node.id;
-      const nextPostId =
-        index === posts.length - 1 ? null : posts[index + 1].node.id;
+      const previousPostSlug = index === 0 ? null : posts[index - 1].slug;
+      const nextPostSlug =
+        index === posts.length - 1 ? null : posts[index + 1].slug;
       createPage({
-        path: `/news/${post.node.slug}`,
+        path: `/news/${post.slug}`,
         component: blogPostTemplate,
         context: {
-          id: post.node.id,
-          previousPostId,
-          nextPostId,
+          slug: post.slug,
+          previousPostSlug,
+          nextPostSlug,
         },
       });
     });
@@ -75,19 +66,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const productResult = await graphql(
     `
       {
-        allMdx(
-          filter: { frontmatter: { type: { eq: "product" } } }
-          sort: { fields: [frontmatter___order], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              id
-              slug
-              frontmatter {
-                order
-              }
-            }
+        allContentfulProduct {
+          nodes {
+            title
+            slug
           }
         }
       }
@@ -102,14 +84,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
   // Create product pages
-  const products = productResult.data.allMdx.edges;
+  const products = productResult.data.allContentfulProduct.nodes;
   if (products.length > 0) {
     products.forEach((product) => {
       createPage({
-        path: `/products/${product.node.slug}`,
+        path: `/products/${product.slug}`,
         component: productPageTemplate,
         context: {
-          id: product.node.id,
+          slug: product.slug,
           product,
         },
       });
@@ -117,6 +99,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 };
 
+{
+  /*
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -130,6 +114,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
+*/
+}
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;

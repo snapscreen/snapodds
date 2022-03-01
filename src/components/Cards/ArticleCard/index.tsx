@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 import { CardProps } from "@/definitions";
 // import { Tags } from "@/components";
 
@@ -9,7 +10,7 @@ import "../Card.styles.css";
 export const ArticleCard: React.FC<CardProps> = ({
   link,
   title,
-  description,
+  shortText,
   date,
   image,
   type,
@@ -21,36 +22,35 @@ export const ArticleCard: React.FC<CardProps> = ({
       className="card group prose prose-lg"
     >
       <header className="card__header">
-        <GatsbyImage image={image} alt={title} />
-        <h3 className="cardTitle">
+        {image && <GatsbyImage image={getImage(image)} alt={title} />}
+        <div className="cardTitle">
           {type === "link" ? (
             <a href={link} itemProp="url" target="_blank">
-              <span itemProp="headline">{title}</span>
+              <h3 itemProp="headline">{title}</h3>
+              <p className="url">{link}</p>
             </a>
           ) : (
-            <Link to={`/news${link}`} itemProp="url">
-              <span itemProp="headline">{title}</span>
+            <Link to={`/news/${link}`} itemProp="url">
+              <h3 itemProp="headline">{title}</h3>
             </Link>
           )}
-        </h3>
+        </div>
       </header>
-      <section className="card__body">
-        <p
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-          itemProp="description"
-          className="cardCopy"
-        />
-      </section>
+      {shortText && (
+        <section className="card__body">
+          <div itemProp="description" className="cardCopy">
+            <MDXRenderer>{shortText}</MDXRenderer>
+          </div>
+        </section>
+      )}
       <footer className="card__footer">
         <span>{date}</span>
         {type === "link" ? (
           <a href={link} itemProp="url" target="_blank">
-            <span>{link}</span>
+            <span>Follow link</span>
           </a>
         ) : (
-          <Link to={`/news${link}`} itemProp="url">
+          <Link to={`/news/${link}`} itemProp="url">
             <span>Read more</span>
           </Link>
         )}

@@ -8,24 +8,19 @@ export const NewsReleaseList: React.FC<EmptyProps> = () => {
     <StaticQuery
       query={graphql`
         query NewsReleaseListQuery {
-          allMdx(
-            filter: { frontmatter: { type: { eq: "article" } } }
-            sort: { order: DESC, fields: frontmatter___date }
+          allContentfulPressArticle(
+            sort: { order: DESC, fields: publishDate }
           ) {
-            totalCount
             edges {
               node {
                 id
-                fields {
-                  slug
-                }
-                excerpt
-                frontmatter {
-                  date(formatString: "MMMM DD, YYYY")
-                  title
-                  description
-                  tags
-                  type
+                publishDate(formatString: "MMM Do, YYYY")
+                title
+                slug
+                shortText {
+                  childMdx {
+                    body
+                  }
                 }
               }
             }
@@ -38,20 +33,21 @@ export const NewsReleaseList: React.FC<EmptyProps> = () => {
             <h2>Press releases</h2>
           </div>
           <ol className="-mx-4 sm:mx-0 space-y-4">
-            {data.allMdx.edges.map(({ node }: { node: INode }) => {
-              const title = node.frontmatter.title || node.fields.slug;
-              return (
-                <li key={node.id} className="group">
-                  <ArticleCard
-                    title={title}
-                    description={node.frontmatter.description}
-                    date={node.frontmatter.date}
-                    type={node.frontmatter.type}
-                    link={node.fields.slug}
-                  />
-                </li>
-              );
-            })}
+            {data.allContentfulPressArticle.edges.map(
+              ({ node }: { node: INode }) => {
+                return (
+                  <li key={node.id} className="group">
+                    <ArticleCard
+                      title={node.title}
+                      shortText={node.shortText.childMdx.body}
+                      date={node.publishDate}
+                      type="article"
+                      link={node.slug}
+                    />
+                  </li>
+                );
+              }
+            )}
           </ol>
         </section>
       )}

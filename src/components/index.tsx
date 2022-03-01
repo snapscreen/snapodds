@@ -8,7 +8,6 @@ export { Banner } from "./Banner";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
 export { Hero } from "./Hero";
-export { Faq } from "./Faq";
 export { Loader } from "./Loader";
 export { Logo } from "./Logo";
 export { Layout } from "./Layout";
@@ -18,6 +17,7 @@ export {
   NewsReleaseList,
   NewsLinkList,
   ProductsList,
+  FaqList,
 } from "./Lists";
 export { CalloutHeading, ArticleHeading } from "./Headings";
 export {
