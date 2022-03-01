@@ -17,31 +17,30 @@ import { PageProps } from "@/definitions";
 
 import "./ProductPage.styles.css";
 
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
-const Bold = ({ children }: { children: INode }) => <strong>{children}</strong>
-const Text = ({ children }: { children: INode }) => <p className="mt-0">{children}</p>
+const Bold = ({ children }: { children: INode }) => <strong>{children}</strong>;
+const Text = ({ children }: { children: INode }) => (
+  <p className="mt-0">{children}</p>
+);
 
 const options = {
   renderMark: {
-    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      const { gatsbyImageData, description } = node.data.target
+      const { gatsbyImageData, description } = node.data.target;
       return (
         <div className="my-1 max-w-screen-md">
-          <GatsbyImage
-            image={getImage(gatsbyImageData)}
-            alt={description}
-          />
+          <GatsbyImage image={getImage(gatsbyImageData)} alt={description} />
         </div>
-      )
-   },
+      );
+    },
   },
-}
+};
 
 const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
   const product = data.contentfulProduct;
@@ -52,13 +51,8 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo
-        title={product.title}
-      />
-      <Hero
-        title={product.title}
-        preTitle={product.customers}
-      ></Hero>
+      <Seo title={product.title} />
+      <Hero title={product.title} preTitle={product.customers}></Hero>
       <Container>
         <article className="mx-auto prose prose-xl max-w-full space-y-8 divide-y divide-skin-base-muted mb-16">
           <div className="flex flex-col md:flex-row items-center">

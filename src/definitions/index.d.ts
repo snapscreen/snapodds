@@ -80,12 +80,12 @@ interface INode {
   benefits: {
     childMdx: {
       body: string;
-    }
+    };
   };
   shortText: {
     childMdx: {
       body: string;
-    }
+    };
   };
   title: string;
   link: string;

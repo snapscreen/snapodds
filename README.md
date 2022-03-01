@@ -36,18 +36,6 @@ yarn format
 Open [http://localhost:8000](http://localhost:8000) with your browser to see the result.
 View GraphiQL, an in-browser IDE, to explore site's data and schema [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql)
 
-## Assets and Files
-
-Video files are handled with git-lfs (Large File Size)
-Find the documentation here: [https://docs.netlify.com/large-media/setup/](https://docs.netlify.com/large-media/setup/)
-
-Use netlify and GIT CLI to check file tracking:
-```bash
-# list all of the files being tracked
-git lfs ls-files
-
-```
-
 ## Licence
 
 SnapOdds is a trademark owned by Snapscreen, Inc.

@@ -8,7 +8,9 @@ export const NewsReleaseList: React.FC<EmptyProps> = () => {
     <StaticQuery
       query={graphql`
         query NewsReleaseListQuery {
-          allContentfulPressArticle(sort: {order: DESC, fields: publishDate}) {
+          allContentfulPressArticle(
+            sort: { order: DESC, fields: publishDate }
+          ) {
             edges {
               node {
                 id
@@ -31,19 +33,21 @@ export const NewsReleaseList: React.FC<EmptyProps> = () => {
             <h2>Press releases</h2>
           </div>
           <ol className="-mx-4 sm:mx-0 space-y-4">
-            {data.allContentfulPressArticle.edges.map(({ node }: { node: INode }) => {
-              return (
-                <li key={node.id} className="group">
-                  <ArticleCard
-                    title={node.title}
-                    shortText={node.shortText.childMdx.body}
-                    date={node.publishDate}
-                    type="article"
-                    link={node.slug}
-                  />
-                </li>
-              );
-            })}
+            {data.allContentfulPressArticle.edges.map(
+              ({ node }: { node: INode }) => {
+                return (
+                  <li key={node.id} className="group">
+                    <ArticleCard
+                      title={node.title}
+                      shortText={node.shortText.childMdx.body}
+                      date={node.publishDate}
+                      type="article"
+                      link={node.slug}
+                    />
+                  </li>
+                );
+              }
+            )}
           </ol>
         </section>
       )}

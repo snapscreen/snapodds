@@ -15,7 +15,7 @@ const Faqs: React.FC<PageProps> = ({ data, location }) => {
         lead="Find here answers that will help you better understand our vision, business and products."
       ></Hero>
       <Container>
-        <FaqList />
+        <FaqList data={data} />
       </Container>
     </Layout>
   );
@@ -28,6 +28,28 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allContentfulFaq {
+      edges {
+        node {
+          id
+          question
+          author
+          answer {
+            raw
+            references {
+              ... on ContentfulAsset {
+                contentful_id
+                title
+                description
+                gatsbyImageData(width: 1000)
+                __typename
+              }
+            }
+          }
+          createdAt
+        }
       }
     }
   }

@@ -12,31 +12,30 @@ import { PageProps, INode } from "@/definitions";
 
 import "./BlogPost.styles.css";
 
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
-const Bold = ({ children }: { children: INode }) => <strong>{children}</strong>
-const Text = ({ children }: { children: INode }) => <p className="mt-0">{children}</p>
+const Bold = ({ children }: { children: INode }) => <strong>{children}</strong>;
+const Text = ({ children }: { children: INode }) => (
+  <p className="mt-0">{children}</p>
+);
 
 const options = {
   renderMark: {
-    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      const { gatsbyImageData, description } = node.data.target
+      const { gatsbyImageData, description } = node.data.target;
       return (
         <div className="my-1 max-w-screen-md">
-          <GatsbyImage
-            image={getImage(gatsbyImageData)}
-            alt={description}
-          />
+          <GatsbyImage image={getImage(gatsbyImageData)} alt={description} />
         </div>
-      )
-   },
+      );
+    },
   },
-}
+};
 
 const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
   const post = data.contentfulPressArticle;
@@ -44,10 +43,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
   const { previous, next } = data;
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo
-        title={post.title}
-        description={post.shortText}
-      />
+      <Seo title={post.title} description={post.shortText} />
       <Container>
         <article
           className="article"
@@ -64,9 +60,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
               term="Published on"
               definition={post.publishDate}
             />
-            <div className="mt-8">
-              {renderRichText(post.longText, options)}
-            </div>
+            <div className="mt-8">{renderRichText(post.longText, options)}</div>
           </section>
         </article>
         {(previous || next) && (

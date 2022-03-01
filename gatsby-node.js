@@ -99,7 +99,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 };
 
-{/*
+{
+  /*
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -113,7 +114,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
-*/}
+*/
+}
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;

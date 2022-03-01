@@ -23,12 +23,10 @@ export const ArticleCard: React.FC<CardProps> = ({
       className="card group prose prose-lg"
     >
       <header className="card__header">
-        {image &&
-          <GatsbyImage image={image} alt={title} />
-        }
-        {type === "link" &&
+        {image && <GatsbyImage image={image} alt={title} />}
+        {type === "link" && (
           <AtSymbolIcon className="h-6 w-6" aria-hidden="true" />
-        }
+        )}
         <h3 className="cardTitle">
           {type === "link" ? (
             <a href={link} itemProp="url" target="_blank">
@@ -41,13 +39,13 @@ export const ArticleCard: React.FC<CardProps> = ({
           )}
         </h3>
       </header>
-      {shortText &&
+      {shortText && (
         <section className="card__body">
           <div itemProp="description" className="cardCopy">
             <MDXRenderer>{shortText}</MDXRenderer>
           </div>
         </section>
-      }
+      )}
       <footer className="card__footer">
         <span>{date}</span>
         {type === "link" ? (
