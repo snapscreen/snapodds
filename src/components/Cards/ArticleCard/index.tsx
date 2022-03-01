@@ -25,9 +25,9 @@ export const ArticleCard: React.FC<CardProps> = ({
       <header className="card__header">
         {image && <GatsbyImage image={image} alt={title} />}
         {type === "link" && (
-          <AtSymbolIcon className="h-6 w-6" aria-hidden="true" />
+          <AtSymbolIcon className="h-5 w-5" aria-hidden="true" />
         )}
-        <h3 className="cardTitle">
+        <h3 className={`cardTitle ${type === "link" && "text-lg"}`}>
           {type === "link" ? (
             <a href={link} itemProp="url" target="_blank">
               <span itemProp="headline">{title}</span>
