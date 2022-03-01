@@ -11,6 +11,7 @@ The website is hosted on netlify and built with GatsbyJS and Gatsby MDX.
 | --------------- | --------------------------------------------------------- |
 | Framework       | [GatsbyJS](https://www.gatsbyjs.com/)                     |
 | Deployment      | https://snapodds.netlify.app/ fully automated GitOps Flow |
+| Content (CMS)   | [Contentful](https://app.contentful.com/)                 |
 | Form Submission | [Hubspot](https://hubspot.com/)                           |
 | Package-Manager | `yarn`                                                    |
 | Language        | `Typescript`                                              |
