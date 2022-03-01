@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { BaseComponentProps } from "@/types";
 
 const getInitialTheme = () => {
   if (typeof window !== "undefined" && window.localStorage) {
@@ -16,9 +15,14 @@ const getInitialTheme = () => {
   return "light";
 };
 
-export const ThemeContext = React.createContext<string | undefined>(undefined);
+export const ThemeContext = React.createContext<any | undefined>(undefined);
 
-export const ThemeProvider: React.FC<BaseComponentProps> = ({
+interface IThemeProvider {
+  initialTheme: string[];
+  children?: Array<string>;
+}
+
+export const ThemeProvider: React.FC<IThemeProvider> = ({
   initialTheme,
   children,
 }) => {
@@ -27,10 +31,8 @@ export const ThemeProvider: React.FC<BaseComponentProps> = ({
   const rawSetTheme = (rawTheme: any) => {
     const root = window.document.documentElement;
     const isDark = rawTheme === "dark";
-
     root.classList.remove(isDark ? "light" : "dark");
     root.classList.add(rawTheme);
-
     localStorage.setItem("color-theme", rawTheme);
   };
 

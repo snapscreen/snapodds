@@ -2,7 +2,7 @@ import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
-import { INode } from "@/definitions";
+import { FaqProps, INode } from "@/definitions";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -33,21 +33,8 @@ export const team = [
   },
 ];
 
-type FaqProps = {
-  data: {
-    allContentfulFaq: {
-      edges: any;
-      id: string;
-      question: string;
-      answer: string;
-      author: string;
-      createdAt: string;
-    };
-  };
-};
-
-const Bold = ({ children }: { children:string }) => <strong>{children}</strong>;
-const Text = ({ children }: { children:string }) => (
+const Bold = ({ children }: { children }) => <strong>{children}</strong>;
+const Text = ({ children }: { children }) => (
   <p className="mt-0">{children}</p>
 );
 const options = {
@@ -55,8 +42,8 @@ const options = {
     [MARKS.BOLD]: (text:string) => <Bold>{text}</Bold>,
   },
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (children:string) => <Text>{children}</Text>,
-    [BLOCKS.EMBEDDED_ASSET]: (node:any) => {
+    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { gatsbyImageData, description } = node.data.target;
       return (
         <div className="my-1 max-w-screen-md">

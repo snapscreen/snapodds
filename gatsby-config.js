@@ -15,6 +15,28 @@ module.exports = {
     social: {
       linkedin: `snapodds`,
     },
+    team: [
+      {
+        user: "willo",
+        name: "Thomas Willomitzer",
+        role: "Founder, CEO",
+      },
+      {
+        user: "matthias",
+        name: "Matthias Grieder",
+        role: "Co-Founder, Design",
+      },
+      {
+        user: "markus",
+        name: "Markus Rumler",
+        role: "Co-Founder, Head of Marketing",
+      },
+      {
+        user: "kevin",
+        name: "Kevin Escalera",
+        role: "Product Marketing",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-image`,

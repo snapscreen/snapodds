@@ -14,11 +14,11 @@ interface HeadingsProps {
 }
 
 interface FaqProps {
-  key: string;
-  category: string;
-  author?: string;
-  q: string;
-  a: any;
+  data: {
+    allContentfulFaq: INode;
+    slug: INode;
+  };
+  image?: GatsbyImage;
 }
 
 interface CardProps {
@@ -77,6 +77,7 @@ interface INode {
   id: string;
   excerpt: string;
   body: string;
+  edges: IEdge[];
   benefits: {
     childMdx: {
       body: string;
@@ -96,17 +97,4 @@ interface INode {
   publishDate: string;
   createdAt: string;
   question: string;
-  fields: {
-    slug: string;
-  };
-  frontmatter: {
-    date: string;
-    title: string;
-    name: string;
-    claim: string;
-    description: string;
-    link: string;
-    image?: any;
-    type?: string;
-  };
 }
