@@ -11,13 +11,14 @@
 }
 
 .card__header .gatsby-image-wrapper {
-  @apply w-24;
+  @apply w-16;
 }
 
 .card__header h3 {
   @apply flex-1;
   @apply my-0;
   @apply font-semibold;
+  @apply leading-tight;
 }
 
 .card__header h3 a {

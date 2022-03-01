@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { AtSymbolIcon } from "@heroicons/react/outline";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { CardProps } from "@/definitions";
 // import { Tags } from "@/components";
@@ -23,11 +22,8 @@ export const ArticleCard: React.FC<CardProps> = ({
       className="card group prose prose-lg"
     >
       <header className="card__header">
-        {image && <GatsbyImage image={image} alt={title} />}
-        {type === "link" && (
-          <AtSymbolIcon className="h-5 w-5" aria-hidden="true" />
-        )}
-        <h3 className={`cardTitle ${type === "link" && "text-lg"}`}>
+        {image && <GatsbyImage image={getImage(image)} alt={title} />}
+        <h3 className="cardTitle">
           {type === "link" ? (
             <a href={link} itemProp="url" target="_blank">
               <span itemProp="headline">{title}</span>

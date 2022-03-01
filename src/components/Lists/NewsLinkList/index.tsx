@@ -17,6 +17,9 @@ export const NewsLinkList: React.FC<EmptyProps> = () => {
                 publishDate(formatString: "MMM Do, YYYY")
                 title
                 link
+                image {
+                  gatsbyImageData(layout: FULL_WIDTH)
+                }
               }
             }
           }
@@ -37,6 +40,7 @@ export const NewsLinkList: React.FC<EmptyProps> = () => {
                       date={node.publishDate}
                       link={node.link}
                       type="link"
+                      image={node.image}
                     />
                   </li>
                 );
