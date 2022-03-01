@@ -46,28 +46,28 @@ type FaqProps = {
   };
 };
 
-export const FaqList: React.FC<FaqProps> = ({ data }) => {
-  const Bold = ({ children }: { children:string }) => <strong>{children}</strong>;
-  const Text = ({ children }: { children:string }) => (
-    <p className="mt-0">{children}</p>
-  );
-  const options = {
-    renderMark: {
-      [MARKS.BOLD]: (text:string) => <Bold>{text}</Bold>,
+const Bold = ({ children }: { children:string }) => <strong>{children}</strong>;
+const Text = ({ children }: { children:string }) => (
+  <p className="mt-0">{children}</p>
+);
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: (text:string) => <Bold>{text}</Bold>,
+  },
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (children:string) => <Text>{children}</Text>,
+    [BLOCKS.EMBEDDED_ASSET]: (node:any) => {
+      const { gatsbyImageData, description } = node.data.target;
+      return (
+        <div className="my-1 max-w-screen-md">
+          <GatsbyImage image={getImage(gatsbyImageData)} alt={description} />
+        </div>
+      );
     },
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: (children:string) => <Text>{children}</Text>,
-      [BLOCKS.EMBEDDED_ASSET]: (node:any) => {
-        const { gatsbyImageData, description } = node.data.target;
-        return (
-          <div className="my-1 max-w-screen-md">
-            <GatsbyImage image={getImage(gatsbyImageData)} alt={description} />
-          </div>
-        );
-      },
-    },
-  };
+  },
+};
 
+export const FaqList: React.FC<FaqProps> = ({ data }) => {
   return (
     <dl className="prose prose-lg max-w-full mx-auto mb-8 divide-y divide-skin-base-muted">
       {data.allContentfulFaq.edges.map(({ node }: { node: INode }) => {
