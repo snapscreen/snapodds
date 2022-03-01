@@ -23,18 +23,18 @@ export const ArticleCard: React.FC<CardProps> = ({
     >
       <header className="card__header">
         {image && <GatsbyImage image={getImage(image)} alt={title} />}
-        <h3 className="cardTitle">
+        <div className="cardTitle">
           {type === "link" ? (
             <a href={link} itemProp="url" target="_blank">
-              <span itemProp="headline">{title}</span>
-              <span className="flex text-sm font-normal mt-2">{link}</span>
+              <h3 itemProp="headline">{title}</h3>
+              <p className="url">{link}</p>
             </a>
           ) : (
             <Link to={`/news/${link}`} itemProp="url">
-              <span itemProp="headline">{title}</span>
+              <h3 itemProp="headline">{title}</h3>
             </Link>
           )}
-        </h3>
+        </div>
       </header>
       {shortText && (
         <section className="card__body">
