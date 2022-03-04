@@ -1,5 +1,5 @@
 .badge {
-  @apply flex justify-center;
+  @apply inline-block;
   @apply w-auto h-10;
   @apply m-2 p-0;
 }
