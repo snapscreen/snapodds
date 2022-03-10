@@ -23,10 +23,12 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
       ></Hero>
       <Container>
         <ProductsList />
+        {/*
         <div className="pt-8 mt-16 border-t border-skin-base-muted">
           <h2 className="text-center text-3xl">Product related FAQs</h2>
           <FaqList data={data} />
         </div>
+        */}
       </Container>
       <LogoCloud />
     </Layout>

@@ -4,6 +4,7 @@ import { PageProps } from "@/definitions";
 import {
   Layout,
   Button,
+  FaqList,
   Container,
   Hero,
   Seo,
@@ -22,22 +23,24 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
       <Seo title="See how it works" />
       <Hero
         title="Try and experience SnapOdds yourself!"
-        lead="Use our demo app or mobile website."
+        lead="We developed a demo app and mobile website so you can see how SnapOdds works. Snap the demo game video below on this page."
       ></Hero>
       <Container>
         <ol className="relative mb-8 prose prose-lg lg:prose-xl mx-auto space-y-16 text-center">
           <li>
             <h2 className="text-center">
-              1. Scan QR code with your mobile phone.
+              1. Open our demo app with your mobile phone.
             </h2>
-            <div className="rect">
-              <span>
-                <QRCode
-                  value={url}
-                  renderAs={"svg"}
-                  className="mx-auto p-2 bg-white"
-                />
-              </span>
+            <div className="hidden md:block ">
+              <div className="rect">
+                <span>
+                  <QRCode
+                    value={url}
+                    renderAs={"svg"}
+                    className="mx-auto p-2 bg-white"
+                  />
+                </span>
+              </div>
             </div>
             <p className="text-lg">
               <a
@@ -59,7 +62,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
           </li>
           <li>
             <h2 className="text-center">
-              2. Play and snap the demo game below.
+              2. Play and snap the demo game on a second screen or TV.
             </h2>
             <div
               className="w-full relative aspect-video"
@@ -77,6 +80,11 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             <p>
               <small>The video above is only for demo reasons.</small>
             </p>
+          </li>
+          <li>
+            <h2 className="text-center">
+              3. Snap the game with our demo app.
+            </h2>
             <p className="lead font-bold">
               SnapOdds works for live games on TV!
             </p>
@@ -105,6 +113,10 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
             </Button>
           </li>
         </ol>
+        <div className="pt-8 mt-16 border-t border-skin-base-muted">
+          <h2 className="text-center text-3xl">Usage related FAQs</h2>
+          <FaqList data={data} />
+        </div>
       </Container>
     </Layout>
   );
@@ -117,6 +129,35 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allContentfulFaq(
+      filter: { metadata: { tags: { elemMatch: { name: { eq: "help" } } } } }
+    ) {
+      edges {
+        node {
+          id
+          question
+          author
+          answer {
+            raw
+            references {
+              ... on ContentfulAsset {
+                contentful_id
+                title
+                description
+                gatsbyImageData(width: 1000)
+                __typename
+              }
+            }
+          }
+          createdAt
+          metadata {
+            tags {
+              name
+            }
+          }
+        }
       }
     }
   }
