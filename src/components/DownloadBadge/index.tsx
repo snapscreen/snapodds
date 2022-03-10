@@ -5,7 +5,7 @@ import "./DownloadBadge.styles.css";
 
 export const DownloadBadge: React.FC<EmptyProps> = () => {
   return (
-    <ul className="flex flex-col mx-auto p-0 sm:flex-row">
+    <ul className="flex mx-auto">
       <li className="badge">
         <a
           target="_blank"
