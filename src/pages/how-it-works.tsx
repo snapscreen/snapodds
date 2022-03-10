@@ -32,7 +32,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
           ></iframe>
         </div>
         <div className="pt-8 mt-16 border-t border-skin-base-muted">
-          <h2 className="text-center text-3xl">How to use</h2>
+          <h2 className="text-center text-3xl">Usage related FAQs</h2>
           <FaqList data={data} />
         </div>
       </Container>
