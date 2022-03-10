@@ -40,6 +40,7 @@ export const LogoCloud: React.FC<EmptyProps> = () => {
                 </svg>
               </div>
               <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 justify-center lg:flex-grow-0 lg:ml-4">
+                {/*
                 <svg
                   className="h-12"
                   xmlns="http://www.w3.org/2000/svg"
@@ -255,6 +256,7 @@ export const LogoCloud: React.FC<EmptyProps> = () => {
                     />
                   </g>
                 </svg>
+                */}
               </div>
             </div>
           </div>
