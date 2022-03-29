@@ -172,6 +172,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-linkedin-insight`,
+      options: {
+        partnerId: `59915`,
+        includeInDevelopment: false
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `SnapOdds`,
