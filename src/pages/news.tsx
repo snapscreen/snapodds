@@ -10,7 +10,6 @@ import {
   Hero,
   Button,
   Seo,
-  HsFormSubscribe,
 } from "@/components";
 import { DownloadIcon } from "@heroicons/react/outline";
 
@@ -29,7 +28,6 @@ const News: React.FC<PageProps> = ({ data, location }) => {
           <section id="articles" className="space-y-8 md:col-span-7">
             <NewsReleaseList />
             <NewsLinkList />
-            <HsFormSubscribe />
           </section>
           <section className="md:col-span-5">
             <div className="prose prose-lg sm:p-4">
