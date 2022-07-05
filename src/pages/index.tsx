@@ -8,7 +8,6 @@ import {
   Hero,
   Button,
   Seo,
-  HsFormSubscribe,
   SupportedBy,
   DefinitionList,
   LogoCloud,
@@ -20,17 +19,16 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="It’s a Snap converting viewers into bettors!" />
+      <Seo title="Converting Viewers into Bettors with a Snap!" />
       <Hero
-        title="It’s a Snap converting viewers into bettors!"
+        title="Converting Viewers into Bettors with a Snap!"
         img={sportsBar}
       >
         <div className="w-full sm:pr-96 lg:pr-96">
           <p className="lead">
-            SnapOdds technology helps sportsbooks and sports media platforms
-            instantly increase the number of bets users place while watching
-            games. Upgrade the betting experience for your users with
-            frictionless bet discovery!
+            SnapOdds technology helps sports media and sportsbook operators to see more viewers quickly
+            converting into bettors in live games. Bettors get an upgraded betting experience and it
+            boosts the ROI in the sports betting lifecycle.
           </p>
           <div className="flex mt-8">
             <Button
@@ -59,7 +57,6 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
       </Hero>
       <LogoCloud />
       <Container>
-        <HsFormSubscribe />
         <SupportedBy />
       </Container>
     </Layout>
