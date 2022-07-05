@@ -11,7 +11,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
       <Seo title="How SnapOdds works" />
       <Hero
         title="Display odds with just a snap of the live TV screen."
-        lead="SnapOdds is a revolutionary bet discovery and engagement tool from Snapscreen. Integrate into your web and mobile experiences and acquisition path to create a dynamic, frictionless path to wagering."
+        lead="Snapodds is an intelligent sports bet discovery tool that you can integrated into your web and mobile apps. Betters can find live games in real time which boosts revenue streams and ROI for sports media and for sports operators."
       >
         {/*
         <Button as="link" to="/try-now" styleType="primary">
@@ -32,6 +32,10 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
             allowFullScreen
             className="absolute top-0 left-0 w-full h-full"
           ></iframe>
+        </div>
+        <div className="pt-8 mt-16 border-t border-skin-base-muted">
+          <h2 className="text-center text-4xl">Getting started is so easy</h2>
+          <p className="text-center text-lg">Snap a game. See odds. Bet and enjoy.</p>
         </div>
         <div className="pt-8 mt-16 border-t border-skin-base-muted">
           <h2 className="text-center text-3xl">Usage related FAQs</h2>
