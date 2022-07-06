@@ -55,6 +55,25 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
           />
         </div>
       </Hero>
+      <div className="p-4 lg:p-12 flex flex-col justify-center text-center">
+        <h2 className="text-3xl semibold">Meet SnapOdds at the SBC Summit North America</h2>
+        <p className="mb-8">
+        <Button
+          as="link"
+          to="https://meetings.hubspot.com/willo1/talk-to-snapodds"
+          styleType="primary"
+          className="my-auto"
+        >
+          Book a meeting
+        </Button>
+        </p>
+        <StaticImage
+          src="../images/SBC-Summit-NA.png"
+          alt="SBC Teaser"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
+      </div>
       <LogoCloud />
       <Container>
         <SupportedBy />
