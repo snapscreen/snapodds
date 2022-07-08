@@ -60,7 +60,7 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
         <p className="mb-8">
         <Button
           as="link"
-          to="https://meetings.hubspot.com/willo1/talk-to-snapodds"
+          to="https://meetings.hubspot.com/willo1/tradeshow-meeting"
           styleType="primary"
           className="my-auto"
         >
