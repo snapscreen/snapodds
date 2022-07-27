@@ -8,6 +8,7 @@ import "./Header.styles.css";
 
 const navigation = {
   leftNav: [
+    { name: "Try now", to: "/try-now" },
     { name: "How it works", to: "/how-it-works" },
     { name: "Products", to: "/products" },
     { name: "Newsroom", to: "/news" },
