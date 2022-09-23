@@ -15,6 +15,7 @@ export const Logo: React.FC<LogoProps> = ({
   className,
 }) => {
   return (
+    <>
     <Button as="link" to="/" styleType="icon">
       <span className={className}>
         {icon ? (
@@ -123,5 +124,7 @@ export const Logo: React.FC<LogoProps> = ({
       </span>
       <span className="sr-only">SnapOdds</span>
     </Button>
+    {!icon && <p className="text-sm mx-2">SnapOdds, a product of Snapscreen.</p>}
+    </>
   );
 };

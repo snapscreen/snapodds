@@ -60,9 +60,6 @@ export const Footer: React.FC<EmptyProps> = () => {
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-2 xl:col-span-1">
               <Logo className="brand p-0" />
-              <p className="pt-3">
-                It’s a Snap converting viewers into bettors!
-              </p>
             </div>
             <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
               <div className="md:grid md:grid-cols-2 md:gap-8">

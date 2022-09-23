@@ -2,7 +2,7 @@
   @apply sticky top-0 z-20;
   @apply bg-skin-header;
   @apply border-b border-skin-base-muted;
-  @apply transition duration-300 ease-in-out;
+  @apply transition-all duration-300 ease-in-out;
 }
 
 .headerWrapper.sticky {
@@ -24,6 +24,11 @@
 .header__left,
 .header__right {
   @apply flex items-center;
+}
+
+.header__left {
+  @apply flex-col items-start;
+  @apply text-sm;
 }
 
 .header__center {
