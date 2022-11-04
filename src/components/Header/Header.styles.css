@@ -56,6 +56,10 @@
   @apply transition transform origin-top-right;
 }
 
+.header--mobile p {
+  @apply hidden;
+}
+
 .header--mobile .brand {
   @apply text-skin-fg;
   @apply order-1;

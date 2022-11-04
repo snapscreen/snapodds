@@ -31,11 +31,6 @@ module.exports = {
         name: "Markus Rumler",
         role: "Co-Founder, Head of Marketing",
       },
-      {
-        user: "kevin",
-        name: "Kevin Escalera",
-        role: "Product Marketing",
-      },
     ],
   },
   plugins: [
