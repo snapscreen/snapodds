@@ -20,7 +20,7 @@
     --color-primary: #2dd4bf;
     --color-primary-tint: #99f6e4;
     --color-primary-shade: #14b8a6;
-    --color-primary-contrast: var(--color-primary);
+    --color-primary-contrast: var(--color-primary-shade);
     --color-background: #f5f5f5;
     --color-background-muted: #e2e2e2;
     --color-background-flash: #ffffff;
