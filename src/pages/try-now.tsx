@@ -78,7 +78,7 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
               ></iframe>
             </div>
             <p>
-              <small>The video above is only for demo reasons.</small>
+              <small>The video above is only for demo purposes only.</small>
             </p>
           </li>
           <li>
