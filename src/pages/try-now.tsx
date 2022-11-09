@@ -72,7 +72,6 @@ const TryNow: React.FC<PageProps> = ({ data, location }) => {
                 src="https://player.vimeo.com/video/682935258?h=96805b468f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
-                title="SnapOdds-demo-game.mp4"
                 allowFullScreen
                 className="absolute top-0 left-0 w-full h-full"
               ></iframe>
