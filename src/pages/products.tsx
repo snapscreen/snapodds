@@ -19,7 +19,7 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
       <Seo title="Our Products" />
       <Hero
         title="Get started with SnapOdds"
-        lead="SnapOdds technology instantly increases the number of sports bets taken on any platform or medium that it's added to. The best part, it can be easily added to any app, website or blog in two impactful ways."
+        lead="Our intelligent technology recognizes live games on TV or streaming using the camera on mobile devices and instantly displays live odds that link directly to the betting page."
       ></Hero>
       <Container>
         <ProductsList />

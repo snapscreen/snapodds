@@ -40,9 +40,6 @@ export const ProductsList: React.FC<EmptyProps> = () => {
       `}
       render={(data) => (
         <section>
-          <div className="prose prose-lg mx-auto mb-8 sm:p-4">
-            <h2 className="text-center mx-auto">Our products</h2>
-          </div>
           <ol className="grid grid-cols-1 gap-4 mb-4 mx-auto sm:mb-8 sm:gap-8 sm:grid-cols-2">
             {data.allContentfulProduct.edges.map(
               ({ node }: { node: INode }) => {
@@ -55,41 +52,6 @@ export const ProductsList: React.FC<EmptyProps> = () => {
                       benefits={node.benefits.childMdx.body}
                       slug={node.slug}
                     >
-                      {node.slug === "operators" && (
-                        <>
-                          <Button
-                            as="button"
-                            styleType="primary"
-                            onClick={() => modalRefDemoSDK.current.openModal()}
-                            className="my-auto sm:ml-8"
-                          >
-                            Get a demo
-                          </Button>
-                          <Modal ref={modalRefDemoSDK} title="Book a Snap Demo">
-                            <HsFormDemoSDK />
-                          </Modal>
-                        </>
-                      )}
-                      {node.slug === "sports-media" && (
-                        <>
-                          <Button
-                            as="button"
-                            styleType="primary"
-                            onClick={() => {
-                              return modalRefDemoBanner.current.openModal();
-                            }}
-                            className="my-auto sm:ml-8"
-                          >
-                            Get a demo
-                          </Button>
-                          <Modal
-                            ref={modalRefDemoBanner}
-                            title="Book a SnapOdds Demo"
-                          >
-                            <HsFormDemoBanner />
-                          </Modal>
-                        </>
-                      )}
                     </ProductCard>
                   </li>
                 );
