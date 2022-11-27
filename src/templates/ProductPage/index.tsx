@@ -10,7 +10,6 @@ import {
   Modal,
   LogoCloud,
   HsFormDemoSDK,
-  HsFormDemoBanner,
   Button,
 } from "@/components";
 import { PageProps } from "@/definitions";
@@ -46,8 +45,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
   const product = data.contentfulProduct;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
-  const modalRefDemoSDK = useRef() as React.MutableRefObject<any>;
-  const modalRefDemoBanner = useRef() as React.MutableRefObject<any>;
+  const modalRefDemo = useRef() as React.MutableRefObject<any>;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -87,39 +85,18 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
             <Button as="link" styleType="ghost" to="/contact">
               Contact Sales
             </Button>
-            {product.slug === "operators" && (
-              <Button
-                as="button"
-                styleType="primary"
-                onClick={() => modalRefDemoSDK.current.openModal()}
-                className="my-auto sm:ml-8"
-              >
-                Get a demo
-              </Button>
-            )}
-            {product.slug === "sports-media" && (
-              <Button
-                as="button"
-                styleType="primary"
-                onClick={() => {
-                  return modalRefDemoBanner.current.openModal();
-                }}
-                className="my-auto sm:ml-8"
-              >
-                Get a demo
-              </Button>
-            )}
+            <Button
+              as="button"
+              styleType="primary"
+              onClick={() => modalRefDemo.current.openModal()}
+              className="my-auto sm:ml-8"
+            >
+              Get a demo
+            </Button>
           </div>
-          {product.slug === "operators" && (
-            <Modal ref={modalRefDemoSDK} title="Book a Demo">
-              <HsFormDemoSDK />
-            </Modal>
-          )}
-          {product.slug === "sports-media" && (
-            <Modal ref={modalRefDemoBanner} title="Book a Demo">
-              <HsFormDemoBanner />
-            </Modal>
-          )}
+          <Modal ref={modalRefDemo} title="Book a Demo">
+            <HsFormDemoSDK />
+          </Modal>
         </article>
       </Container>
       <LogoCloud />
