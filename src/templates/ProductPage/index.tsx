@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import {
   Layout,
   Container,
-  Hero,
+  CalloutHeading,
   Seo,
   Modal,
   LogoCloud,
@@ -22,7 +22,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 const Bold = ({ children }: { children: INode }) => <strong>{children}</strong>;
 const Text = ({ children }: { children: INode }) => (
-  <p className="mt-0">{children}</p>
+  <p className="mt-0 mb-0">{children}</p>
 );
 
 const options = {
@@ -52,11 +52,17 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title={product.title} />
-      <Hero title={product.title} preTitle={product.customers}></Hero>
       <Container>
-        <article className="mx-auto prose prose-xl max-w-full space-y-8 divide-y divide-skin-base-muted mb-16">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 md:mr-16">
+        <article className="mx-auto prose prose-xl max-w-full space-y-8 mb-16">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-8 mt-16">
+            <div className="lg:col-span-5">
+              <p>SnapOdds <strong>{product.customers}</strong></p>
+              <CalloutHeading itemProp="headline" text={product.title} />
+              <div className="my-8 lead">
+                <MDXRenderer>{product.shortText.childMdx.body}</MDXRenderer>
+              </div>
+            </div>
+            <div className="mt-16 sm:mt-24 lg:col-span-7 lg:mt-16">
               <GatsbyImage
                 image={getImage(product.heroImage)}
                 alt=""
@@ -64,49 +70,47 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
                 layout="fullWidth"
               />
             </div>
-            <div className="w-full md:w-1/2">
-              <div className="mt-8">
-                {renderRichText(product.longText, options)}
-              </div>
-              <div className="flex flex-col sm:flex-row justify-start mt-12 space-y-4 sm:space-y-0 sm:space-x-8">
-                <Button as="link" styleType="ghost" to="/contact">
-                  Contact Sales
-                </Button>
-                {product.slug === "operators" && (
-                  <Button
-                    as="button"
-                    styleType="primary"
-                    onClick={() => modalRefDemoSDK.current.openModal()}
-                    className="my-auto sm:ml-8"
-                  >
-                    Get a demo
-                  </Button>
-                )}
-                {product.slug === "sports-media" && (
-                  <Button
-                    as="button"
-                    styleType="primary"
-                    onClick={() => {
-                      return modalRefDemoBanner.current.openModal();
-                    }}
-                    className="my-auto sm:ml-8"
-                  >
-                    Get a demo
-                  </Button>
-                )}
-              </div>
-              {product.slug === "operators" && (
-                <Modal ref={modalRefDemoSDK} title="Book a Demo">
-                  <HsFormDemoSDK />
-                </Modal>
-              )}
-              {product.slug === "sports-media" && (
-                <Modal ref={modalRefDemoBanner} title="Book a Demo">
-                  <HsFormDemoBanner />
-                </Modal>
-              )}
-            </div>
           </div>
+          <div className="mt-8">
+            {renderRichText(product.longText, options)}
+          </div>
+          <div className="flex flex-col sm:flex-row justify-start mt-12 space-y-4 sm:space-y-0 sm:space-x-8">
+            <Button as="link" styleType="ghost" to="/contact">
+              Contact Sales
+            </Button>
+            {product.slug === "operators" && (
+              <Button
+                as="button"
+                styleType="primary"
+                onClick={() => modalRefDemoSDK.current.openModal()}
+                className="my-auto sm:ml-8"
+              >
+                Get a demo
+              </Button>
+            )}
+            {product.slug === "sports-media" && (
+              <Button
+                as="button"
+                styleType="primary"
+                onClick={() => {
+                  return modalRefDemoBanner.current.openModal();
+                }}
+                className="my-auto sm:ml-8"
+              >
+                Get a demo
+              </Button>
+            )}
+          </div>
+          {product.slug === "operators" && (
+            <Modal ref={modalRefDemoSDK} title="Book a Demo">
+              <HsFormDemoSDK />
+            </Modal>
+          )}
+          {product.slug === "sports-media" && (
+            <Modal ref={modalRefDemoBanner} title="Book a Demo">
+              <HsFormDemoBanner />
+            </Modal>
+          )}
         </article>
       </Container>
       <LogoCloud />
