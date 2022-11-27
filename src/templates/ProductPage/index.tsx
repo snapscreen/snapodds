@@ -60,6 +60,15 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
               <CalloutHeading itemProp="headline" text={product.title} />
               <div className="my-8 lead">
                 <MDXRenderer>{product.shortText.childMdx.body}</MDXRenderer>
+                {product.factsheet.file.url &&
+                  <Button
+                    as="externalLink"
+                    styleType="normal"
+                    href={`${product.factsheet.file.url}`}
+                  >
+                    Download 1-Pager PDF
+                  </Button>
+                }
               </div>
             </div>
             <div className="mt-16 sm:mt-24 lg:col-span-7 lg:mt-16">
@@ -143,6 +152,11 @@ export const pageQuery = graphql`
       }
       longText {
         raw
+      }
+      factsheet {
+        file {
+          url
+        }
       }
       heroImage {
         title
