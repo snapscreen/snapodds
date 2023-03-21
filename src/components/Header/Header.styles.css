@@ -5,12 +5,12 @@
   @apply transition-all duration-300 ease-in-out;
 }
 
-.headerWrapper.sticky {
+.headerWrapper.isSticky {
   @apply border-opacity-10;
 }
 
-.headerWrapper.sticky .header,
-.headerWrapper.sticky .brand {
+.headerWrapper.isSticky .header,
+.headerWrapper.isSticky .brand {
   @apply text-current;
 }
 
