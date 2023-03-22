@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import { CardProps } from "@/definitions";
 
 import "../Card.styles.css";
@@ -20,7 +19,7 @@ export const ProductCard: React.FC<CardProps> = ({
         <div>
           <h3 className="text-3xl mt-2">{customers}</h3>
           <p className="lead !text-skin-fg mt-4">
-            <MDXRenderer>{shortText}</MDXRenderer>
+            {shortText}
           </p>
         </div>
       </article>

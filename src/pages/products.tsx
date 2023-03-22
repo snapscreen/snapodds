@@ -5,7 +5,6 @@ import {
   Layout,
   Container,
   Hero,
-  FaqList,
   LogoCloud,
   ProductsList,
   Seo,
@@ -23,12 +22,6 @@ const Products: React.FC<PageProps> = ({ data, location }) => {
       ></Hero>
       <Container>
         <ProductsList />
-        {/*
-        <div className="pt-8 mt-16 border-t border-skin-base-muted">
-          <h2 className="text-center text-3xl">Product related FAQs</h2>
-          <FaqList data={data} />
-        </div>
-        */}
       </Container>
       <LogoCloud />
     </Layout>
@@ -42,35 +35,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allContentfulFaq(
-      filter: { metadata: { tags: { elemMatch: { name: { eq: "product" } } } } }
-    ) {
-      edges {
-        node {
-          id
-          question
-          author
-          answer {
-            raw
-            references {
-              ... on ContentfulAsset {
-                contentful_id
-                title
-                description
-                gatsbyImageData(width: 1000)
-                __typename
-              }
-            }
-          }
-          createdAt
-          metadata {
-            tags {
-              name
-            }
-          }
-        }
       }
     }
   }

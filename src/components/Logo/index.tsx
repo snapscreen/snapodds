@@ -124,7 +124,7 @@ export const Logo: React.FC<LogoProps> = ({
       </span>
       <span className="sr-only">SnapOdds</span>
     </Button>
-    {!icon && <p className="text-xs sm:text-sm m-0 ml-2">SnapOdds, a product of <a href="https://snapscreen.com">Snapscreen</a>.</p>}
+    {!icon && <p className="text-xs sm:text-sm m-0 ml-4">SnapOdds, a product of <a href="https://snapscreen.com">Snapscreen</a>.</p>}
     </>
   );
 };

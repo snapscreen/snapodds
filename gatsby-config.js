@@ -49,59 +49,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-portal`,
-      options: {
-        key: "portal",
-        id: "portal",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-hubspot`,
-      options: {
-        trackingCode: "7433878",
-        respectDNT: false,
-        productionOnly: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
           process.env.GATSBY_PUBLIC_GA_MEASUREMENT_ID, // Google Analytics / GA
         ],
       },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        plugins: [`gatsby-remark-images`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              linkImagesToOriginal: false,
-              withWebp: true,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-linkedin-insight`,
-      options: {
-        partnerId: `59915`,
-        includeInDevelopment: false
-      }
     },
     {
       resolve: `gatsby-plugin-manifest`,

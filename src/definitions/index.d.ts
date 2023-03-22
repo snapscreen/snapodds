@@ -30,8 +30,12 @@ interface CardProps {
   image?: GatsbyImage;
   type?: string;
   body?: any;
-  shortText: string;
-  benefits?: string & ReactNode;
+  shortText?: {
+    shortText?: string;
+  };
+  benefits: {
+    benefits: string;
+  };
   slug?: string;
 }
 
@@ -79,18 +83,15 @@ interface INode {
   body: string;
   edges: IEdge[];
   benefits: {
-    childMdx: {
-      body: string;
-    };
+    benefits: string;
   };
   shortText: {
-    childMdx: {
-      body: string;
-    };
+    shortText: string;
   };
   title: string;
   link: string;
   slug: string;
+  image: any;
   author: string;
   customers: string;
   answer: any;

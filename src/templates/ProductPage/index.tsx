@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import {
   Layout,
   Container,
@@ -16,25 +15,26 @@ import { PageProps } from "@/definitions";
 
 import "./ProductPage.styles.css";
 
-import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { BLOCKS } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 
-const Bold = ({ children }: { children: INode }) => <strong>{children}</strong>;
-const Text = ({ children }: { children: INode }) => (
-  <p className="mt-0 mb-0">{children}</p>
+const Bold = ({ children }: { children: React.ReactNode }) => <strong>{children}</strong>;
+const Text = ({ children }: { children: React.ReactNode }) => (
+  <p className="mt-0">{children}</p>
 );
 
 const options = {
-  renderMark: {
-    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
-  },
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    [BLOCKS.PARAGRAPH]: (node, children) => {
+      return <Text>{children}</Text>;
+    },
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { gatsbyImageData, description } = node.data.target;
+      const img = getImage(gatsbyImageData);
+
       return (
         <div className="my-1 max-w-screen-md">
-          <GatsbyImage image={getImage(gatsbyImageData)} alt={description} />
+          {img && <GatsbyImage image={img as IGatsbyImageData} alt={description} />}
         </div>
       );
     },
@@ -51,13 +51,13 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title={product.title} />
       <Container>
-        <article className="mx-auto prose prose-xl max-w-full space-y-8 mb-16">
+        <article className="mx-4 prose prose-xl max-w-full space-y-8 mb-16">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 mt-16">
             <div className="lg:col-span-5">
               <p>SnapOdds <strong>{product.customers}</strong></p>
               <CalloutHeading itemProp="headline" text={product.title} />
               <div className="my-8 lead">
-                <MDXRenderer>{product.shortText.childMdx.body}</MDXRenderer>
+                <p>{product.shortText.shortText}</p>
                 {product.factsheet.file.url &&
                   <Button
                     as="externalLink"
@@ -118,14 +118,7 @@ export const pageQuery = graphql`
       customers
       title
       shortText {
-        childMdx {
-          body
-        }
-      }
-      benefits {
-        childMdx {
-          body
-        }
+        shortText
       }
       longText {
         raw

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { CardProps } from "@/definitions";
 // import { Tags } from "@/components";
 
@@ -15,6 +15,7 @@ export const ArticleCard: React.FC<CardProps> = ({
   image,
   type,
 }) => {
+  const img = getImage(image);
   return (
     <article
       itemScope
@@ -22,7 +23,7 @@ export const ArticleCard: React.FC<CardProps> = ({
       className="card group prose prose-lg"
     >
       <header className="card__header">
-        {image && <GatsbyImage image={getImage(image)} alt={title} />}
+        {image && <GatsbyImage image={img as IGatsbyImageData} alt={title} />}
         <div className="cardTitle">
           {type === "link" ? (
             <a href={link} itemProp="url" target="_blank">
@@ -39,7 +40,7 @@ export const ArticleCard: React.FC<CardProps> = ({
       {shortText && (
         <section className="card__body">
           <div itemProp="description" className="cardCopy">
-            <MDXRenderer>{shortText}</MDXRenderer>
+            {shortText}
           </div>
         </section>
       )}
