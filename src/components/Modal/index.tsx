@@ -36,7 +36,7 @@ export const Modal = forwardRef((props: any, ref) => {
 
   if (display) {
     return (
-      <Portal>
+      <>
         <div className="modal">
           <div
             className="modal__body"
@@ -66,7 +66,7 @@ export const Modal = forwardRef((props: any, ref) => {
             data-aos-easing="ease-in-cubic"
           />
         </div>
-      </Portal>
+      </>
     );
   }
 

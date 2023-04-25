@@ -1,10 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
-const portalRoot =
-  typeof document !== `undefined` ? document.getElementById("portal") : null;
+const portalRoot = typeof document !== `undefined` && document.getElementById("portal");
 
-export const Portal: React.FC<{}> = ({ children }) => {
+interface PortalProps {
+  children: React.ReactNode;
+}
+
+export const Portal: React.FC<PortalProps> = ({ children }) => {
+
+  if (!portalRoot) {
+    return null;
+  }
+
   const el = useRef(document.createElement("div"));
 
   useEffect(() => {
@@ -16,6 +24,7 @@ export const Portal: React.FC<{}> = ({ children }) => {
     current.setAttribute("aria-modal", "true");
     return () => void portalRoot!.removeChild(current);
   }, []);
+
 
   return createPortal(children, el.current);
 };

@@ -2,7 +2,7 @@ import React, { ReactNode, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Location } from "history";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Portal } from "@/components";
 // import { Banner } from "@/components";
 
 interface LayoutProps {
@@ -38,6 +38,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* <Banner /> */}
       <main>{children}</main>
       <Footer />
+      <Portal />
     </>
   );
 };
