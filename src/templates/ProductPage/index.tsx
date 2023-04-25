@@ -99,6 +99,39 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
           </Modal>
         </article>
       </Container>
+      {product.slug === "social" && (
+        <div className="prose prose-xl max-w-full p-16 bg-base-flash">
+          <Container>
+            <h2 className="text-center mt-0">Embed SnapOdds Social into your Channels</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-40 mx-4">
+              <div className="text-center">
+                <p className="lead font-bold">Facebook</p>
+                <iframe
+                  src="https://player.vimeo.com/video/792320851?h=3661ff155c&title=0&byline=0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  className="mx-auto w-2/3 md:w-full h-auto aspect-phone shadow-xl"
+                />
+              </div>
+              <div className="text-center">
+                <p className="lead font-bold">Twitter</p>
+                <iframe
+                  src="https://player.vimeo.com/video/742320714?h=143a0a013d&title=0&byline=0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  className="mx-auto w-2/3 md:w-full h-auto aspect-phone shadow-xl"
+                />
+              </div>
+              <div className="text-center">
+                <p className="lead font-bold">Instagram</p>
+                <iframe
+                  src="https://player.vimeo.com/video/792274683?h=62dcdbf66d&title=0&byline=0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  className="mx-auto w-2/3 md:w-full h-auto aspect-phone shadow-xl"
+                />
+              </div>
+            </div>
+          </Container>
+        </div>
+      )}
       <LogoCloud />
     </Layout>
   );
