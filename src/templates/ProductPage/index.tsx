@@ -81,7 +81,7 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
           <div className="mt-8">
             {renderRichText(product.longText, options)}
           </div>
-          <div className="flex flex-col sm:flex-row justify-start mt-12 space-y-4 sm:space-y-0 sm:space-x-8">
+          <div className="border-t flex flex-col sm:flex-row justify-center pt-12 space-y-4 sm:space-y-0 sm:space-x-8">
             <Button as="link" styleType="ghost" to="/contact">
               Contact Sales
             </Button>
