@@ -113,6 +113,9 @@ module.exports = {
       gridTemplateColumns: {
         blog: "1fr min(600px, 100%) 1fr",
       },
+      aspectRatio: {
+        'phone': '9 / 19.5',
+      },
       backgroundColor: themes,
       textColor: themes,
       borderColor: themes,
