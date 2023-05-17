@@ -43,12 +43,14 @@ const options = {
 
 const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
   const product = data.contentfulProduct;
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   const modalRefDemo = useRef() as React.MutableRefObject<any>;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout
+      location={location}
+      title={product.title}
+    >
       <Seo title={product.title} />
       <Container>
         <article className="mx-4 prose prose-xl max-w-full space-y-8 mb-16">
