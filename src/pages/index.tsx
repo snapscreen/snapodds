@@ -26,9 +26,11 @@ const Home: React.FC<PageProps> = ({ data, location }) => {
       >
         <div className="w-full sm:pr-96 lg:pr-96">
           <p className="lead">
-            SnapOdds technology helps sports media and sportsbook operators to see more viewers quickly
-            converting into bettors in live games. Bettors get an upgraded betting experience and it
-            boosts the ROI in the sports betting lifecycle.
+            Our technology leverages the user's mobile camera to recognize live events on
+            TV and streaming - think of <strong>“Shazam for sports betting”</strong>.
+            After the Snap users get redirected to the recognized game’s destination of
+            choice like Live Wagering Markets, Odds Comparisons,
+            Ads, Promotions, Picks and similar.
           </p>
           <div className="flex mt-8">
             <Button

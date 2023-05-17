@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { PageProps } from "@/definitions";
-import { Layout, Container, Hero, Seo, FaqList, Button } from "@/components";
+import { Layout, Container, Hero, Seo, FaqList } from "@/components";
 
 const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -11,7 +11,7 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
       <Seo title="How SnapOdds works" />
       <Hero
         title="Display odds with just a snap of the live TV screen."
-        lead="Snapodds is an intelligent sports bet discovery tool that you can integrated into your web and mobile apps. Betters can find live games in real time which boosts revenue streams and ROI for sports media and for sports operators."
+        lead="SnapOdds comes as a widget to be embedded into native apps or mobile websites. Additionally, we offer branded turn-key, white-label solutions for social media or a standalone app if no embedded widgets are desired."
       >
         {/*
         <Button as="link" to="/try-now" styleType="primary">
@@ -26,7 +26,6 @@ const HowItWorks: React.FC<PageProps> = ({ data, location }) => {
         >
           <iframe
             src="https://player.vimeo.com/video/682945888?h=348e48fdad&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479autoplay=1&loop=1&autopause=0"
-            frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             title="SnapOdds-demo-game.mp4"
             allowFullScreen
