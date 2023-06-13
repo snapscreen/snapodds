@@ -91,6 +91,10 @@ h2, .h2 {
   @apply text-current;
 }
 
+.prose :where(strong):not(:where([class~="not-prose"] *)) {
+  @apply !text-current;
+}
+
 /* rectangles */
 .rect {
   @apply relative;
