@@ -26,10 +26,10 @@ const News: React.FC<PageProps> = ({ data, location }) => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-8">
           <section id="articles" className="space-y-8 md:col-span-7">
-            <NewsReleaseList />
             <NewsLinkList />
           </section>
           <section className="md:col-span-5">
+            <NewsReleaseList />
             <div className="prose prose-lg sm:p-4">
               <h2>SnapOdds Brand Assets</h2>
               <div className="py-2">
