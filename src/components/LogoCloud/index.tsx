@@ -10,7 +10,7 @@ export const LogoCloud: React.FC<EmptyProps> = () => {
       <Container>
         <div className="py-12 text-center">
           <h2 className="mx-auto text-xl font-bold mt-6 mb-12">
-            Our B2B products are best suited for sportsbooks and sports media.
+            Our B2B products are for sportsbooks, affiliates and sports media.
           </h2>
           <div className="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-12 sm:mb-8 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-6">
             <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/betika.webp" alt="Betika" width="158" height="48" />
