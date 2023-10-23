@@ -9,8 +9,10 @@ import "./Footer.styles.css";
 const navigation = {
   solutions: [
     { name: "Overview", to: "/products" },
-    { name: "Operator", to: "/products/operators" },
+    { name: "Operators", to: "/products/operators" },
     { name: "Sports media", to: "/products/sports-media" },
+    { name: "Social", to: "/products/social" },
+    { name: "Companion", to: "/products/companion" },
     {
       name: "Book a demo",
       to: "https://meetings.hubspot.com/willo1/talk-to-snapodds",
