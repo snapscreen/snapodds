@@ -134,7 +134,9 @@ const ProductPageTemplate: React.FC<PageProps> = ({ data, location }) => {
           </Container>
         </div>
       )}
+      {/*
       <LogoCloud />
+      */}
     </Layout>
   );
 };
