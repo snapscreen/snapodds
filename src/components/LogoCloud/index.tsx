@@ -14,13 +14,13 @@ export const LogoCloud: React.FC<EmptyProps> = () => {
           </h2>
           <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:mb-8 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-4">
             <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/betika.webp" alt="Betika" width="158" height="48" />
-            <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 dark:invert" src="../clients/lottomatica.svg" alt="Lottomatica" width="158" height="48" />
+            <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/lottomatica.svg" alt="Lottomatica" width="158" height="48" />
             <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/Fox_Sports.svg" alt="Fox Sports" width="158" height="48" />
-            <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 dark:invert" src="../clients/maxxwin.svg" alt="Maxxwin" width="158" height="48" />
+            <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/maxxwin.svg" alt="Maxxwin" width="158" height="48" />
             <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/Netball_Australia.svg" alt="Netball Australia" width="158" height="48" />
             <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/StationsCasino.png" alt="Stations Casino" width="158" height="48" />
             <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/wbsc-logo.svg" alt="WBSC - World Baseball Softball Confederation" width="158" height="48" />
-            <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="../clients/Powered_by_SCCG.png" alt="Powered by SCCG" width="158" height="48" />
+            <img className="col-span-2 max-h-14 w-full object-contain lg:col-span-1" src="../clients/Powered_by_SCCG.png" alt="Powered by SCCG" width="158" height="48" />
           </div>
         </div>
       </Container>
