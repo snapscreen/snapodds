@@ -6,11 +6,12 @@
 }
 
 .supportedLogo {
-  @apply flex flex-col justify-center;
+  @apply flex flex-col justify-center items-center;
   @apply p-8;
 }
 
-.supportedLogo svg {
+.supportedLogo svg,
+.supportedLogo img {
   @apply h-8 w-auto;
 }
 .supportedLogo p {

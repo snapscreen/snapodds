@@ -72,6 +72,12 @@ export const SupportedBy: React.FC<EmptyProps> = () => {
           </svg>
           <p>Supported by AWS, Austria Wirtschaftsservice.</p>
         </div>
+        <div className="supportedLogo">
+          <a href="https://sccgmanagement.com/" target="blank" className="border-0 hover:border-0">
+            <img className="dark:invert dark:grayscale dark:brightness-200" src="../clients/Powered_by_SCCG.png" alt="Powered by SCCG" width="158" height="48" />
+          </a>
+          <p>Powered by SCCG</p>
+        </div>
       </div>
     </Container>
   );
