@@ -16,7 +16,7 @@ var QRCode = require("qrcode.react");
 const TryNow: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
-  let url = "https://snapodds.onelink.me/rx4N/de77d92a";
+  let url = "https://demo.snapodds.com/?utm_source=website";
 
   return (
     <Layout location={location} title={siteTitle}>
